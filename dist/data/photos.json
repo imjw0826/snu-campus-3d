@@ -1,0 +1,296 @@
+{
+  "researchDate": "2026-09-20",
+  "reuse": "Photo copyright remains with the respective source. No open reuse licence was identified.",
+  "buildings": [
+    {
+      "number": 1,
+      "officialName": "인문관1",
+      "latitude": 37.46027,
+      "longitude": 126.95234,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46027&lon_val=126.95234&convinType=Y&inst_seq=1",
+      "images": [
+        {
+          "path": "./assets/photos/01-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000001.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "officialName": "인문관2",
+      "latitude": 37.46038,
+      "longitude": 126.95295,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46038&lon_val=126.95295&convinType=Y&inst_seq=2",
+      "images": [
+        {
+          "path": "./assets/photos/02-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000002.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "officialName": "인문관3",
+      "latitude": 37.46071,
+      "longitude": 126.95355,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46071&lon_val=126.95355&convinType=Y&inst_seq=3",
+      "images": [
+        {
+          "path": "./assets/photos/03-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000003.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "officialName": "신양인문학술정보관",
+      "latitude": 37.46089,
+      "longitude": 126.95326,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46089&lon_val=126.95326&convinType=Y&inst_seq=4",
+      "images": [
+        {
+          "path": "./assets/photos/04-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000004.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        },
+        {
+          "path": "./assets/photos/04-facade-kodos.jpg",
+          "imageUrl": "https://t1.daumcdn.net/cfile/tistory/1420AF3E5000B4D823",
+          "sourcePage": "https://kodos.tistory.com/585",
+          "sourceName": "Sungjin Kim · 현장 사진 (2012 게시)",
+          "captureDate": null,
+          "confidence": "high",
+          "observations": "4동 유리 외벽 및 처마 구조 근접 사진. 나뭇가지에 가려진 부분은 확인 불가."
+        },
+        {
+          "path": "./assets/photos/04-roof-kodos.jpg",
+          "imageUrl": "https://t1.daumcdn.net/cfile/tistory/1726CC3E5000B4D91E",
+          "sourcePage": "https://kodos.tistory.com/585",
+          "sourceName": "Sungjin Kim · 현장 사진 (2012 게시)",
+          "captureDate": null,
+          "confidence": "high",
+          "observations": "4동 유리 외벽 및 처마 구조 근접 사진. 나뭇가지에 가려진 부분은 확인 불가."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "officialName": "인문관4",
+      "latitude": 37.4606,
+      "longitude": 126.95393,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.4606&lon_val=126.95393&convinType=Y&inst_seq=5",
+      "images": [
+        {
+          "path": "./assets/photos/05-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000005.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "officialName": "인문관5",
+      "latitude": 37.46073,
+      "longitude": 126.95452,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46073&lon_val=126.95452&convinType=Y&inst_seq=6",
+      "images": [
+        {
+          "path": "./assets/photos/06-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000006.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "officialName": "인문관6",
+      "latitude": 37.46022,
+      "longitude": 126.95436,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46022&lon_val=126.95436&convinType=Y&inst_seq=7",
+      "images": [
+        {
+          "path": "./assets/photos/07-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000007.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "officialName": "두산인문관",
+      "latitude": 37.46016,
+      "longitude": 126.95398,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46016&lon_val=126.95398&convinType=Y&inst_seq=8",
+      "images": [
+        {
+          "path": "./assets/photos/08-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000008.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        },
+        {
+          "path": "./assets/photos/08-chio-official.jpg",
+          "imageUrl": "https://chio.snu.ac.kr/images/sub/greeting.jpg",
+          "sourcePage": "https://chio.snu.ac.kr/chio/greeting.php",
+          "sourceName": "서울대학교 공식 자료",
+          "confidence": "high",
+          "observations": "Brown brick with dark metal horizontal bands and narrow vertical window strips; tall recessed entrance/pilotis; projecting glazed side bay, flat roof and open upper screen. Number 8 visible."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "officialName": "사범관1",
+      "latitude": 37.46017,
+      "longitude": 126.9548,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46017&lon_val=126.9548&convinType=Y&inst_seq=9",
+      "images": [
+        {
+          "path": "./assets/photos/09-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000009.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "officialName": "사범관2",
+      "latitude": 37.46031,
+      "longitude": 126.95536,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46031&lon_val=126.95536&convinType=Y&inst_seq=10",
+      "images": [
+        {
+          "path": "./assets/photos/10-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000010.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "officialName": "사범관3",
+      "latitude": 37.45979,
+      "longitude": 126.9552,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.45979&lon_val=126.9552&convinType=Y&inst_seq=12",
+      "images": [
+        {
+          "path": "./assets/photos/11-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000012.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "officialName": "사범교육협력센터",
+      "latitude": 37.45962,
+      "longitude": 126.95479,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.45962&lon_val=126.95479&convinType=Y&inst_seq=13",
+      "images": [
+        {
+          "path": "./assets/photos/12-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000013.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "officialName": "과학교육관",
+      "latitude": 37.45927,
+      "longitude": 126.95389,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.45927&lon_val=126.95389&convinType=Y&inst_seq=14",
+      "images": [
+        {
+          "path": "./assets/photos/13-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000014.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "officialName": "인문관7",
+      "latitude": 37.46093,
+      "longitude": 126.95499,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46093&lon_val=126.95499&convinType=Y&inst_seq=15",
+      "images": [
+        {
+          "path": "./assets/photos/14-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000015.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        },
+        {
+          "path": "./assets/photos/14-history-official.jpg",
+          "imageUrl": "https://www.snu.ac.kr/webdata/boardimages/konews/img_20230918_001.jpg",
+          "sourcePage": "https://www.snu.ac.kr/snunow/snu_story?bbsidx=143580&md=v",
+          "sourceName": "서울대학교 공식 자료",
+          "confidence": "high",
+          "observations": "Exposed light gray concrete slab edges and numerous narrow vertical fins; brown brick infill and tall slim windows. Large flat overhanging canopy with open terrace below; glazed lower level."
+        },
+        {
+          "path": "./assets/photos/14-terrace-official.jpg",
+          "imageUrl": "https://humanities.snu.ac.kr/webdata/upimages/02cz8dazd82zaabz4cdzabcz1cezf18z1d6z945ze6.jpg",
+          "sourcePage": "https://humanities.snu.ac.kr/community/department?bbsidx=3485&md=v",
+          "sourceName": "서울대학교 인문대학 · 6층 테라스",
+          "confidence": "high",
+          "captureDate": null
+        },
+        {
+          "path": "./assets/photos/14-terrace-detail-official.jpg",
+          "imageUrl": "https://humanities.snu.ac.kr/webdata/upimages/0d6z374z5a7z48az803z6eaz5fcze1dze15zc85z5e.jpg",
+          "sourcePage": "https://humanities.snu.ac.kr/community/department?bbsidx=3485&md=v",
+          "sourceName": "서울대학교 인문대학 · 6층 테라스",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "officialName": "법학관1",
+      "latitude": 37.46233,
+      "longitude": 126.95174,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46233&lon_val=126.95174&convinType=Y&inst_seq=16",
+      "images": [
+        {
+          "path": "./assets/photos/15-official.jpg",
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000016.jpg",
+          "sourceName": "서울대학교 공식 지도",
+          "confidence": "high",
+          "captureDate": null
+        }
+      ]
+    }
+  ]
+}

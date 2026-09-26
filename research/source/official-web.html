@@ -1,0 +1,3998 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="/web/common/css/font.css"/>
+<link rel="stylesheet" type="text/css" href="/web/common/css/map_style.css"/>
+<style type="text/css">
+    	.select_info_wrap {width:200px; min-height:30px; background-color:#5f5f5f; border-radius:30px; line-height:30px; position:absolute; top:-80px;
+    	 left:-100px;}
+    	.select_info_wrap:after{content:""; display:block; width:0; height:0; position:absolute; left:95px; border-left: 5px solid transparent;
+			border-right: 5px solid transparent; border-top: 10px solid #5f5f5f; }
+    	.select_info_title {text-align: center;}
+    	.select_kor_title { margin: 0 0 0 10px; font-weight: bold; font-size:14px; color:#fff;}
+    	.select_eng_title { margin: 0 0 0 10px; font-size:13px;}
+</style>
+<script nonce="" src="/web/common/js/jquery-1.11.0.min.js"></script>
+<script nonce="" src="/web/common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script nonce="" src="/web/common/js/clipboard.js"></script>
+<script nonce="" type="text/javascript">
+    //<![CDATA[
+if(!window.localStorage) {
+	document.write('이 Browser 는 Local Storage 를 지원하지 않습니다.');
+	} else {
+		$(document).ready(function () {
+			if(!localStorage.getItem("lang")){
+				localStorage.setItem("lang", "kor");
+				$('.lang').html("English");
+				$('.lang').attr('id','kor');
+			}else if(localStorage.getItem("lang") == "kor"){
+				$('.lang').html("English");
+				$('.lang').attr('id','kor');
+			}else if(localStorage.getItem("lang") == "eng"){
+				$('.lang').html("Korean");
+				$('.lang').attr('id','eng');
+			}
+			$('.lang').click(function(){
+				var targetId = $(this).attr('id');
+				if(targetId == 'eng'){
+					localStorage.setItem("lang", "kor");
+					$('.lang').attr('id','kor');
+					$('.lang').html("English");
+				}else if(targetId == 'kor'){
+					localStorage.setItem("lang", "eng");
+					$('.lang').attr('id','eng');
+					$('.lang').html("Korean");
+				}
+				location.reload();
+			});
+		});
+		var langType = localStorage.getItem("lang");
+		 //]]>
+	};
+
+
+</script>
+
+
+<title>:: SNU Campus ::</title>
+<style type="text/css">
+.floor_info_list {overflow-y: auto;width:238px;padding:5px; max-height: 200px;background: #fff;line-height: 20px; border-left:1px #1f64cb solid; border-right:1px #1f64cb solid;}
+
+.area {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #888;
+    border-radius: 3px;
+    font-size: 12px;
+    top: -5px;
+    left: 15px;
+    padding:2px;
+}
+
+.info {
+    font-size: 12px;
+    padding: 5px;
+}
+.info .title {
+    font-weight: bold;
+}
+
+.g_tbl_02{border:1px solid #5d6268; border-width:1px 0 1px; background-color:#fff}
+.g_tbl_02 th, .g_tbl_02 td{padding:6px 15px; box-sizing:border-box; border-top:1px solid #e2e8ec; border-left:1px solid #b8bfc9; height:30px; font-size:13px}
+.g_tbl_02 th{color:#333; background-color:#f3f7fa}
+.g_tbl_02 tbody th, .g_tbl_02 tfoot th{text-align:center}
+.g_tbl_02 tbody tr:first-child th, .g_tbl_02 tbody tr:first-child td{border-top:0}
+.g_tbl_02 thead tr th{border-top:0; border-bottom:1px solid #b8bfc9}
+.g_tbl_02 tbody tr td:first-child, .g_tbl_02 tbody tr th:first-child, .g_tbl_02 thead tr th:first-child, .g_tbl_02 tfoot tr th:first-child{border-left:0}
+.g_tbl_02 tfoot th, .g_tbl_02 tfoot td{color:#376dc8; font-weight:bold}
+
+a[class^='g_btn_']{display:inline-block; box-sizing:border-box; text-align:center; font-size:15px}
+a.g_btn_01{height:35px; line-height:36px; font-size:13px; color:#fff; background-color:#848484}
+
+[class^='btn_wrap_']{display:block; width:100%; box-sizing:border-box}
+.btn_wrap_full a{width:100%}
+
+.mo-ui-layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 9999;
+}
+
+.mo-icon-loading{width:60px;height:60px; margin-left:auto; margin-right:auto; margin-top:25%}
+.mo-icon-loading img{width:50%;}
+
+.mo-icon-loading {
+    position: relative;
+	/*
+	animation: example 2s linear infinite;
+	*/
+	-webkit-animation-name: example;
+	-moz-animation-name: example;
+	-o-animation-name: example;
+	-ms-animation-name: example;
+	animation-name: example;
+
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-duration: 2s;
+
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	-ms-animation-timing-function: linear;
+	animation-timing-function: linear;
+
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+		
+}
+
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+    	<div class="logoSearchZone">
+            <h1><a href="/web/main.action">서울대학교</a></h1>
+
+            <!--검색-->
+            <div class="search">
+               <fieldset>
+                        <legend>검색</legend>
+                        <input type="text" title="검색어 입력" class="inputSt" id="search_word">
+                        <button class="searchBtn" type="submit" onClick="searchWord()">검색</button>
+
+               </fieldset>
+           </div>
+           <!--//검색-->
+           	<a href="#url" class="lang" id="kor"></a>
+       </div>
+        <ul class="gnb">
+        	<li><a href="/web/main.action" id="facility">검색</a></li>
+            <li><a href="/web/search_road.action" id="road">길찾기</a></li>
+            <li><a href="/web/busStation.action" id="bus">버스정류장</a></li>
+            <li><a href="/web/event_search.action" id="event">행사/이벤트</a></li>
+            <li><a href="/web/campus_tour_list.action" id="campus">캠퍼스 투어</a></li>
+        </ul>
+    </div>
+    <input type="hidden" id="current_lat_val" value="37.4613186057004"/>
+    <input type="hidden" id="current_lon_val" value="126.95395103327749"/>
+<script nonce="" type="text/javascript">
+    //<![CDATA[
+	var search_word = $('#search_word').val();
+	var current_lat_val = $('#current_lat_val').val();
+	var current_lon_val = $('#current_lon_val').val();
+
+	 webLocationCallBack = function( location_info ){
+        $('.nowArea').text(location_info.addr);
+        $('#current_lat_val').val(location_info.lat);
+        $('#current_lon_val').val(location_info.lon);
+     };
+
+	(function($){
+
+
+		// 해당 탑 메뉴 ON
+		var tmp_url = document.URL;
+		var tmps = tmp_url.split('/');
+		var param = tmps[tmps.length-1];
+		var tmps_param = param.split('?');
+		var current_url = tmps_param[0];
+
+		// 호출 URL이 campus_cpr.action이면 main.action으로 변경한다. cpr 위치표시 리다이렉시 메뉴 상이 문제로 추가 ,배영진 20171130
+		if(current_url == "campus_cpr.action"){
+			current_url = "main.action";
+		}
+
+		var menuChk = true;
+		$('.gnb li a').each(function(index){
+			if ( $(this).attr('id') != undefined ){
+
+				var menu_attr = $(this).attr('id');
+
+				if ( current_url.indexOf(menu_attr) > -1 ){
+					$(this).addClass('on');
+					menuChk = false;
+				}
+			}
+		});
+
+		if(menuChk){
+			$('.gnb li a').first().addClass('on');
+		}
+
+		if(langType == 'eng'){ // 영문
+			$('.gnb li:eq(0) a').first().html('Search');
+			$('.gnb li:eq(1) a').first().html('Directions');
+			$('.gnb li:eq(2) a').first().html('Bus Stop');
+			$('.gnb li:eq(3) a').first().html('Event');
+			$('.gnb li:eq(4) a').first().html('Campus Tour');
+		}
+		else{	//한글
+			$('.gnb li:eq(0) a').first().html('검색');
+			$('.gnb li:eq(1) a').first().html('길찾기');
+			$('.gnb li:eq(2) a').first().html('버스정류장');
+			$('.gnb li:eq(3) a').first().html('행사/이벤트');
+			$('.gnb li:eq(4) a').first().html('캠퍼스 투어');
+		}
+
+	})(jQuery);
+
+
+	$(document).on('click', '.placeChoice', function(){
+		$(".clickPlace").hide();
+// 		  $("body").find(".position2").removeClass("position2").addClass("position");
+		  $(this).parent().children(".clickPlace").attr("style","display:block");
+// 		  $(this).parent().parent().children(".imgBg").addClass("position2");
+    });
+
+
+
+	$(document).ready(function () {
+		//webMyLocation();
+		var pageUrl = document.location;
+		$('.pop_input').val(pageUrl);
+		$("#copy").on("click", function(){
+			var copyTextarea = document.querySelector('.pop_input');
+			 copyTextarea.select();
+
+	 		try {
+			    document.execCommand('copy');
+			  } catch (err) {
+			  }
+
+			//clipboard.copy({"text/plain": pageUrl});
+			pop_hide('url_copy');
+			alert('이 포스트의 주소가 복사되었습니다.\n게시판이나 메신저 창에서 Ctrl + V 를 눌러보세요!');
+		});
+
+		$('#search_word').keyup(function(event){
+			if(event.keyCode == 13){
+				searchWord();
+				return;
+			}
+		});
+
+		if(search_word == ''){
+			$('.nowArea').hide();
+			$('.searchResultTxt').hide();
+			$('.searchResultTxt2').show();
+			$('.appClick').show();
+		}
+
+	});
+
+
+	var searchMarkers = [];
+	var upperParkingLotList = [];
+    var underParkingLotList = [];
+    var amenitiesMarkers = [];
+    var disabledRestroomMarkers = [];
+    var disabledMarkers = [];
+    var overlays = [];
+    var ceremonyMarkers = [];
+    var gatePath = [];
+	var parkingLotPath = [];
+	var path = [];
+	var path2 = [];
+	var path3 = [];
+	var gateList=[];
+	var spot_markers = [];
+    var numMarkers = [];
+	var tourLine;
+    var ceremonyMarker;
+    var searchMarker;
+    var amenitiesMarker;
+    var buildingMarker;
+    var organizationMarker;
+    var parkingLotMarker;
+    var gateMarker;
+    var upperParkingCenter;
+    var underParkingCenter;
+    var parkingLot;
+    var searchMarkers;
+    var road_search_polyline;
+    var road_search_polyline2;
+    var road_search_polyline3;
+    var marker;
+    var startMarker;
+    var arriveMarker;
+    var polyline_arr = [];
+	var path_arr = [];
+	var startMarker_arr = [];
+	var arriveMarker_arr = [];
+
+	var mouseOverMarker;
+
+	searchWord = function(){
+		$('#amenities_sel').hide();
+		var search_word2 = encodeURIComponent($('#search_word').val());
+
+
+		if($('#search_word').val() == '셔틀' || $('#search_word').val() == '셔틀버스' || $('#search_word').val() == 'shuttle' || $('#search_word').val() == 'shuttlebus' ){
+			location.href = "/web/busStation.action?search_type=s";
+		}
+
+		$('.gnb li a').removeClass('on');
+		$('.gnb li a').first().addClass('on');
+
+		$('.asideConList').css('top' , '80px');
+
+		var lang_type = '';
+
+		if(langType == 'eng'){ // 영문
+			lang_type = 'ENG';
+		}
+		else{	//한글
+			lang_type = 'KOR';
+		}
+
+        clearMarkers();
+        clearParkingLots();
+        clearRoadSearchPolyline();
+
+
+		$('.nowArea').hide();
+		$('.searchResultTxt').html('<strong>'+$('#search_word').val()+'</strong> 검색결과');
+		$('.searchResultTxt').show();
+		$('.searchResultTxt2').hide();
+		$('.appClick').hide();
+		$('.event').hide();
+		$('.subTitle').show();
+		$('.startEndClick').remove();
+		$('.detailCon').remove();
+		$('.btnZone').remove();
+		$('.subTitle2').remove();
+		$('.searchLoad').remove();
+		$('.moveType').remove();
+		$('.subSeT').remove();
+		$('.loadDetailType').remove();
+		$('.searchLoad').remove();
+		$('#aside').removeClass("bgBlack");
+		$('.tourType1').css({"background":"none"});
+		$('.swiper-container').remove();
+		$('#map').show();
+
+		var ajax_url = '/api/search.action?search_word='+search_word2+'&lang_type='+lang_type;
+		var param = '';
+
+		$.ajax({
+	        'type': 'GET',
+	        'url': ajax_url,
+	        'contentType': 'text/plain; charset=utf-8',
+	        'data': param,
+	        'dataType': 'json',
+	        'beforeSend':function(request){
+	        	request.setRequestHeader('access_token', '111');
+	        },
+	        'error':function(request,status,error){
+	        	searchWordFailCallback(request,status,error); //실패 콜백함수 호출
+	        },
+	        'success': function(data){
+	        	searchWordSuccessCallback(data); //성공 콜백함수 호출
+	        }
+	    });
+	};
+
+
+
+    searchWordSuccessCallback = function(data){
+	var search_list = data.search_list;
+	var html = "";
+
+
+	var name = '';
+	$('.subTitle').html("검색"+ "("+search_list.length+")건");
+	if(search_list.length > 0){
+		for ( var i=0; i<search_list.length; i++ ){
+			var search = search_list[i];
+			console.log('search:::', search);
+
+			if(langType == 'eng'){ // 영문
+				name = search.ename;
+			}
+			else{	//한글
+				name = search.name;
+			}
+
+			var url='';
+			url+= '/web/facility_detail.action?lat_val='+search.lat_val+'&lon_val='+search.lon_val;
+
+			if ( search.con_type == 'F' ){
+				url += '&convinType=Y&inst_seq='+search.seq;
+			}
+			else if ( search.con_type =='B'  ){
+				url += '&convin_inst_seq='+search.seq+'&convin_inst_knd_cd='+search.knd_cd;
+			}
+			else{
+				url += '&breu_seq='+search.seq;
+			}
+
+			var search_img='';
+			if(search.knd_cd == '1'){
+				search_img ='/web/common/images/marker/marker_facilities_1.png';
+			} else if(search.knd_cd == '2'){
+				search_img ='/web/common/images/marker/marker_facilities_2.png';
+			} else if(search.knd_cd == '3'){
+				search_img ='/web/common/images/marker/marker_facilities_3.png';
+			} else if(search.knd_cd == '4'){
+				search_img ='/web/common/images/marker/marker_facilities_4.png';
+			} else if(search.knd_cd == '5' || search.knd_cd == '6' || search.knd_cd == '7'){
+				search_img ='/web/common/images/marker/marker_facilities_5.png';
+			} else if(search.knd_cd == '8' || search.knd_cd == '9' || search.knd_cd == '10' || search.knd_cd == '11'){
+				search_img ='/web/common/images/marker/marker_facilities_8.png';
+			} else if(search.knd_cd == '12' || search.knd_cd == '13' || search.knd_cd == '14' || search.knd_cd == '15'){
+				search_img ='/web/common/images/marker/marker_facilities_12.png';
+			} else if(search.knd_cd == '16'  || search.knd_cd == '17' || search.knd_cd == '18' || search.knd_cd == '19'){
+				search_img ='/web/common/images/marker/marker_facilities_16.png';
+			} else if(search.knd_cd == '20'){
+				search_img ='/web/common/images/marker/marker_facilities_20.png';
+			} else if(search.knd_cd == '21'){
+				search_img ='/web/common/images/marker/marker_facilities_21.png';
+			} else if(search.knd_cd == '22' || search.knd_cd == '23' || search.knd_cd == '24'){
+				search_img ='/web/common/images/marker/marker_facilities_22.png';
+			} else if(search.knd_cd == '27' || search.knd_cd == '30'){
+				search_img ='/web/common/images/marker/marker_facilities_27.png';
+			} else if(search.knd_cd == '28'){
+				search_img ='/web/common/images/marker/marker_facilities_30.png';
+			} else {
+				if ( search.con_type == 'F' ){
+					search_img ='/web/common/images/marker/marker_facilities_0.png';
+				}else{
+					search_img ='/web/common/images/marker/marker_facilities_22.png';
+				}
+			}
+
+			html += '<div class="place"  onmouseover="mouseoverFunction('+i+')" onmouseout="mouseoutFunction('+i+')">';
+			html += '<span class="position3"><img src="'+search_img+'" alt=\'시설아이콘\'></span>';
+			html += '<div class="placeCon">';
+			html += '<a href="#url" class="placeChoice"><strong>'+name;
+			if(search.vil_dong_nm != '' && search.vil_dong_nm != null){
+				html += '('+search.vil_dong_nm;
+				if(langType == 'eng'){ // 영문
+					html += 'DONG)';
+				}
+				else{	//한글
+					html += '동)';
+				}
+			}
+			html += '</strong></a>';
+			html += '<div class="clickPlace" style="display:none">';
+			html += '<button class="imgBg startBtn" type="button" onClick="location.href=\'/web/search_road.action?sName='+search.name;
+			if(search.vil_dong_nm != '' && search.vil_dong_nm != null){
+				html += '('+ search.vil_dong_nm;
+				if(langType == 'eng'){ // 영문
+					html += 'DONG)';
+				}
+				else{	//한글
+					html += '동)';
+				}
+			}
+			if(langType == 'eng'){ // 영문
+				html += '&start_lat='+search.lat_val+'&start_lon='+search.lon_val+'\'">Start</button>';
+			}
+			else{	//한글
+				html += '&start_lat='+search.lat_val+'&start_lon='+search.lon_val+'\'">출발</button>';
+			}
+			html += '<button class="imgBg endBtn" type="button" onClick="location.href=\'/web/search_road.action?eName='+search.name;
+			if(search.vil_dong_nm != '' && search.vil_dong_nm != null){
+				html += '('+ search.vil_dong_nm +'동)';
+			}
+			if(langType == 'eng'){ // 영문
+				html += '&end_lat='+search.lat_val+'&end_lon='+search.lon_val+'\'">Stop</button>';
+			}
+			else{	//한글
+				html += '&end_lat='+search.lat_val+'&end_lon='+search.lon_val+'\'">도착</button>';
+			}
+			html += '<a href="'+url+'">상세보기<span class="arr"></span> </a>';
+			html += '</div>';
+			html += '</div>';
+			html += '</div>';
+
+			var searchPosition = new daum.maps.LatLng(search.lat_val, search.lon_val);
+
+			searchMarker = new daum.maps.Marker({
+		        map: map,
+		        position: searchPosition,
+		    });
+			if(search.knd_cd == '1'){
+				searchMarker.setImage(libraryImage2);
+			} else if(search.knd_cd == '2'){
+				searchMarker.setImage(informationImage2);
+			} else if(search.knd_cd == '3'){
+				searchMarker.setImage(supportcenterImage2);
+			} else if(search.knd_cd == '4'){
+				searchMarker.setImage(restaurantImage2);
+			} else if(search.knd_cd == '5' || search.knd_cd == '6' || search.knd_cd == '7'){
+				searchMarker.setImage(cafeImage2);
+			} else if(search.knd_cd == '8' || search.knd_cd == '9' || search.knd_cd == '10' || search.knd_cd == '11'){
+				searchMarker.setImage(bankImage2);
+			} else if(search.knd_cd == '12' || search.knd_cd == '13' || search.knd_cd == '14' || search.knd_cd == '15'){
+				searchMarker.setImage(hospitalImage2);
+			} else if(search.knd_cd == '16'  || search.knd_cd == '17' || search.knd_cd == '18' || search.knd_cd == '19'){
+				searchMarker.setImage(bookstoreImage2);
+			} else if(search.knd_cd == '20'){
+				searchMarker.setImage(disabled_supportImage2);
+			} else if(search.knd_cd == '21'){
+				searchMarker.setImage(disabledImage2);
+			} else if(search.knd_cd == '22' || search.knd_cd == '23' || search.knd_cd == '24'){
+				searchMarker.setImage(officeImage2);
+			} else if(search.knd_cd == '27' || search.knd_cd == '30'){
+				searchMarker.setImage(upperParkingLotImage2);
+			} else if(search.knd_cd == '28'){
+				searchMarker.setImage(gateImage2);
+			} else {
+				searchMarker.setImage(facilitiesImage2);
+			}
+			searchMarkers.push(searchMarker);
+			searchMarkers[i].setMap(map);
+			var content='';
+			var convin_name='';
+			if(langType == 'eng'){
+				convin_name = search.ename;
+			} else {
+				convin_name = search.name;
+			}
+		    content += '<div class="info_wrap">';
+		    content +=  '    <div class="info_title">' ;
+		    content += '        <a href="'+url+'"><p class="kor_title">'+convin_name;
+		    if(search.vil_dong_nm != '' && search.vil_dong_nm != null){
+		    	content += '('+search.vil_dong_nm;
+		    	if(langType == 'eng'){ // 영문
+		    		content += 'DONG)';
+				}
+				else{	//한글
+					content += '동)';
+				}
+		    }
+		    content += '</p></a>';
+		    content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+
+			if(search.con_type == 'F'){
+		    	if(search.floor_info.length != 0){
+		    		content +=  '<div class="floor_info_list">';
+		    		for(var j=0; j<search.floor_info.length; j++){
+		    			var floor_info = search.floor_info[j];
+		    			content += '<p>'+floor_info.flr_nm+'&nbsp;'+floor_info.convin_inst_kor_nm+'</p>';
+		    		}
+		    		content +=  '</div>';
+		    	}
+			}
+
+		    content +=  '    </div>';
+		    content += '<div class="bus_infoStartEnd">';
+            content += '<div class="btn">';
+            content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+convin_name;
+            if(search.vil_dong_nm != '' && search.vil_dong_nm != null){
+            	content += '('+ search.vil_dong_nm;
+            	if(langType == 'eng'){ // 영문
+            		content += 'DONG)';
+				}
+				else{	//한글
+					content += '동)';
+				}
+			}
+			if(langType == 'eng'){ // 영문
+				content += '&start_lat='+search.lat_val+'&start_lon='+search.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+			}
+			else{	//한글
+				content += '&start_lat='+search.lat_val+'&start_lon='+search.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+			}
+			content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+search.name;
+			if(search.vil_dong_nm != '' && search.vil_dong_nm != null){
+				content += '('+ search.vil_dong_nm ;
+				if(langType == 'eng'){ // 영문
+            		content += 'DONG)';
+				}
+				else{	//한글
+					content += '동)';
+				}
+			}
+			if(langType == 'eng'){ // 영문
+				content += '&end_lat='+search.lat_val+'&end_lon='+search.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+			}
+			else{	//한글
+				content += '&end_lat='+search.lat_val+'&end_lon='+search.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+			}
+            content += '</div>';
+            content += '</div>';
+		    content +=  '</div>';
+
+
+		    var infowindow = new daum.maps.CustomOverlay({});
+
+		    infowindow = new daum.maps.CustomOverlay({
+				content: content,
+				position : new daum.maps.LatLng(search.lat_val, search.lon_val)
+			});
+
+		    daum.maps.event.addListener(searchMarkers[i], 'mouseover', makeOverListener(map, searchMarkers[i], infowindow));
+
+		    overlays.push(infowindow);
+
+		    mouseoverFunction = function(i){
+		    	var search_img2='';
+
+		    	if(search_list[i].knd_cd == '1'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_1.png';
+		    		} else if(search_list[i].knd_cd == '2'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_2.png';
+		    		} else if(search_list[i].knd_cd == '3'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_3.png';
+		    		} else if(search_list[i].knd_cd == '4'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_4.png';
+		    		} else if(search_list[i].knd_cd == '5' || search_list[i].knd_cd == '6' || search_list[i].knd_cd == '7'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_5.png';
+		    		} else if(search_list[i].knd_cd == '8' || search_list[i].knd_cd == '9' || search_list[i].knd_cd == '10' || search_list[i].knd_cd == '11'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_8.png';
+		    		} else if(search_list[i].knd_cd == '12' || search_list[i].knd_cd == '13' || search_list[i].knd_cd == '14' || search_list[i].knd_cd == '15'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_12.png';
+		    		} else if(search_list[i].knd_cd == '16'  || search_list[i].knd_cd == '17' || search_list[i].knd_cd == '18' || search_list[i].knd_cd == '19'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_16.png';
+		    		} else if(search_list[i].knd_cd == '20'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_20.png';
+		    		} else if(search_list[i].knd_cd == '21'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_21.png';
+		    		} else if(search_list[i].knd_cd == '22' || search_list[i].knd_cd == '23' || search_list[i].knd_cd == '24'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_22.png';
+		    		} else if(search_list[i].knd_cd == '27' || search_list[i].knd_cd == '30'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_27.png';
+		    		} else if(search_list[i].knd_cd == '28'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_30.png';
+		    		} else {
+		    		search_img2 ='/web/common/images/marker/marker_facilities_0.png';
+		    		}
+		    	var content2 ='';
+		    	var convin_name='';
+		    	if(langType == 'eng'){
+		    		convin_name = search_list[i].ename;
+		    	} else {
+		    		convin_name = search_list[i].name;
+		    	}
+				content2 += '<div class="info_wrap">';
+				content2 += '    <div class="info_title">';
+				content2 += '        <a href="'+url+'"><p class="kor_title">'+convin_name;
+				if(search_list[i].vil_dong_nm != '' && search_list[i].vil_dong_nm != null){
+					content2 += '('+search_list[i].vil_dong_nm;
+					if(langType == 'eng'){ // 영문
+			    		content2 += 'DONG)';
+					}
+					else{	//한글
+						content2 += '동)';
+					}
+				}
+				content2 += '</p></a>';
+				content2 +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+
+				if(search_list[i].con_type == 'F'){
+			    	if(search_list[i].floor_info.length != 0){
+			    		content2 +=  '<div class="floor_info_list">';
+			    		for(var j=0; j<search_list[i].floor_info.length; j++){
+			    			var floor_info = search_list[i].floor_info[j];
+			    			content2 += '<p >'+floor_info.flr_nm+'&nbsp;'+floor_info.convin_inst_kor_nm+'</p>';
+			    		}
+			    		content2 +=  '</div>';
+			    	}
+				}
+
+
+				content2 += '    </div>' ;
+				content2 += '<div class="bus_infoStartEnd">';
+                content2 += '<div class="btn">';
+
+                content2 += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+convin_name;
+                if(search_list[i].vil_dong_nm != '' && search_list[i].vil_dong_nm != null){
+                	content2 += '('+ search_list[i].vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					content2 += '동)';
+    				}
+    			}
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&start_lat='+search_list[i].lat_val+'&start_lon='+search_list[i].lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&start_lat='+search_list[i].lat_val+'&start_lon='+search_list[i].lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+    			}
+    			content2 += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+search_list[i].name;
+    			if(search_list[i].vil_dong_nm != '' && search_list[i].vil_dong_nm != null){
+    				content2 += '('+ search_list[i].vil_dong_nm;
+    				if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					content2 += '동)';
+    				}
+    			}
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&end_lat='+search_list[i].lat_val+'&end_lon='+search_list[i].lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&end_lat='+search_list[i].lat_val+'&end_lon='+search_list[i].lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+    			}
+
+                content2 += '</div>';
+                content2 += '</div>';
+				content2 += '</div>';
+
+			    var infowindow2 = new daum.maps.CustomOverlay({});
+			    infowindow2 = new daum.maps.CustomOverlay({
+					content: content2,
+					position : new daum.maps.LatLng(search_list[i].lat_val, search_list[i].lon_val)
+				});
+
+			    makeOverListener2(map, searchMarkers[i], infowindow2);
+			    overlays.push(infowindow2);
+
+			    panLatLngTo(search_list[i].lat_val, search_list[i].lon_val);
+
+			};
+
+			 mouseoutFunction = function(i){
+				 closeOverlay();
+			 };
+
+
+		}
+    }else{
+    	html += '<div class="place">';
+    	html += '<span class="position3"><img src="/web/common/images/marker/marker_facilities_0.png" alt=\'시설아이콘\'/></span>';
+		html += '<div class="placeCon">';
+		if(langType == 'eng'){ // 영문
+			html += '<strong>There are no results to display</strong>';
+		}
+		else{	//한글
+			html += '<strong>검색결과가 없습니다</strong>';
+		}
+		html += '</div>';
+		html += '</div>';
+    }
+
+	$('.asideCon').html(html);
+	};
+
+	searchWordFailCallback = function(request, status, error){
+	};
+
+	function panLatLngTo(x,y) {
+	    var moveLatLon = new daum.maps.LatLng(x,y);
+	    map.panTo(moveLatLon);
+	}
+	function panCoordsTo(x,y) {
+	    var moveCoords = new daum.maps.Coords(x,y);
+	    map.panTo(moveCoords);
+	}
+
+	// Map상의 마커들 삭제
+    function clearMarkers(mode) {
+        for (var i = 0; i < amenitiesMarkers.length; i++) {
+        	closeOverlay();
+            amenitiesMarkers[i].setMap(null);
+        }
+        amenitiesMarkers=[];
+        for (var i = 0; i < disabledRestroomMarkers.length; i++) {
+        	closeOverlay();
+        	disabledRestroomMarkers[i].setMap(null);
+        }
+        disabledRestroomMarkers=[];
+        for (var i = 0; i < disabledMarkers.length; i++) {
+        	closeOverlay();
+        	disabledMarkers[i].setMap(null);
+        }
+        disabledMarkers=[];
+        for (var i = 0; i < searchMarkers.length; i++) {
+        	closeOverlay();
+        	searchMarkers[i].setMap(null);
+        }
+        searchMarkers=[];
+        for (var i = 0; i < ceremonyMarkers.length; i++) {
+        	closeOverlay();
+            ceremonyMarkers[i].setMap(null);
+        }
+        ceremonyMarkers = [];
+        if(path != null){
+        	path = [];
+		}
+        if(path2 != null){
+        	path2 = [];
+		}
+        if(path3 != null){
+        	path3 = [];
+		}
+        if(ceremonyMarker != null){
+	        ceremonyMarker.setMap(null);
+	        ceremonyMarker='';
+        }
+        for (var i = 0; i < gateList.length; i++) {
+        	closeOverlay();
+        	gateList[i].setMap(null);
+        }
+        if(amenitiesMarker != null){
+        	amenitiesMarker.setMap(null);
+        	amenitiesMarker='';
+        }
+        if(buildingMarker != null){
+        	buildingMarker.setMap(null);
+        	buildingMarker='';
+        }
+        if(organizationMarker != null){
+        	organizationMarker.setMap(null);
+        	organizationMarker='';
+        }
+        if(parkingLotMarker != null){
+        	parkingLotMarker.setMap(null);
+        	parkingLotMarker='';
+        }
+        if(parkingLot != null){
+        	parkingLot.setMap(null);
+        	parkingLot='';
+        }
+
+		if(numMarkers.length  > 0){
+			for (var i = 0; i < numMarkers.length; i++) {
+	        	numMarkers[i].setMap(null);
+	        }
+			numMarkers = [];
+		}
+
+
+		if(startMarker_arr.length  > 0){
+			for (var i = 0; i < startMarker_arr.length; i++) {
+	        	startMarker_arr[i].setMap(null);
+	        }
+			startMarker_arr = [];
+		}
+
+		if(arriveMarker_arr.length  > 0){
+			for (var i = 0; i < arriveMarker_arr.length; i++) {
+	        	arriveMarker_arr[i].setMap(null);
+	        }
+			arriveMarker_arr = [];
+		}
+
+		if(tourLine){
+        	tourLine.setMap(null);
+		}
+        path = [];
+		path2 = [];
+		path3 = [];
+        for (var i = 0; i < spot_markers.length; i++) {
+        	closeOverlay();
+        	spot_markers[i].setMap(null);
+        }
+        spot_markers = [];
+    }
+
+    // 주차장 영역 삭제
+    function clearParkingLots() {
+        for (var i = 0; i < upperParkingLotList.length; i++) {
+        	closeOverlay();
+            upperParkingLotList[i].setMap(null);
+        }
+        upperParkingLotList=[];
+        for (var i = 0; i < underParkingLotList.length; i++) {
+        	closeOverlay();
+            underParkingLotList[i].setMap(null);
+        }
+        underParkingLotList=[];
+        for (var i = 0; i < underParkingLotList.length; i++) {
+        	closeOverlay();
+            underParkingLotList[i].setMap(null);
+        }
+        underParkingLotList=[];
+    }
+
+	 function clearRoadSearchPolyline(){
+	   	 if(road_search_polyline != null && road_search_polyline != ''){
+	   		 road_search_polyline.setMap(null);
+	   		 road_search_polyline='';
+	        }
+	   	 if(road_search_polyline2 != '' && road_search_polyline2 != null){
+	   		 road_search_polyline2.setMap(null);
+	   		 road_search_polyline2='';
+	        }
+	   	 if(road_search_polyline3 != '' && road_search_polyline3 != null){
+	   		 road_search_polyline3.setMap(null);
+	   		 road_search_polyline3='';
+	        }
+	   	 if(polyline_arr.length > 0){
+		   	for(var i = 0 ; i < polyline_arr.length ; i++){
+				if(polyline_arr[i] != null){
+					polyline_arr[i].setMap(null);
+				}
+			}
+			polyline_arr = [];
+			path_arr = [];
+	   	 }
+	}
+
+
+
+	function makeOverListener(map, marker, infowindow) {
+	    return function() {
+	    	mouseOverMarker = marker;
+	    	closeOverlay();
+	    	infowindow.setMap(map);
+	    };
+	}
+
+	function makeOverListener2(map, marker, infowindow) {
+		closeOverlay();
+		infowindow.setMap(map);
+	}
+
+	function closeOverlay() {
+		 for (var i = 0; i < overlays.length; i++) {
+	        overlays[i].setMap(null);
+	    }
+	}
+
+
+	function clickRoadMarker(type){
+		location.href = "/web/search_road.action?road_marker_type="+type;
+	}
+
+	function pop_show(obj) {
+		$("#"+obj).show();
+		$("#mask").show();
+	}
+
+	function pop_hide(obj) {
+		$("#"+obj).hide();
+		$("#mask").hide();
+	}
+
+
+	 //]]>
+</script>
+  <div id="container">
+    	<!--왼쪽메뉴및컨텐츠-->
+    	<div id="aside" style="position: relative;">
+        	<!-- 현재위치 주변시설-->
+        	<div class="asideHeader" style="position: absolute; width: 100%; z-index: 9999;">
+            	<!--현재위치-->
+            	<div class="nowArea">
+                </div>
+                <div class="searchResultTxt">
+                </div>
+                <!--현재위치-->
+                <div class="subTitle"></div>
+                <ul id="amenities_sel" style="display: none;">
+	               	<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #00ffff">
+               			<a href="#" onclick="amenitiesList(8)">은행/ATM/우체국</a>
+              		</li>
+              		<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #ccffff">
+               			<a href="#" onclick="amenitiesList(8)">은행/ATM/우체국</a>
+              		</li>
+	             </ul>
+            </div>
+
+            <!--리스트-->
+            <div class="asideConList" style="position: relative; top: 40px;">
+            	<!--앱다운-->
+				<div class="appClick">
+					<span>서울대 캠퍼스맵 다운로드 받기 </span>
+					<div class="appChoice">
+						<a href="https://appsto.re/kr/EMwvdb.i" title="iOS 전용 앱 다운받기" class="iosApp"  target="_blank">Download
+							for iOS</a> <a href="https://play.google.com/store/apps/details?id=kr.ac.snu.map" title="Android 전용 앱 다운받기 "
+							class="androidApp"  target="_blank">Download for Android</a>
+					</div>
+				</div>
+				<div class="asideCon" id="add_category" >
+				</div>
+				<div class="asideCon" id="category_result" style="display: none"></div>
+             </div>
+            <!--//리스트-->
+            <!-- //현재위치 주변시설-->
+        </div>
+        <!--왼쪽메뉴및컨텐츠-->
+        <div id="content">
+        	<div id="map" style="width:1000px;height:100%;position:relative;overflow:hidden;">
+        		<!-- 로딩바 -->
+				<div class="mo-ui-layer progress" id="loading" style="visibility: hidden;">
+					<div class="mo-ui-innerlayer">
+						<div class="mo-icon-loading">
+							<img src="/m/img/common/loading.gif">
+						</div>
+					</div>
+				</div>
+				
+       		<div id="notiPopup" style="width: 600px; height: auto; max-height: 500px; background: rgb(255, 255, 255); color: rgb(0, 0, 0); 
+								position: absolute; padding: 20px; border: 0.5px solid rgb(88, 88, 88); text-align: center; top: 50%; left: 50%; 
+								transform: translate(-50%, -50%); box-shadow: grey 8px 8px 8px; visibility: hidden; z-index:100">
+				<h3 style="margin-bottom:15px; font-weight:bold; color:#424242; font-size:16px">출입 인원 정보</h3>
+				
+				<!-- 출입정보가 없을때 -->
+				<div id="notiPopupEmpty" style="margin-bottom:20px; font-size:14px; display:none">
+					<p>출입 인원 정보가 없습니다.</p>
+				</div>
+				
+				<!-- 출입정보 확인 팝업 -->
+				<div id="notiPopupTable" style="height:auto; min-height:50px; max-height:300px; margin-top:5px; margin-bottom:15px; overflow-y:scroll;">
+					<table class="g_tbl_02" style="height:100px; margin-left:auto; margin-right:auto; overflow-y:scroll" id="enterCurCntTable">
+					</table>
+				</div>
+				<div class="btn_wrap_full" style="width:100%;">
+					<a class="g_btn_01" id="confirm" onclick="popupConfimFunction()">닫기</a>
+				</div>
+			</div>
+        	</div>
+        	<!-- 지도 위에 표시될 출발,도착 -->
+		    <div class="FlagWrap" style="position: absolute;left: 0px;top: -25px;">
+		    	<div class="Flag">
+		    		<div class="originWrap">
+		    			<a id="start" class="origin"  onclick="clickRoadMarker('start')">
+		    				<i></i>
+		    			</a>
+		    		</div>
+		    		<div class="destWrap">
+		    			<a id="arrive" class="dest" onclick="clickRoadMarker('arrive')">
+		    				<i></i>
+		    			</a>
+		    		</div>
+		    	</div>
+		    </div>
+
+		    <div class="btn_map">
+	       		<div class="btn_map_hide">
+	       			<p><a href="#" class="btn_st btn_white" style="margin-bottom:5px" onclick="main_pop_show('url_copy')">URL 복사</a></p>
+	       			<p><a href="#" class="btn_st btn_white" onclick="main_pop_show('map_copy')">지도퍼가기</a></p>
+	       		</div>
+	       		<a href="#" class="btn_st btn_white" onclick="$('.btn_map_hide').toggle()">지도 공유</a>
+	       		<!-- <a href="http://openapi.snu.ac.kr/mob/oapi/main/main.action" target ="_blank" class="btn_st btn_white">OpenAPI 신청 안내</a> -->
+	       	</div>
+        </div>
+        <!-- 지도퍼가기 -->
+        <div class="pop_wrap3" id="map_copy">
+        	<div class="pop_title">지도퍼가기</div>
+        	<div id="staticMap" class="pop_content" style="width:800px;height:500px;">
+        	</div>
+        	<div style="width:100%; margin-bottom:15px; text-align:left;">상단의 이미지를 우클릭 후 다른이름으로 저장 하여 사용 해 주세요</div>
+        	<div class="pop_footer">
+        		<a id="img_download" onclick="main_pop_download('map_copy')"><img src="common/images/btn_ok.png" alt="확인"></a>
+        		<a href="#" onclick="main_pop_hide('map_copy')"><img src="common/images/btn_cancel.png" alt="취소"></a>
+        	</div>
+        </div>
+
+        <!-- url 복사 -->
+        <div class="pop_wrap2" id="url_copy" style="width:280px">
+        	<div class="pop_title">URL 복사</div>
+        	<div class="pop_content">
+        		<input type="text" name="urlcopy" class="pop_input" readOnly>
+        	</div>
+        	<div class="pop_footer">
+        		<a href="#" id="copy"><img src="common/images/btn_copy.png" alt="복사"></a>
+        		<a href="#" onclick="pop_hide('url_copy')"><img src="common/images/btn_cancel.png" alt="취소"></a>
+        	</div>
+        </div>
+        <div id="mask"></div>
+    </div>
+</div>
+<!-- map  -->
+<!-- 201812-web
+<script nonce="" type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=11ca7a9d7753db310d523b418513fc66&libraries=services,clusterer"></script>
+-->
+    <script nonce="" type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e3a44bd8c7b111989f6ad5b05f9afd9a&libraries=services,clusterer"></script>
+<!-- <script nonce="" type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4a99be52171505f704578541eac789ad5f9aff98&libraries=services,clusterer"></script> -->
+<script nonce="" src="/resource/jslib/map/map_core.js"></script>
+<script nonce="" src="/resource/jslib/map/daum_map_core.js"></script>
+<script nonce="" src="/web/common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script nonce="" type="text/javascript">
+    //<![CDATA[
+
+		var current_lat_val = $('#current_lat_val').val();
+		var current_lon_val = $('#current_lon_val').val();
+		var convin_inst_knd_cd = '';
+		var convin_inst_knd_kor_nm = '';
+		var search_word = $('#search_word').val();
+
+    	// lat, lon파라메터 넘어올 경우 지도상 center에 위치 후 marker표시
+    	var lat, lon;
+    	var paramUrl = window.location.search.substring(1);
+    	var tempParamUrl = paramUrl.replace('?', '');
+    	var tempParamUrlArr = tempParamUrl.split('&');
+    	for (var i = 0; i < tempParamUrlArr.length; i++) {
+			var pair = tempParamUrlArr[i].split('=');
+			if (pair[0] == 'LAT') {
+				lat = pair[1];
+			} else if (pair[0] == 'LON') {
+				lon = pair[1];
+			}
+		}
+    	
+    	// lat, lon 조건이 맞을 경우
+    	// 지도상 center에 위치
+    	if (lat != null && lat != '' 
+    			&& lon != null && lon != '') {
+    		current_lat_val = lat;
+    		current_lon_val = lon;
+		}
+    	
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+		   mapOption = {
+		      //center: new daum.maps.LatLng(37.4613186057004 , 126.95395103327749), // 지도의 중심좌표
+		      center: new daum.maps.LatLng(current_lat_val,current_lon_val), // 지도의 중심좌표
+		   };
+		var map = new daum.maps.Map(mapContainer, mapOption),
+			constructionOverlays = [];
+		
+		// lat, lon 조건이 맞을 경우
+		// 지도에 maker 표시
+		if (lat != null && lat != '' 
+			&& lon != null && lon != '') {
+			var markerPosition = new daum.maps.LatLng(lat, lon);
+			var marker = new daum.maps.Marker({
+				position: markerPosition
+			});
+			marker.setMap(map);
+		}
+		
+		if (window.innerHeight) {
+			$('#map').width(window.innerWidth - 296);
+		 } else {
+			$('#map').width(document.documentElement.clientWidth - 296);
+	    }
+		var zoomControl = new daum.maps.ZoomControl();
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		map.relayout();
+
+		(function($){
+			$(window).load(function(){
+				var asideCon = $('.asideCon').height();
+				var headerH = $('.asideHeader').height();
+				if (window.innerHeight) {
+					var asideConListH = window.innerHeight - (headerH + 168);
+					$('.asideConList').height(asideConListH);
+					//$('#map').width(window.innerWidth - 296);
+					$('#map').height(window.innerHeight - 96);
+					$('#content').width(window.innerWidth - 296);
+
+				 } else {
+					var asideConListH = document.documentElement.clientHeight - (headerH + 168);
+					$('.asideConList').height(asideConListH);
+					$('#map').height(document.documentElement.clientHeight - 96);
+					$('#content').width(document.documentElement.clientWidth - 296);
+			     }
+
+
+			});
+			$(window).resize(function() {
+				var asideCon = $('.asideCon').height();
+				var headerH = $('.asideHeader').height();
+				if (window.innerHeight) {
+					var asideConListH = window.innerHeight - (headerH + 168);
+					$('.asideConList').height(asideConListH);
+					$('#map').width(window.innerWidth - 296);
+					$('#map').height(window.innerHeight - 96);
+					$('#content').width(window.innerWidth - 296);
+				 } else {
+					var asideConListH = document.documentElement.clientHeight - (headerH + 168);
+					$('.asideConList').height(asideConListH);
+					$('#map').width(document.documentElement.clientWidth - 296);
+					$('#map').height(document.documentElement.clientHeight - 96);
+					$('#content').width(document.documentElement.clientWidth - 296);
+			    }
+			});
+			/*스크롤*/
+
+
+
+		})(jQuery);
+
+		$(document).ready(function () {
+
+			$('.nowArea').hide();
+			
+			if(convin_inst_knd_cd != null && convin_inst_knd_cd != '') {
+				/* if(location.host == 'map.snu.ac.kr') {
+					// 운영
+					if(convin_inst_knd_cd == '54') {
+						amenitiesList(54, 37.4613186057004, 126.9539510332774, '공사 위치');
+					}
+				} else {
+					// 개발
+					if(convin_inst_knd_cd == '48') {
+						amenitiesList(48, 37.4613186057004, 126.9539510332774, '공사 위치');
+					}
+				} */
+				if(convin_inst_knd_cd == '48') {
+					amenitiesList(48, 37.4613186057004, 126.9539510332774, '공사 위치');
+				}
+			} else {
+				categoryList();
+			}
+
+			if(search_word == ''){
+				if(langType == 'eng'){ // 영문
+					$('.subTitle').html("Nearby Facilities");
+				}
+				else{	//한글
+					$('.subTitle').html("주변시설");
+				}
+			}
+			$(".asideConList").mCustomScrollbar({
+				theme:"dark-3"
+			});
+
+			$(".btn_white").mouseenter(function (){
+				$(this).addClass("on");
+			});
+
+			$(".btn_white").mouseleave(function (){
+				$(this).removeClass("on");
+			});
+
+
+			var selected_buil_marker_arr = [];
+			kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+				var lat = (mouseEvent.latLng.getLat()).toFixed(5);
+				var lng = (mouseEvent.latLng.getLng()).toFixed(5);
+				console.log('map click', 'lat : ' + lat, 'lng : ' + lng);
+				
+				var ajax_url = '/api/getSelectedSurroundingBuildings.action?lat=' + lat + '&lng=' + lng;
+				var param = '';
+				$.ajax({
+			        'type': 'GET',
+			        'url': ajax_url,
+			        'contentType': 'text/plain; charset=utf-8',
+			        'data': param,
+			        'dataType': 'json',
+			        'beforeSend':function(request){
+			        	request.setRequestHeader('access_token', '111');
+			        },
+			        'error':function(request,status,error){
+			        	console.log('error', 'request : ' + request, 'status : ' + status, 'error : ' + error);
+			        },
+			        'success': function(data){
+			        	console.log('success', 'data : ' + data);
+
+			        	closeOverlay();
+			        	
+			        	// 기존 마커 제거
+		        		for (var i = 0; i < selected_buil_marker_arr.length; i++){
+		        			selected_buil_marker_arr[i].setMap(null);
+		    			}
+		        		selected_buil_marker_arr = [];
+		        		
+			        	if(data.rows != null && data.rows.length > 0) {	
+				        	var lat = data.rows[0].lat_val;
+				        	var lng = data.rows[0].lon_val;
+				        	var title = data.rows[0].inst_kor_nm;
+				        	var seq = data.rows[0].inst_seq;
+				        	
+				        	var marker = new daum.maps.Marker({ position: new daum.maps.LatLng(lat, lng)});
+				        	marker.setImage(facilitiesImage);
+							marker.setMap(map);
+							selected_buil_marker_arr.push(marker);
+							
+							var content = '<div class="select_info_wrap" style="top:-60px; color:#ffffff" ' +
+							'onClick="location.href=\'/m/facility_detail.action?current_lat_val=&current_lon_val=&convinType=N&inst_seq=' + seq + '\'">' +
+				            '    <div class="select_info_title">' +
+				            '        <p class="select_eng_title" style="font-size:12px">'+title+'</p>' +
+				            '    </div>' +
+				            '</div>';
+			                
+				            customOverlay = new daum.maps.CustomOverlay({
+							    map : map,
+							  	position: new daum.maps.LatLng(lat, lng),
+								content: content,
+								zIndex: 3
+							});
+				            
+				            overlays.push(customOverlay);
+			        	}
+			        }
+			    });
+			});
+
+		});
+		
+		function mvDetail(seq, title) {
+			var url = '/m/facility_detail.action?current_lat_val=&current_lon_val=&convinType=N&inst_seq=' + seq;
+			appScript.moveNextPage(title, '', url, 'N');
+		}
+
+		categoryList = function(){
+			var ajax_url = '/api/amenities/category.action';
+			var param = '';
+
+			$.ajax({
+		        'type': 'GET',
+		        'url': ajax_url,
+		        'contentType': 'text/plain; charset=utf-8',
+		        'data': param,
+		        'dataType': 'json',
+		        'beforeSend':function(request){
+		        	request.setRequestHeader('access_token', '111');
+		        },
+		        'error':function(request,status,error){
+		        	categoryViewFailCallback(request,status,error); //실패 콜백함수 호출
+		        },
+		        'success': function(data){
+		        	categoryViewSuccessCallback(data); //성공 콜백함수 호출
+		        }
+		    });
+		};
+
+		categoryViewSuccessCallback = function(data){
+			var rows = data.rows;
+			var add_category = '';
+			
+			// [보안수정] prntmt_url null 체크 헬퍼
+			function getSafeImgSrc(prntmt_url) {
+				if (prntmt_url == null || prntmt_url == '' || prntmt_url == 'null') {
+					return '/api/upload/category/ad60773c-c54c-47b5-b948-0b10d07dfdd3.png';
+				}
+				return prntmt_url;
+			}
+
+			var amenities_sel_area = '';
+
+			for(var i=0; i<rows.length; i++){
+				add_category +="<div class='place'>";
+
+
+				if(langType == 'eng'){
+					amenities_sel_area += '<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #00ffff">';
+					amenities_sel_area += '<a href="#" onclick="amenitiesList('+rows[i].convin_inst_knd_cd+','+current_lat_val+','+current_lon_val+' , \'' + rows[i].convin_inst_knd_eng_nm + '\')">' + rows[i].convin_inst_knd_eng_nm + '</a>';
+					amenities_sel_area += '</li>';
+				}else{
+					amenities_sel_area += '<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #00ffff">';
+					amenities_sel_area += '<a href="#" onclick="amenitiesList('+rows[i].convin_inst_knd_cd+','+current_lat_val+','+current_lon_val+' , \'' + rows[i].convin_inst_knd_kor_nm + '\')">' + rows[i].convin_inst_knd_kor_nm + '</a>';
+					amenities_sel_area += '</li>';
+				}
+
+				if(rows[i].sub_category.length != 0){
+
+				// 하위 카테고리
+					for(var j=0; j<rows[i].sub_category.length;j++){
+						if(langType == 'eng'){ // 영문
+
+							amenities_sel_area += '<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #ccffff">';
+							amenities_sel_area += '<a href="#" onclick="amenitiesDetail('+rows[i].sub_category[j].convin_inst_knd_cd+','+current_lat_val+','+current_lon_val+' , \'' + rows[i].sub_category[j].convin_inst_knd_eng_nm + '\')">' + rows[i].sub_category[j].convin_inst_knd_eng_nm + '</a>';
+							amenities_sel_area += '</li>';
+						} else { // 국문
+							amenities_sel_area += '<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #ccffff">';
+							amenities_sel_area += '<a href="#" onclick="amenitiesDetail('+rows[i].sub_category[j].convin_inst_knd_cd+','+current_lat_val+','+current_lon_val+' , \'' + rows[i].sub_category[j].convin_inst_knd_kor_nm + '\')">' + rows[i].sub_category[j].convin_inst_knd_kor_nm + '</a>';
+							amenities_sel_area += '</li>';
+						}
+					}
+				// 하위 카테고리
+				}
+
+				if(rows[i].icon_file_yn == 'Y'){
+					if(langType == 'eng'){
+						if(rows[i].use_yn == 'Y'){
+							if(rows[i].convin_inst_knd_cd == 21){
+								add_category +="<img src='/api"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='disabledList("+current_lat_val+","+current_lon_val+")'>"+rows[i].convin_inst_knd_eng_nm+"</a></div>";
+							}else{
+								add_category +="<img src='/api"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_eng_nm + "\")'>"+rows[i].convin_inst_knd_eng_nm+"</a></div>";
+							}
+						} else {
+							if(rows[i].convin_inst_knd_cd == 21){
+								add_category +="<img src='/api"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='disabledList("+current_lat_val+","+current_lon_val+")'>"+rows[i].convin_inst_knd_eng_nm+"</a></div>";
+							}else{
+								add_category +="<img src='/api"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_eng_nm + "\")'>"+rows[i].convin_inst_knd_eng_nm+"</a></div>";
+							}
+						}
+
+					}else{
+						if(rows[i].use_yn == 'Y'){
+							if(rows[i].convin_inst_knd_cd == 21){
+								add_category +="<img src='/api/"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='disabledList("+current_lat_val+","+current_lon_val+")'>"+rows[i].convin_inst_knd_kor_nm+"</a></div>";
+							}else{
+								add_category +="<img src='/api/"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_kor_nm + "\")'>"+rows[i].convin_inst_knd_kor_nm+"</a></div>";
+							}
+						} else {
+							if(rows[i].convin_inst_knd_cd == 21){
+								add_category +="<img src='/api/"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='disabledList("+current_lat_val+","+current_lon_val+")'>"+rows[i].convin_inst_knd_kor_nm+"</a></div>";
+							}else{
+								add_category +="<img src='/api/"+getSafeImgSrc(rows[i].prntmt_url)+"' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_kor_nm + "\")'>"+rows[i].convin_inst_knd_kor_nm+"</a></div>";
+							}
+						}
+					}
+				} else if(rows[i].icon_file_yn == 'N'){
+					if(langType == 'eng'){
+						if(rows[i].use_yn == 'Y'){
+							add_category +="<img src='/api/upload/category/ad60773c-c54c-47b5-b948-0b10d07dfdd3.png'' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_eng_nm + "\")'>"+rows[i].convin_inst_knd_eng_nm+"</a></div>";
+						} else {
+							add_category +="<img src='/api/upload/category/ad60773c-c54c-47b5-b948-0b10d07dfdd3.png'' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_eng_nm + "\")'>"+rows[i].convin_inst_knd_eng_nm+"</a></div>";
+						}
+					}else{
+						if(rows[i].use_yn == 'Y'){
+							add_category +="<img src='/api/upload/category/ad60773c-c54c-47b5-b948-0b10d07dfdd3.png'' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_kor_nm + "\")'>"+rows[i].convin_inst_knd_kor_nm+"</a></div>";
+						} else {
+							add_category +="<img src='/api/upload/category/ad60773c-c54c-47b5-b948-0b10d07dfdd3.png'' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='amenitiesList("+rows[i].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + rows[i].convin_inst_knd_kor_nm + "\")'>"+rows[i].convin_inst_knd_kor_nm+"</a></div>";
+						}
+					}
+				}
+
+				if(rows[i].sub_category.length != 0){
+					var scategory_kor_nm='';
+				// 하위 카테고리
+					add_category +="<a href='#' class='cateBtn' onclick='cate_list_show(this)'></a>";
+					add_category += "<ul class='sub_cate_list'>";
+					for(var j=0; j<rows[i].sub_category.length;j++){
+						if(langType == 'eng'){ // 영문
+							scategory_kor_nm = rows[i].sub_category[j].convin_inst_knd_eng_nm;
+						} else { // 국문
+							scategory_kor_nm = rows[i].sub_category[j].convin_inst_knd_kor_nm;
+						}
+						add_category += "<li><a href='#' onclick='amenitiesDetail("+rows[i].sub_category[j].convin_inst_knd_cd+","+current_lat_val+","+current_lon_val+" , \"" + scategory_kor_nm + "\")'>"+scategory_kor_nm+"</a></li>";
+					}
+					add_category += "</ul>";
+				// 하위 카테고리
+				}
+
+				add_category += "</div>";
+			}
+			
+			// 스마트서울맵 추가
+			add_category += "<div class='place'>";
+			if(langType == 'eng'){
+			    add_category += "<img src='/api/upload/category/6460db48-f771-44e6-8e10-9b24b53d833d.png' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='https://map.seoul.go.kr/smgis2/short/6PbGF' target='_blank'>AllWays (Barrier-Free Map)</a></div>";
+			} else {
+			    add_category += "<img src='/api/upload/category/6460db48-f771-44e6-8e10-9b24b53d833d.png' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='https://map.seoul.go.kr/smgis2/short/6PbGF' target='_blank'>모두의 지도(배리어프리)</a></div>";
+			}
+			add_category += "</div>";
+
+
+			// 강의실 추가			
+			// amenities_sel_area += '<li style="border-bottom: 1px solid blue; font-size: 14px; text-align: center;height: 30px; line-height: 30px; background: #00ffff">';
+			// amenities_sel_area += '<a href="#" onclick="lectureList()">강의실</a>';
+			// amenities_sel_area += '</li>';
+			// $('#amenities_sel').html( amenities_sel_area );
+			// 강의실 추가
+			// add_category +="<div class='place'>";
+			// add_category += "<img src='/api/upload/category/7f203610-6f41-4b70-8772-38a93b232e95.png' alt='카테고리이미지' class='iconImg'><div class='placeCon'><a href='#' onclick='lectureList()'>강의실</a></div>";
+			// add_category += "</div>";
+			$('#add_category').html(add_category);
+			};
+
+		categoryViewFailCallback = function(request, status, error){
+		};
+		
+		lectureList = function() {
+			$('#add_category').hide();
+			
+			var ajax_url = '/api/getClassLatLon.action';
+			var param = {};
+			$.ajax({
+		        'type': 'GET',
+		        'url': ajax_url,
+		        'contentType': 'text/plain; charset=utf-8',
+		        'data': param,
+		        'dataType': 'json',
+		        'beforeSend':function(request){
+		        	request.setRequestHeader('access_token', '111');
+		        },
+		        'error':function(request,status,error){
+		        	console.log("status : " + status + ", error : " + error);
+		        },
+		        'success': function(data){
+		        	clearMarkers();
+		            clearParkingLots();
+		            
+		            mouseOverMarker = null;
+		            
+		            var menuHtml = '';
+
+	                var sub_title_area_html = '강의실';
+	    			sub_title_area_html += '<button style="float: right; line-height: 36px; margin-right: 5px; border: none; background: none;"  onclick=\'showCate();\'><img src="/m/img/btn/back.png" alt="" width="25" ></button>';
+	    			$('.subTitle').html(sub_title_area_html);
+		            
+		            var classAmenitiesList = data.qr_list;
+		            var classAmenitiesHtml = '';
+		            var classAmenitiesMarker;
+		            
+		            for(var i = 0; i < classAmenitiesList.length; i++){
+		            	var classAmenitie = classAmenitiesList[i];
+		            	
+		            	var eY = classAmenitie.lat;
+		                var eX = classAmenitie.lon;
+		                var bdNo = classAmenitie.bdNo;
+		                var bdNm = classAmenitie.bdNm;
+		    			
+		    			var classAmenitiesPosition = new daum.maps.LatLng(eY, eX);
+
+		                classAmenitiesMarker = new daum.maps.Marker({
+		                    map: map,
+		                    position: classAmenitiesPosition,
+		                });
+		                classAmenitiesMarker.setImage(classImage2);
+
+		                var menu_image_src = '/m/img/marker/marker_facilities_class_nor.png';
+		                amenitiesMarkers.push(classAmenitiesMarker);
+		                amenitiesMarkers[i].setMap(map);
+		                
+		                var content = '';
+		                content += '<div class="info_wrap">' ;
+		                content += '<div class="info_title">' ;
+		                content += '<a href="#"><p class="kor_title">' + bdNm;
+		                content += '('+ bdNo;
+		                content += '동)';
+		                content += '</p></a>';
+		                content += '<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+		                content += '</div>' ;
+		                content += '<div class="bus_infoStartEnd">';
+		                content += '<div class="btn">';
+		                content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(bdNo);
+		                content += encodeURIComponent('동')+')';
+		                content += '&start_lat='+eY+'&start_lon='+eX+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+		                content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(bdNo);
+		                content += encodeURIComponent('동')+')';
+		                content += '&end_lat='+eY+'&end_lon='+eX+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+		                content += '</div>';
+		                content += '</div>';
+		                content += '</div>';
+		                var infowindow = new daum.maps.CustomOverlay({});
+		                infowindow = new daum.maps.CustomOverlay({
+							content: content,
+							position : new daum.maps.LatLng(eY, eX)
+						});
+		                daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+		                overlays.push(infowindow);
+		                
+		                //makeClassMarkerClickListener(amenitiesMarkers[i], bdNo);
+
+		                menuHtml += '<div class="place" onmouseover="lectureMouseoverFunction(' + i + ')" onmouseout="lectureMouseoutFunction(' + i + ')">';
+						menuHtml += '<span class="position3"><img src="' + menu_image_src + '" alt="시설아이콘"></span>';
+			            menuHtml += '<div class="placeCon"><a href="#url" class="placeChoice"><strong>' + bdNm + '(' + bdNo + '동)</strong></a>';
+						menuHtml += '</div></div>';
+		            }
+		            
+		            lectureMouseoutFunction = function(i){
+						 closeOverlay();
+					 };
+				    
+				    lectureMouseoverFunction = function(i) {
+				    	popupConfimFunction();
+				    	
+				    	var data = classAmenitiesList[i];
+				    	
+				    	var search_img2='/web/common/images/marker/marker_facilities_1.png';
+				    	var content2 ='';
+				    	
+				    	content2 += '<div class="info_wrap">' ;
+				    	content2 += '<div class="info_title">' ;
+				    	content2 += '<a href="#"><p class="kor_title">' + data.bdNm;
+		                content2 += '('+ data.bdNo;
+		                content2 += '동)';
+		                content2 += '</p></a>';
+		                content2 += '<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+		                content2 += '</div>' ;
+		                content2 += '<div class="bus_infoStartEnd">';
+		                content2 += '<div class="btn">';
+		                content2 += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(data.bdNo);
+		                content2 += encodeURIComponent('동')+')';
+		                content2 += '&start_lat='+data.lat+'&start_lon='+data.lon+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+		                content2 += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(data.bdNo);
+		                content2 += encodeURIComponent('동')+')';
+		                content2 += '&end_lat='+data.lat+'&end_lon='+data.lon+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+		                content2 += '</div>';
+		                content2 += '</div>';
+		                content2 += '</div>';
+		                
+		                var infowindow2 = new daum.maps.CustomOverlay({});
+					    infowindow2 = new daum.maps.CustomOverlay({
+							content: content2,
+							position : new daum.maps.LatLng(data.lat, data.lon)
+						});
+
+					    makeOverListener2(map, amenitiesMarkers[i], infowindow2);
+					    overlays.push(infowindow2);
+
+					    panLatLngTo(data.lat, data.lon);
+				    };
+		            
+		            $('#category_result').html(menuHtml);
+		            $('#category_result').show();
+		            $('#add_category').hide();
+		        }
+		    });
+            
+            function makeClassMarkerClickListener(marker, bdNo) {
+            	kakao.maps.event.addListener(marker, 'click', function() {
+            		popupConfimFunction();
+            		
+    				document.getElementById("loading").style.visibility = "visible";
+            		
+            		var ajax_url = '/api/getClassInfo.action';
+					var param = {'bdNo' : bdNo};
+					
+					$.ajax({
+				        'type': 'GET',
+				        'url': ajax_url,
+				        'contentType': 'text/plain; charset=utf-8',
+				        'data': param,
+				        'dataType': 'json',
+				        'beforeSend':function(request){
+				        	request.setRequestHeader('access_token', '111');
+				        },
+				        'error':function(request,status,error){
+				        	console.log("status : " + status + ", error : " + error);
+							document.getElementById("loading").style.visibility = "hidden";
+				        },
+				        'success': function(data) {		
+							document.getElementById("loading").style.visibility = "hidden";
+							document.getElementById("notiPopup").style.visibility = "visible";
+							document.getElementById("notiPopupEmpty").style.display = "none";
+							document.getElementById("notiPopupTable").style.display = "block";
+							
+				        	var tableHtml = '';
+				        	var list = data.qr_list;
+				        	if(list.length > 0) {
+					        	tableHtml = '<tbody>';
+			        			tableHtml += '<tr>';
+			        			tableHtml += '<th>호실</th><th>강좌명</th><th>수업요일</th><th>수업시간</th><th>수업형태</th><th>QR태깅인원</th>';
+			        			tableHtml += '</tr>';
+			        			
+				        		for(var i = 0 ; i < list.length ; i++) {
+				        			var item = list[i];
+				        			
+				        			var bdRoomCount = item.bdRoomCount;
+				        			var ltDayNm = item.ltDayNm;
+				        			var lsnTmtablRemk = item.lsnTmtablRemk;
+				        			var remk = item.remk;
+				        			if(bdRoomCount == null || bdRoomCount == '') {
+				        				bdRoomCount = '0';
+				        			}
+				        			
+				        			if(ltDayNm == null || ltDayNm == '') {
+				        				ltDayNm = '';
+				        			} else {
+				        				var week = ['일', '월', '화', '수', '목', '금', '토'];
+				        				var dayOfWeek = week[new Date().getDay()];
+				        				if(ltDayNm != dayOfWeek) {
+				        					bdRoomCount = '0';
+				        				}
+				        			}
+				        			
+				        			if(lsnTmtablRemk == null || lsnTmtablRemk == '') {
+				        				lsnTmtablRemk = '';
+				        			}
+				        			
+				        			if(remk == null || remk == '') {
+				        				remk = '';
+				        			}
+				        			
+				        			tableHtml += '<tr>';
+				        			tableHtml += '<td>' + item.bdRoomCtnt + '호</td><td>' + item.sbjtNm + '</td><td>' + ltDayNm + '</td>';
+				        			tableHtml += '<td>' + lsnTmtablRemk + '</td><td>' + remk + '</td><td>' + bdRoomCount + '명</td>';
+				        			tableHtml += '</tr>';
+				        		}
+					        	tableHtml += '</tbody>';
+								$("#enterCurCntTable").html(tableHtml);
+				        	} else {
+								document.getElementById("notiPopupEmpty").style.display = "block";
+								document.getElementById("notiPopupTable").style.display = "none";
+				        	}
+				        	
+				        }
+				    });
+            	});
+            }
+		};
+
+		amenitiesList = function(convin_inst_knd_cd, current_lat_val, current_lon_val , convin_inst_knd_nm) {
+			//temp_html = $('#add_category').html();
+			$('#add_category').hide();
+			//$('#amenities_sel').hide();
+
+			current_lat_val = '';
+			current_lon_val = '';
+
+
+			var ajax_url = '/api/amenities.action';
+			var param = {'convin_inst_knd_cd' : convin_inst_knd_cd, 'current_lat_val' : current_lat_val, 'current_lon_val' : current_lon_val};
+			$.ajax({
+		        'type': 'GET',
+		        'url': ajax_url,
+		        'contentType': 'text/plain; charset=utf-8',
+		        'data': param,
+		        'dataType': 'json',
+		        'beforeSend':function(request){
+		        	request.setRequestHeader('access_token', '111');
+		        },
+		        'error':function(request,status,error){
+		        	amenitiesListFailCallback(request,status,error); //실패 콜백함수 호출
+		        },
+		        'success': function(data){
+		        	amenitiesListSuccessCallback(data , convin_inst_knd_nm); //성공 콜백함수 호출
+		        }
+		    });
+
+		};
+
+
+        amenitiesListSuccessCallback = function(data , convin_inst_knd_nm){
+
+			clearMarkers();
+            clearParkingLots();
+
+            mouseOverMarker = null;
+
+            var amenitiesList = data.rows;
+            var parkingNoti = data.parkingNoti;
+            var carConfSectLineAllList = data.carConfSectLineAllList;
+            var carPassImpbSectLineAllList = data.carPassImpbSectLineAllList;
+            var disabledRestroomList = data.disabledRestroomList;
+            
+            var html = '';
+            var amenitiesMarker;
+
+            var menuHtml = '';
+            var fac_detail_nm = '';
+
+            if(convin_inst_knd_cd == 26) {
+                alert(parkingNoti.park_pl_noti_desct);
+            }
+            
+         // 공사영형도로표기 overlay 모두 삭제, 초기화
+			var len = constructionOverlays.length;
+			for (var i = 0; i < len; i++) {
+				constructionOverlays[i].setMap(null);
+		    }
+			constructionOverlays = [];
+		
+			// 공사영향도로표기 - 차량혼잡구간 
+        	/*if(carConfSectLineAllList != null && carConfSectLineAllList.length > 0) {
+        		for (var root = 0; root < carConfSectLineAllList.length; root++) {
+					var lineSeq = carConfSectLineAllList[root];
+            		for (var i = 0; i < lineSeq.length; i++) {
+    					var path = [];
+    					var line = lineSeq[i];
+    					for (var j = 0; j < line.length; j++) {
+    						path.push(new kakao.maps.LatLng(line[j].lat, line[j].lon));
+    					}
+    					
+    					var polyline = new kakao.maps.Polyline({
+    			            map: map,
+    			            path: path,
+    			            strokeColor: '#ffC000'
+    			        });
+    					constructionOverlays.push(polyline);
+    				}
+				}
+        	}*/
+        	
+        	// 공사영향도로표기 - 차량통행불가 
+			/*if(carPassImpbSectLineAllList != null && carPassImpbSectLineAllList.length > 0) {
+				for (var root = 0; root < carPassImpbSectLineAllList.length; root++) {
+					var lineSeq = carPassImpbSectLineAllList[root];
+					for (var i = 0; i < lineSeq.length; i++) {
+						var path = [];
+						var line = lineSeq[i];
+						for (var j = 0; j < line.length; j++) {
+							path.push(new kakao.maps.LatLng(line[j].lat, line[j].lon));
+						}
+						
+						var polyline = new kakao.maps.Polyline({
+				            map: map,
+				            path: path,
+				            strokeColor: '#ff0000'
+				        });
+						constructionOverlays.push(polyline);
+					}
+				}
+        	}*/
+        	
+			// 주변시설 > 장애인지원시설 > 장애인 화장실 표기
+        	if(disabledRestroomList != null && disabledRestroomList.length > 0) {
+        		for (var i = 0; i < disabledRestroomList.length; i++) {
+        			disabledRestroom = disabledRestroomList[i];
+        			
+        			eY = disabledRestroom.lat_val;
+                    eX = disabledRestroom.lon_val;
+                    
+                    var convin_name='';
+                    
+                    // var url= '/web/facility_detail.action?convinType=Y&inst_seq=' + disabledRestroom.inst_seq;
+                    
+                    /* var sub_title_area_html = '<button style="float: right; line-height: 36px; margin-right: 5px; border: none; background: none;"  onclick=\'showCate();\'><img src="/m/img/btn/back.png" alt="" width="25" ></button>';
+        			$('.subTitle').html(sub_title_area_html); */
+        			
+        			var disabledRestroomPosition = new daum.maps.LatLng(disabledRestroom.lat_val, disabledRestroom.lon_val);
+        			disabledRestroomMarker = new daum.maps.Marker({
+	                    map: map,
+	                    position: disabledRestroomPosition,
+	                });
+
+        			disabledRestroomMarker.setImage(disabled_restroomImage_red);
+	                var menu_image_src = '/m/img/marker/marker_facilities_disabled_restroom_red.png';
+	                disabledRestroomMarkers.push(disabledRestroomMarker);
+	                disabledRestroomMarkers[i].setMap(map);
+	                
+	                var content = '';
+	                if(langType == 'eng'){
+	                	convin_name = disabledRestroom.inst_eng_nm;
+					} else {
+						convin_name = disabledRestroom.inst_kor_nm;
+					}
+	                
+	                fac_detail_nm = convin_name;
+	                
+	                content += '<div class="info_wrap">' ;
+	                content += '    <div class="info_title">' ;
+	                content += '        <a href="#">';
+	                
+	                if(disabledRestroom.vil_dong_nm != '' && disabledRestroom.vil_dong_nm != null){
+	                	content += '('+disabledRestroom.vil_dong_nm;
+
+	                	fac_detail_nm += '('+disabledRestroom.vil_dong_nm;
+
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	                		fac_detail_nm += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					content += '동)';
+	    					fac_detail_nm += '동)';
+	    				}
+	                }
+	                
+	                
+	             	// 층수 표시
+	                /* if(langType == 'eng') { // 영문
+						if(disabledRestroom.flr_cd != null && disabledRestroom.flr_cd != '') {
+		                	content += ' ' + disabledRestroom.flr_cd;
+		                	fac_detail_nm += ' ' + disabledRestroom.flr_cd;
+						}
+	                } */
+	             	
+	                content += '</p></a>';
+	                content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+	                content += '    </div>' ;
+	                content += '<div class="bus_infoStartEnd">';
+	                content += '<div class="btn">';
+	                content += '<a href="#" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+	                if(disabledRestroom.vil_dong_nm != '' && disabledRestroom.vil_dong_nm != null){
+	                	content += '('+disabledRestroom.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					//content += '동)';
+	                		content += encodeURIComponent('동')+')';
+	    				}
+	                }
+	                
+	             	// 층수 표시
+	                /* if(langType == 'eng') { // 영문
+						if(disabledRestroom.flr_cd != null && disabledRestroom.flr_cd != '') {
+		                	content += ' ' + amenities.flr_cd;
+						}
+	                } */
+	                
+	                if(langType == 'eng'){ // 영문
+	         			content += '&start_lat='+disabledRestroom.lat_val+'&start_lon='+disabledRestroom.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+	         		}
+	         		else{	//한글
+	         			content += '&start_lat='+disabledRestroom.lat_val+'&start_lon='+disabledRestroom.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+	         		}
+	                
+	                content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+	    			if(disabledRestroom.vil_dong_nm != '' && disabledRestroom.vil_dong_nm != null){
+	    				content += '('+disabledRestroom.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					//content += '동)';
+	    					content += encodeURIComponent('동')+')';
+	    				}
+	    			}
+	    			
+	    			// 층수 표시
+	                /* if(langType == 'eng') { // 영문
+						if(disabledRestroom.flr_cd != null && disabledRestroom.flr_cd != '') {
+		                	content += ' ' + disabledRestroom.flr_cd;
+						}
+	                } */
+	    			
+	                if(langType == 'eng'){ // 영문
+	    				content += '&end_lat='+disabledRestroom.lat_val+'&end_lon='+disabledRestroom.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+	    			}
+	    			else{	//한글
+	    				content += '&end_lat='+disabledRestroom.lat_val+'&end_lon='+disabledRestroom.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+	    			}
+	                
+	                content += '</div>';
+	                content += '</div>';
+	                content += '</div>';
+
+ 	                var infowindow = new daum.maps.CustomOverlay({});
+
+		            infowindow = new daum.maps.CustomOverlay({
+						content: content,
+						position : new daum.maps.LatLng(disabledRestroom.lat_val, disabledRestroom.lon_val)
+					});
+		            
+		            daum.maps.event.addListener(disabledRestroomMarkers[i], 'mouseover', makeOverListener(map, disabledRestroomMarkers[i], infowindow));
+		            overlays.push(infowindow);
+		            
+		            menuHtml += '<div class="place" onmouseover="disabledRestroomMouseoverFunction(' + i + ')" onmouseout="mouseoutFunction(' + i + ')">';
+					menuHtml += '<span class="position3"><img src="' + menu_image_src + '" alt="시설아이콘"></span>';
+					menuHtml += '<div class="placeCon"><a href="#url" class="placeChoice"><strong>' + fac_detail_nm + '</strong></a>';
+					menuHtml += '<div class="clickPlace" style="display:none">';
+					menuHtml += '<button class="imgBg startBtn" type="button" onclick="location.href=\'/web/search_road.action?sName=' + encodeURIComponent(fac_detail_nm) + '&start_lat=' + disabledRestroom.lat_val + '&start_lon=' + disabledRestroom.lon_val + '\'">출발</button>'
+					menuHtml += '<button class="imgBg endBtn" type="button" onclick="location.href=\'/web/search_road.action?eName=' + encodeURIComponent(fac_detail_nm) + '&end_lat=' + disabledRestroom.lat_val + '&end_lon=' + disabledRestroom.lon_val + '\'">도착</button>';
+					// menuHtml += '<a href="/web/facility_detail.action?lat_val=' + disabledRestroom.lat_val + '&lon_val=' + disabledRestroom.lon_val + '&convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd=' + amenities.convin_inst_knd_cd + '">상세보기<span class="arr"></span> </a>';
+					menuHtml += '</div></div></div>';
+        		}
+        	}
+
+            for(var i=0; i<amenitiesList.length; i++){
+                amenities = amenitiesList[i];
+
+                eY = amenities.lat_val;
+                eX = amenities.lon_val;
+
+                var convin_name='';
+
+                var url='';
+    			url+= '/web/facility_detail.action?lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val;
+    			url += '&convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd;
+
+				var sub_title_area_html = convin_inst_knd_nm;
+    			sub_title_area_html += '<button style="float: right; line-height: 36px; margin-right: 5px; border: none; background: none;"  onclick=\'showCate();\'><img src="/m/img/btn/back.png" alt="" width="25" ></button>';
+    			$('.subTitle').html(sub_title_area_html);
+
+
+				if(amenities.up_convin_inst_knd_cd != "26"){
+
+	                var amenitiesPosition = new daum.maps.LatLng(amenities.lat_val, amenities.lon_val);
+
+	                amenitiesMarker = new daum.maps.Marker({
+	                    map: map,
+	                    position: amenitiesPosition,
+	                });
+
+	                var menu_image_src = '/m/img/marker/marker_facilities_default_nor.png'; // [보안수정]
+
+	                if(amenities.up_convin_inst_knd_cd == '1'){
+	                	amenitiesMarker.setImage(libraryImage2);
+	                	menu_image_src = '/m/img/marker/marker_facilities_library_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '2'){
+						amenitiesMarker.setImage(informationImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_information_retrieval_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '3'){
+						amenitiesMarker.setImage(supportcenterImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_supportcenter_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '4'){
+						amenitiesMarker.setImage(restaurantImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_restaurant_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '5' ||amenities.up_convin_inst_knd_cd == '6' || amenities.up_convin_inst_knd_cd == '7' ){
+						amenitiesMarker.setImage(cafeImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_cafe_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '8'){
+						amenitiesMarker.setImage(bankImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_bank_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '12'){
+						amenitiesMarker.setImage(hospitalImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_hospital_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '16'){
+						amenitiesMarker.setImage(bookstoreImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_bookstore_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '20'){
+						amenitiesMarker.setImage(disabled_supportImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_disabled_support_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '21'){
+						amenitiesMarker.setImage(disabledImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_disabled_amenities_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '22'){
+						amenitiesMarker.setImage(officeImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_administration_office_nor.png';
+					} else {
+						amenitiesMarker.setImage(facilitiesImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_default_nor.png';
+					}
+	                amenitiesMarkers.push(amenitiesMarker);
+	                amenitiesMarkers[i].setMap(map);
+
+	                var content = '';
+	                if(langType == 'eng'){
+	                	convin_name = amenities.convin_inst_eng_nm;
+					} else {
+						convin_name = amenities.convin_inst_kor_nm;
+					}
+
+	                fac_detail_nm = convin_name;
+
+	                content += '<div class="info_wrap">' ;
+	                content += '    <div class="info_title">' ;
+	                content += '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+	                if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+	                	content += '('+amenities.vil_dong_nm;
+
+	                	fac_detail_nm += '('+amenities.vil_dong_nm;
+
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	                		fac_detail_nm += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					content += '동)';
+	    					fac_detail_nm += '동)';
+	    				}
+	                }
+	                
+	                // 층수 표시
+	                if(langType == 'eng') { // 영문
+						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+		                	content += ' ' + amenities.flr_cd;
+		                	fac_detail_nm += ' ' + amenities.flr_cd;
+						}
+	                } else {
+	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+		                	content += ' ' + amenities.flr_nm;
+		                	fac_detail_nm += ' ' + amenities.flr_nm;
+						}
+	                }
+	                
+	                content += '</p></a>';
+	                content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+	                /* content += '        <p class="eng_title"><span><span></p>' ; */
+	                content += '    </div>' ;
+	                content += '<div class="bus_infoStartEnd">';
+	                content += '<div class="btn">';
+
+	                content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+	                if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+	                	content += '('+amenities.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					//content += '동)';
+	                		content += encodeURIComponent('동')+')';
+	    				}
+	                }
+	                
+	                // 층수 표시
+	                if(langType == 'eng') { // 영문
+						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+		                	content += ' ' + amenities.flr_cd;
+						}
+	                } else {
+	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+		                	content += ' ' + amenities.flr_nm;
+						}
+	                }
+	                
+	         		if(langType == 'eng'){ // 영문
+	         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+	         		}
+	         		else{	//한글
+	         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+	         		}
+
+	         		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+	    			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+	    				content += '('+amenities.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					//content += '동)';
+	    					content += encodeURIComponent('동')+')';
+	    				}
+	    			}
+	    			
+	    			// 층수 표시
+	                if(langType == 'eng') { // 영문
+						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+		                	content += ' ' + amenities.flr_cd;
+						}
+	                } else {
+	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+		                	content += ' ' + amenities.flr_nm;
+						}
+	                }
+	    			
+	    			if(langType == 'eng'){ // 영문
+	    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+	    			}
+	    			else{	//한글
+	    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+	    			}
+
+	                content += '</div>';
+	                content += '</div>';
+	                content += '</div>';
+
+	                var infowindow = new daum.maps.CustomOverlay({});
+
+		            infowindow = new daum.maps.CustomOverlay({
+						content: content,
+						position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+					});
+
+		            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+		            overlays.push(infowindow);
+
+		            menuHtml += '<div class="place" onmouseover="mouseoverFunction(' + i + ')" onmouseout="mouseoutFunction(' + i + ')">';
+					menuHtml += '<span class="position3"><img src="' + menu_image_src + '" alt="시설아이콘"></span>';
+					menuHtml += '<div class="placeCon"><a href="#url" class="placeChoice"><strong>' + fac_detail_nm + '</strong></a>';
+					menuHtml += '<div class="clickPlace" style="display:none">';
+					menuHtml += '<button class="imgBg startBtn" type="button" onclick="location.href=\'/web/search_road.action?sName=' + encodeURIComponent(fac_detail_nm) + '&start_lat=' + amenities.lat_val + '&start_lon=' + amenities.lon_val + '\'">출발</button>'
+					menuHtml += '<button class="imgBg endBtn" type="button" onclick="location.href=\'/web/search_road.action?eName=' + encodeURIComponent(fac_detail_nm) + '&end_lat=' + amenities.lat_val + '&end_lon=' + amenities.lon_val + '\'">도착</button>';
+					menuHtml += '<a href="/web/facility_detail.action?lat_val=' + amenities.lat_val + '&lon_val=' + amenities.lon_val + '&convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd=' + amenities.convin_inst_knd_cd + '">상세보기<span class="arr"></span> </a>';
+					menuHtml += '</div></div></div>';
+					
+					// if(amenities.up_convin_inst_knd_cd == '4') {
+						//// 식당일 경우
+						// makeRestaurantMarkerClickListener(amenitiesMarkers[i], amenities.convin_inst_kor_nm, amenities.vil_dong_nm, amenities.flr_cd);
+					// }
+
+				}else{			// 주차장 및 나들문(up_convin_inst_knd_cd = 26)
+
+                    if(amenities.convin_inst_knd_cd == "27"){   //지상 주차장
+                        var path = [];
+                    	if(amenities.path != null){
+	                        var _pathList = amenities.path.split('|');
+	                        for(var j = 0 ; j < _pathList.length; j++){
+	                            path.push(new daum.maps.LatLng(_pathList[j].split(',')[0], _pathList[j].split(',')[1]));
+	                        }
+                    	}else{
+
+                    	}
+
+                        var upperParkingLot  = new daum.maps.Polygon({});
+                        upperParkingLot.setPath(path);
+                        upperParkingLot.setOptions(upperPolygonOption);
+                        upperParkingLot.setMap(map);
+                        upperParkingLotList.push(upperParkingLot);
+
+                        var upperParkingCenter = new daum.maps.Marker({
+                            map : map,
+                            position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val),
+                            image : upperParkingLotImage2,
+                            clickable : true
+                        });
+
+                        amenitiesMarkers.push(upperParkingCenter);
+
+                        var content = '';
+                        if(langType == 'eng'){
+                        	convin_name = amenities.convin_inst_eng_nm;
+                        } else {
+                        	convin_name = amenities.convin_inst_kor_nm;
+                        }
+
+                        fac_detail_nm = convin_name;
+                        content += '<div class="info_wrap">';
+                        content += '    <div class="info_title">';
+                        //content += '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+                        content += '        <a href="#"><p class="kor_title">'+convin_name;
+                        if(amenities.vil_dong_nm != '' &&  amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+                        		fac_detail_nm += 'DONG)';
+            				}
+            				else{	//한글
+            					content += '동)';
+            					fac_detail_nm += '동)';
+            				}
+                        }
+                        
+                     	// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    		                	content += ' ' + amenities.flr_cd;
+    		                	fac_detail_nm += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    		                	content += ' ' + amenities.flr_nm;
+    		                	fac_detail_nm += ' ' + amenities.flr_nm;
+    						}
+    	                }
+                     
+                        content += '</p></a>';
+                        content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+                        /* content += '        <p class="eng_title"><span><span></p>' ; */
+                        content += '    </div>';
+                        content += '<div class="bus_infoStartEnd">';
+                        content += '<div class="btn">';
+                        content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+                        }
+                        
+                     	// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    		                	content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    		                	content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+                     	
+                 		if(langType == 'eng'){ // 영문
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+                 		}
+                 		else{	//한글
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+                 		}
+
+                 		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+            			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+            				content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+            			}
+            			
+            			// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    		                	content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    		                	content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+            			
+            			if(langType == 'eng'){ // 영문
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+            			}
+            			else{	//한글
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+            			}
+                        content += '</div>';
+                        content += '</div>';
+                        content += '</div>';
+
+                        var infowindow = new daum.maps.CustomOverlay({});
+
+        	            infowindow = new daum.maps.CustomOverlay({
+        					content: content,
+        					position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+        				});
+
+        	            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map,amenitiesMarkers[i], infowindow));
+
+        	            overlays.push(infowindow);
+
+
+
+                    }else if(amenities.convin_inst_knd_cd == "30"){   //지하 주차장
+
+                        var path = [];
+                        if(amenities.path != null){
+                        var _pathList = amenities.path.split('|');
+                        for(var j = 0 ; j < _pathList.length; j++){
+                            path.push(new daum.maps.LatLng(_pathList[j].split(',')[0], _pathList[j].split(',')[1]));
+                        }
+                        }else{
+
+                        }
+
+                        var underParkingLot  = new daum.maps.Polygon({});
+                        underParkingLot.setPath(path);
+                        underParkingLot.setOptions(underPolygonOption);
+                        underParkingLot.setMap(map);
+                        underParkingLotList.push(underParkingLot);
+
+                        var underParkingCenter = new daum.maps.Marker({
+                            map : map,
+                            position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val),
+                            image : underParkingLotImage2,
+                            clickable : true
+                        });
+
+                       amenitiesMarkers.push(underParkingCenter);
+
+                       var content = '';
+                       var convin_name='';
+                       if(langType == 'eng'){
+                       	convin_name = amenities.convin_inst_eng_nm;
+                       } else {
+                       	convin_name = amenities.convin_inst_kor_nm;
+                       }
+                       fac_detail_nm = convin_name;
+                        content += '<div class="info_wrap">' ;
+                        content += '    <div class="info_title">';
+                        //content += '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+                        content += '        <a href="#"><p class="kor_title">'+convin_name;
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					content += '동)';
+            				}
+                        }
+                        
+                     	// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    		                	content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    		                	content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+                     	
+                        content += '</p></a>' ;
+                        content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()"style="cursor:pointer" />' ;
+                        /* content += '        <p class="eng_title"><span><span></p>' ; */
+                        content += '    </div>' ;
+                        content += '<div class="bus_infoStartEnd">';
+		                content += '<div class="btn">';
+		                content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+		                if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+		                	content += '('+amenities.vil_dong_nm;
+		                	if(langType == 'eng'){ // 영문
+		                		content += 'DONG)';
+		    				}
+		    				else{	//한글
+		    					//content += '동)';
+		    					content += encodeURIComponent('동')+')';
+		    				}
+		                }
+		                
+		             	// 층수 표시
+		                if(langType == 'eng') { // 영문
+							if(amenities.flr_cd != null && amenities.flr_cd != '') {
+			                	content += ' ' + amenities.flr_cd;
+							}
+		                } else {
+		                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+			                	content += ' ' + amenities.flr_nm;
+							}
+		                }
+		             	
+		         		if(langType == 'eng'){ // 영문
+		         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+		         		}
+		         		else{	//한글
+		         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+		         		}
+
+		         		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+		    			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+		    				content += '('+amenities.vil_dong_nm;
+		                	if(langType == 'eng'){ // 영문
+		                		content += 'DONG)';
+		    				}
+		    				else{	//한글
+		    					//content += '동)';
+		    					content += encodeURIComponent('동')+')';
+		    				}
+		    			}
+		    			
+		    			// 층수 표시
+		                if(langType == 'eng') { // 영문
+							if(amenities.flr_cd != null && amenities.flr_cd != '') {
+			                	content += ' ' + amenities.flr_cd;
+							}
+		                } else {
+		                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+			                	content += ' ' + amenities.flr_nm;
+							}
+		                }
+		    			
+		    			if(langType == 'eng'){ // 영문
+		    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+		    			}
+		    			else{	//한글
+		    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+		    			}
+		                content += '</div>';
+		                content += '</div>';
+                        content += '</div>';
+
+                        var infowindow = new daum.maps.CustomOverlay({});
+
+        	            infowindow = new daum.maps.CustomOverlay({
+        					content: content,
+        					position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+        				});
+
+        	            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+        	            overlays.push(infowindow);
+
+                    }else if(amenities.convin_inst_knd_cd == "28"){   //나들문
+                        var point = [];
+                        if(amenities.path != null){
+                            point  = amenities.path.split(',');
+                        }
+
+
+                        var gatePosition = new daum.maps.LatLng(point[0],point[1]);
+
+                        gateMarker = new daum.maps.Marker({
+                        	map : map,
+                        	position : gatePosition,
+                        	image : gateImage2,
+                            clickable : true
+                        });
+
+                        gateList.push(gateMarker);
+                        amenitiesMarkers.push(gateMarker);
+
+                        var content = '';
+                        var convin_name='';
+                        if(langType == 'eng'){
+                        	convin_name = amenities.convin_inst_eng_nm;
+                        } else {
+                        	convin_name = amenities.convin_inst_kor_nm;
+                        }
+                        fac_detail_nm = convin_name;
+                        content += '<div class="info_wrap">' ;
+                        content += '    <div class="info_title">';
+                        //content +=  '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+                        content += '        <a href="#"><p class="kor_title">'+convin_name;
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					content += '동)';
+            				}
+                        }
+                        
+                     	// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    		                	content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    		                	content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+                     	
+                        content += '</p></a>' ;
+                        content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+                        /* content += '        <p class="eng_title"><span><span></p>' ; */
+                        content += '    </div>';
+                        content += '<div class="bus_infoStartEnd">';
+		                content += '<div class="btn">';
+		                content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+		                if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+		                	content += '('+amenities.vil_dong_nm;
+		                	if(langType == 'eng'){ // 영문
+		                		content += 'DONG)';
+		    				}
+		    				else{	//한글
+		    					//content += '동)';
+		    					content += encodeURIComponent('동')+')';
+		    				}
+		                }
+		                
+		             	// 층수 표시
+		                if(langType == 'eng') { // 영문
+							if(amenities.flr_cd != null && amenities.flr_cd != '') {
+			                	content += ' ' + amenities.flr_cd;
+							}
+		                } else {
+		                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+			                	content += ' ' + amenities.flr_nm;
+							}
+		                }
+		             	
+		         		if(langType == 'eng'){ // 영문
+		         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+		         		}
+		         		else{	//한글
+		         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+		         		}
+
+		         		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+		    			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+		    				content += '('+amenities.vil_dong_nm;
+		                	if(langType == 'eng'){ // 영문
+		                		content += 'DONG)';
+		    				}
+		    				else{	//한글
+		    					//content += '동)';
+		    					content += encodeURIComponent('동')+')';
+		    				}
+		    			}
+		    			
+		    			// 층수 표시
+		                if(langType == 'eng') { // 영문
+							if(amenities.flr_cd != null && amenities.flr_cd != '') {
+			                	content += ' ' + amenities.flr_cd;
+							}
+		                } else {
+		                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+			                	content += ' ' + amenities.flr_nm;
+							}
+		                }
+		    			
+		    			if(langType == 'eng'){ // 영문
+		    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+		    			}
+		    			else{	//한글
+		    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+		    			}
+		                content += '</div>';
+		                content += '</div>';
+                        content += '</div>';
+
+                        var infowindow = new daum.maps.CustomOverlay({});
+
+        	            infowindow = new daum.maps.CustomOverlay({
+        					content: content,
+        					position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+        				});
+
+        	            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+        	            overlays.push(infowindow);
+
+                    }
+
+					menuHtml += '<div class="place" onmouseover="mouseoverFunction(' + i + ')" onmouseout="mouseoutFunction(' + i + ')">';
+					menuHtml += '<span class="position3"><img src="/web/common/images/marker/marker_facilities_1.png" alt="시설아이콘"></span>';
+					menuHtml += '<div class="placeCon"><a href="#url" class="placeChoice"><strong>' + fac_detail_nm + '</strong></a>';
+					menuHtml += '<div class="clickPlace" style="display:none">';
+					menuHtml += '<button class="imgBg startBtn" type="button" onclick="location.href=\'/web/search_road.action?sName=' + encodeURIComponent(fac_detail_nm) + '&start_lat=' + amenities.lat_val + '&start_lon=' + amenities.lon_val + '\'">출발</button>'
+					menuHtml += '<button class="imgBg endBtn" type="button" onclick="location.href=\'/web/search_road.action?eName=' +encodeURIComponent( fac_detail_nm) + '&end_lat=' + amenities.lat_val + '&end_lon=' + amenities.lon_val + '\'">도착</button>';
+					menuHtml += '</div></div></div>';
+                }
+            }
+            
+            function makeRestaurantMarkerClickListener(marker, bdNm, bdNo, bdFlrFg) {
+            	kakao.maps.event.addListener(marker, 'click', function() {
+		        	popupConfimFunction();
+		        	
+					var ajax_url = '/api/getRestaurantBuilInfo.action';
+					var param = {'bdNo' : bdNo, 'bdFlrFg' : bdFlrFg};
+		
+					$.ajax({
+				        'type': 'GET',
+				        'url': ajax_url,
+				        'contentType': 'text/plain; charset=utf-8',
+				        'data': param,
+				        'dataType': 'json',
+				        'beforeSend':function(request){
+				        	request.setRequestHeader('access_token', '111');
+				        },
+				        'error':function(request,status,error){
+							document.getElementById("loading").style.visibility = "hidden";
+				        	console.log("status : " + status + ", error : " + error);
+				        },
+				        'success': function(data) {		
+							document.getElementById("loading").style.visibility = "hidden";
+							document.getElementById("notiPopup").style.visibility = "visible";
+							document.getElementById("notiPopupEmpty").style.display = "none";
+							document.getElementById("notiPopupTable").style.display = "block";
+							
+				        	var tableHtml = '';
+				        	var list = data.qr_list;
+				        	if(list.length > 0) {
+					        	tableHtml = '<tbody>';
+			        			tableHtml += '<tr>';
+			        			tableHtml += '<th>식당명</th><th>층</th><th>호실</th><th>구역</th><th>QR태깅인원</th>';
+			        			tableHtml += '</tr>';
+			        			
+				        		for(var i = 0 ; i < list.length ; i++) {
+				        			var item = list[i];
+				        			
+				        			tableHtml += '<tr>';
+				        			tableHtml += '<td>' + bdNm + '</td><td>' + item.bdFlrNm + '</td><td>' + item.bdRoomCtnt + '호</td>';
+				        			tableHtml += '<td>' + item.cafeZoneFg + '</td><td>' + item.bdRoomCount + '명</td>';
+				        			tableHtml += '</tr>';
+				        		}
+					        	tableHtml += '</tbody>';
+								$("#enterCurCntTable").html(tableHtml);
+				        	} else {
+								document.getElementById("notiPopupEmpty").style.display = "block";
+								document.getElementById("notiPopupTable").style.display = "none";
+				        	}
+				        	
+				        }
+				    });
+				});
+            }
+            
+            disabledRestroomMouseoverFunction = function(i){
+            	popupConfimFunction();
+            	
+		    	var search_img2='/m/img/marker/marker_facilities_disabled_restroom_red.png';
+
+		    	if(langType == 'eng'){
+                	convin_name = disabledRestroomList[i].inst_eng_nm;
+				} else {
+					convin_name = disabledRestroomList[i].inst_kor_nm;
+				}
+
+		    	var content2 ='';
+				content2 += '<div class="info_wrap">';
+				content2 += '    <div class="info_title">';
+				content2 += '        <a href="#"><p class="kor_title">'+convin_name;
+
+				if(disabledRestroomList[i].vil_dong_nm != '' && disabledRestroomList[i].vil_dong_nm != null){
+					content2 += '('+disabledRestroomList[i].vil_dong_nm;
+					if(langType == 'eng'){ // 영문
+			    		content2 += 'DONG)';
+					}
+					else{	//한글
+						content2 += '동)';
+					}
+				}
+				
+				// 층수 표시
+                /* if(langType == 'eng') { // 영문
+					if(disabledRestroomList[i].flr_cd != null && disabledRestroomList[i].flr_cd != '') {
+						content2 += ' ' + disabledRestroomList[i].flr_cd;
+					}
+                } */
+				
+				content2 += '</p></a>';
+				content2 +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()"/>' ;
+
+				content2 += '    </div>' ;
+				content2 += '<div class="bus_infoStartEnd">';
+                content2 += '<div class="btn">';
+
+                content2 += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                if(disabledRestroomList[i].vil_dong_nm != '' && disabledRestroomList[i].vil_dong_nm != null){
+                	content2 += '('+ disabledRestroomList[i].vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					//content2 += '동)';
+    					content2 += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                /* if(langType == 'eng') { // 영문
+					if(disabledRestroomList[i].flr_cd != null && disabledRestroomList[i].flr_cd != '') {
+						content2 += ' ' + disabledRestroomList[i].flr_cd;
+					}
+                } */
+				
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&start_lat='+disabledRestroomList[i].lat_val+'&start_lon='+disabledRestroomList[i].lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&start_lat='+disabledRestroomList[i].lat_val+'&start_lon='+disabledRestroomList[i].lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+    			}
+    			content2 += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+    			if(disabledRestroomList[i].vil_dong_nm != '' && disabledRestroomList[i].vil_dong_nm != null){
+    				content2 += '('+ disabledRestroomList[i].vil_dong_nm;
+    				if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					//content2 += '동)';
+    					content2 += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                /* if(langType == 'eng') { // 영문
+					if(disabledRestroomList[i].flr_cd != null && disabledRestroomList[i].flr_cd != '') {
+						content2 += ' ' + disabledRestroomList[i].flr_cd;
+					}
+                } */
+				
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&end_lat='+disabledRestroomList[i].lat_val+'&end_lon='+disabledRestroomList[i].lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&end_lat='+disabledRestroomList[i].lat_val+'&end_lon='+disabledRestroomList[i].lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+    			}
+
+                content2 += '</div>';
+                content2 += '</div>';
+				content2 += '</div>';
+
+			    var infowindow2 = new daum.maps.CustomOverlay({});
+			    infowindow2 = new daum.maps.CustomOverlay({
+					content: content2,
+					position : new daum.maps.LatLng(disabledRestroomList[i].lat_val, disabledRestroomList[i].lon_val)
+				});
+
+			    makeOverListener2(map, searchMarkers[i], infowindow2);
+			    overlays.push(infowindow2);
+
+			    panLatLngTo(disabledRestroomList[i].lat_val, disabledRestroomList[i].lon_val);
+
+			};
+
+            mouseoverFunction = function(i){
+            	popupConfimFunction();
+            	
+		    	var search_img2='';
+
+		    	if(langType == 'eng'){
+                	convin_name = amenitiesList[i].convin_inst_eng_nm;
+				} else {
+					convin_name = amenitiesList[i].convin_inst_kor_nm;
+				}
+
+		    	if(amenitiesList[i].convin_inst_knd_cd == '1'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_1.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '2'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_2.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '3'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_3.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '4'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_4.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '5' || amenitiesList[i].convin_inst_knd_cd == '6' || amenitiesList[i].convin_inst_knd_cd == '7'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_5.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '8' || amenitiesList[i].convin_inst_knd_cd == '9' || amenitiesList[i].convin_inst_knd_cd == '10' || amenitiesList[i].convin_inst_knd_cd == '11'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_8.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '12' || amenitiesList[i].convin_inst_knd_cd == '13' || amenitiesList[i].convin_inst_knd_cd == '14' || amenitiesList[i].convin_inst_knd_cd == '15'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_12.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '16'  || amenitiesList[i].convin_inst_knd_cd == '17' || amenitiesList[i].convin_inst_knd_cd == '18' || amenitiesList[i].convin_inst_knd_cd == '19'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_16.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '20'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_20.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '21'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_21.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '22' || amenitiesList[i].convin_inst_knd_cd == '23' || amenitiesList[i].convin_inst_knd_cd == '24'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_22.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '27' || amenitiesList[i].convin_inst_knd_cd == '30'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_27.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '28'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_30.png';
+		    		} else {
+		    		search_img2 ='/web/common/images/marker/marker_facilities_0.png';
+		    		}
+		    	var content2 ='';
+				content2 += '<div class="info_wrap">';
+				content2 += '    <div class="info_title">';
+				// 주차장/나들문 븐기
+				if(amenitiesList[i].up_convin_inst_knd_cd != "26"){
+					content2 += '        <a href="'+url+'"><p class="kor_title">'+convin_name;
+				}else{
+					content2 += '        <a href="#"><p class="kor_title">'+convin_name;
+				}
+
+				if(amenitiesList[i].vil_dong_nm != '' && amenitiesList[i].vil_dong_nm != null){
+					content2 += '('+amenitiesList[i].vil_dong_nm;
+					if(langType == 'eng'){ // 영문
+			    		content2 += 'DONG)';
+					}
+					else{	//한글
+						content2 += '동)';
+					}
+				}
+				
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content2 += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content2 += ' ' + amenities.flr_nm;
+					}
+                }
+				
+				content2 += '</p></a>';
+				content2 +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()"/>' ;
+
+				content2 += '    </div>' ;
+				content2 += '<div class="bus_infoStartEnd">';
+                content2 += '<div class="btn">';
+
+                content2 += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                if(amenitiesList[i].vil_dong_nm != '' && amenitiesList[i].vil_dong_nm != null){
+                	content2 += '('+ amenitiesList[i].vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					//content2 += '동)';
+    					content2 += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content2 += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content2 += ' ' + amenities.flr_nm;
+					}
+                }
+				
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&start_lat='+amenitiesList[i].lat_val+'&start_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&start_lat='+amenitiesList[i].lat_val+'&start_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+    			}
+    			content2 += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+    			if(amenitiesList[i].vil_dong_nm != '' && amenitiesList[i].vil_dong_nm != null){
+    				content2 += '('+ amenitiesList[i].vil_dong_nm;
+    				if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					//content2 += '동)';
+    					content2 += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content2 += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content2 += ' ' + amenities.flr_nm;
+					}
+                }
+				
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&end_lat='+amenitiesList[i].lat_val+'&end_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&end_lat='+amenitiesList[i].lat_val+'&end_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+    			}
+
+                content2 += '</div>';
+                content2 += '</div>';
+				content2 += '</div>';
+
+			    var infowindow2 = new daum.maps.CustomOverlay({});
+			    infowindow2 = new daum.maps.CustomOverlay({
+					content: content2,
+					position : new daum.maps.LatLng(amenitiesList[i].lat_val, amenitiesList[i].lon_val)
+				});
+
+			    makeOverListener2(map, searchMarkers[i], infowindow2);
+			    overlays.push(infowindow2);
+
+			    panLatLngTo(amenitiesList[i].lat_val, amenitiesList[i].lon_val);
+
+			};
+
+			 mouseoutFunction = function(i){
+				 closeOverlay();
+			 };
+
+            //$('#add_category').html(menuHtml);
+            $('#category_result').html(menuHtml);
+
+            $('.search_list2 ul').html(html);
+
+            $('#category_result').show();
+
+        };
+
+        amenitiesListFailCallback = function(request, status, error){
+        	//alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+            //("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+        };
+
+        disabledList = function(current_lat_val, current_lon_val){
+			var ajax_url = '/api/building.action';
+			var param = {'page' : 1, 'rows' : 10, 'convinType' : 'Y', 'current_lat_val' : current_lat_val, 'current_lon_val' : current_lon_val};
+
+			$.ajax({
+		        'type': 'GET',
+		        'url': ajax_url,
+		        'contentType': 'text/plain; charset=utf-8',
+		        'data': param,
+		        'dataType': 'json',
+		        'beforeSend':function(request){
+		        	request.setRequestHeader('access_token', '111');
+		        },
+		        'error':function(request,status,error){
+		        	disabledListFailCallback(request,status,error); //실패 콜백함수 호출
+		        },
+		        'success': function(data){
+		        	disabledListSuccessCallback(data); //성공 콜백함수 호출
+		        }
+		    });
+		};
+
+		disabledListSuccessCallback = function(data){
+			var disabledList = data.rows;
+			var disabledMarker;
+			var html = '';
+
+
+			clearMarkers();
+            clearParkingLots();
+
+			for(var i=0; i<disabledList.length; i++){
+				disabled = disabledList[i];
+
+				var disabledPosition = new daum.maps.LatLng(disabled.lat_val, disabled.lon_val);
+
+				disabledMarker = new daum.maps.Marker({
+  				    map: map,
+  				    position: disabledPosition,
+  				  	image  : facilitiesImage2
+  				});
+				disabledMarkers.push(disabledMarker);
+
+				disabledMarkers[i].setMap(map);
+
+				var content = '';
+				var convin_name='';
+				if(langType == 'eng'){
+					convin_name = disabled.inst_eng_nm;
+				} else {
+					convin_name = disabled.inst_kor_nm;
+				}
+				content += '<div class="info_wrap">' ;
+				content += '    <div class="info_title">' ;
+				content += '        <a href="/web/facility_detail.action?convinType=Y&inst_seq='+disabled.inst_seq+'&lat_val='+disabled.lat_val+'&lon_val='+disabled.lon_val+'"><p class="kor_title">'+convin_name;
+				if(disabled.vil_dong_nm != '' && disabled.vil_dong_nm != null){
+                	content += '('+disabled.vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content += 'DONG)';
+    				}
+    				else{	//한글
+    					content += '동)';
+    				}
+                }
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content += ' ' + amenities.flr_nm;
+					}
+                }
+				
+				content += '</p></a>' ;
+				content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+				/* content += '        <p class="eng_title"><span><span></p>' ; */
+				content += '    </div>' ;
+				content += '<div class="bus_infoStartEnd">';
+                content += '<div class="btn">';
+                content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                if(disabled.vil_dong_nm != '' && disabled.vil_dong_nm != null){
+                	content += '('+disabled.vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content += 'DONG)';
+    				}
+    				else{	//한글
+    					//content += '동)';
+    					content += encodeURIComponent('동')+')';
+    				}
+                 }
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content += ' ' + amenities.flr_nm;
+					}
+                }
+				
+         		if(langType == 'eng'){ // 영문
+         			content += '&start_lat='+disabled.lat_val+'&start_lon='+disabled.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+         		}
+         		else{	//한글
+         			content += '&start_lat='+disabled.lat_val+'&start_lon='+disabled.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+         		}
+
+         		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+    			if(disabled.vil_dong_nm != '' && disabled.vil_dong_nm != null){
+    				content += '('+disabled.vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content += 'DONG)';
+    				}
+    				else{	//한글
+    					//content += '동)';
+    					content += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content += ' ' + amenities.flr_nm;
+					}
+                }
+				
+    			if(langType == 'eng'){ // 영문
+    				content += '&end_lat='+disabled.lat_val+'&end_lon='+disabled.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+    			}
+    			else{	//한글
+    				content += '&end_lat='+disabled.lat_val+'&end_lon='+disabled.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+    			}
+                content += '</div>';
+                content += '</div>';
+				content += '</div>';
+
+                var infowindow = new daum.maps.CustomOverlay({});
+
+	            infowindow = new daum.maps.CustomOverlay({
+					content: content,
+					position : new daum.maps.LatLng(disabled.lat_val, disabled.lon_val)
+				});
+
+	            daum.maps.event.addListener(disabledMarkers[i], 'mouseover', makeOverListener(map, disabledMarkers[i], infowindow));
+
+	            overlays.push(infowindow);
+
+			}
+			$('.search_list2 li a').attr('href', function(index, value, html) {
+				return value+'&current_lat_val='+current_lat_val+'&current_lon_val='+current_lon_val;
+			});
+
+			$('.search_list2 ul').html(html);
+		};
+
+		disabledListFailCallback = function(request, status, error){
+		};
+
+     // 주차장 팝업 안내 불러오기
+		pakringLotPopup = function(){
+			var ajax_url = '/api/amenities/parkingNoti.action';
+			$.ajax({
+		        'type': 'GET',
+		        'url': ajax_url,
+		        'contentType': 'text/plain; charset=utf-8',
+				'dataType': 'json',
+		        'beforeSend':function(request){
+		        	request.setRequestHeader('access_token', '111');
+		        },
+		        'error':function(request,status,error){
+		        },
+		        'success': function(data){
+		        }
+		    });
+		};
+
+
+		amenitiesDetail = function(convin_inst_knd_cd, current_lat_val, current_lon_val , convin_inst_knd_nm) {
+
+			$('#amenities_sel').hide();
+
+			var ajax_url = '/api/amenitiesDetail.action';
+			var param = {'convin_inst_knd_cd' : convin_inst_knd_cd, 'current_lat_val' : current_lat_val, 'current_lon_val' : current_lon_val};
+			$.ajax({
+		        'type': 'GET',
+		        'url': ajax_url,
+		        'contentType': 'text/plain; charset=utf-8',
+		        'data': param,
+		        'dataType': 'json',
+		        'beforeSend':function(request){
+		        	request.setRequestHeader('access_token', '111');
+		        },
+		        'error':function(request,status,error){
+		        	amenitiesDetailFailCallback(request,status,error); //실패 콜백함수 호출
+		        },
+		        'success': function(data){
+		        	amenitiesDetailSuccessCallback(data , convin_inst_knd_nm); //성공 콜백함수 호출
+		        }
+		    });
+
+		};
+
+
+		amenitiesDetailSuccessCallback = function(data , convin_inst_knd_nm){
+			//console.log('주변시설 상세');
+
+			clearMarkers();
+            clearParkingLots();
+
+            var amenitiesList = data.rows;
+            var parkingNoti = data.parkingNoti;
+            var html = '';
+            var amenitiesMarker;
+
+            var menuHtml = '';
+            var fac_detail_nm = '';
+
+            if(convin_inst_knd_cd == 26) {
+                alert(parkingNoti.park_pl_noti_desct);
+            }
+
+            for(var i=0; i<amenitiesList.length; i++){
+                amenities = amenitiesList[i];
+                //console.log('amenities::::', amenities);
+
+                eY = amenities.lat_val;
+                eX = amenities.lon_val;
+
+
+
+                var sub_title_area_html = convin_inst_knd_nm;
+
+                var url='';
+    			url+= '/web/facility_detail.action?lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val;
+    			url += '&convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd;
+
+    			sub_title_area_html += '<button style="float: right; line-height: 36px; margin-right: 5px; border: none; background: none;" onclick=\'showCate();\'><img src="/m/img/btn/back.png" alt="" width="25"></button>';
+    			$('.subTitle').html(sub_title_area_html);
+
+
+                if(amenities.up_convin_inst_knd_cd != "26"){
+
+	                var amenitiesPosition = new daum.maps.LatLng(amenities.lat_val, amenities.lon_val);
+
+	                amenitiesMarker = new daum.maps.Marker({
+	                    map: map,
+	                    position: amenitiesPosition,
+	                });
+
+
+	                var menu_image_src = '/m/img/marker/marker_facilities_default_nor.png'; // [보안수정]
+
+	                if(amenities.up_convin_inst_knd_cd == '1'){
+	                	amenitiesMarker.setImage(libraryImage2);
+	                	menu_image_src = '/m/img/marker/marker_facilities_library_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '2'){
+						amenitiesMarker.setImage(informationImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_information_retrieval_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '3'){
+						amenitiesMarker.setImage(supportcenterImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_supportcenter_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '4'){
+						amenitiesMarker.setImage(restaurantImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_restaurant_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '5' || amenities.up_convin_inst_knd_cd == '6' || amenities.up_convin_inst_knd_cd == '7'){
+						amenitiesMarker.setImage(cafeImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_cafe_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '8' || amenities.up_convin_inst_knd_cd == '9' || amenities.up_convin_inst_knd_cd == '10' || amenities.up_convin_inst_knd_cd == '11'){
+						amenitiesMarker.setImage(bankImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_bank_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '12' || amenities.up_convin_inst_knd_cd == '13' || amenities.up_convin_inst_knd_cd == '14' || amenities.up_convin_inst_knd_cd == '15'){
+						amenitiesMarker.setImage(hospitalImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_hospital_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '16' || amenities.up_convin_inst_knd_cd == '17' || amenities.up_convin_inst_knd_cd == '18' || amenities.up_convin_inst_knd_cd == '19' ){
+						amenitiesMarker.setImage(bookstoreImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_bookstore_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '20'){
+						amenitiesMarker.setImage(disabled_supportImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_disabled_support_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '21'){
+						amenitiesMarker.setImage(disabledImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_disabled_amenities_nor.png';
+					} else if(amenities.up_convin_inst_knd_cd == '22'){
+						amenitiesMarker.setImage(officeImage2);
+						menu_image_src ='/m/img/marker/marker_facilities_administration_office_nor.png';
+					} else {
+						amenitiesMarker.setImage(facilitiesImage2);
+						menu_image_src = '/m/img/marker/marker_facilities_default_nor.png'; // [보안수정]
+					}
+	                amenitiesMarkers.push(amenitiesMarker);
+	                amenitiesMarkers[i].setMap(map);
+
+	                var content = '';
+	                var convin_name='';
+	                if(langType == 'eng'){
+	                	convin_name = amenities.convin_inst_eng_nm;
+	                } else {
+	                	convin_name = amenities.convin_inst_kor_nm;
+	                }
+
+	                fac_detail_nm = convin_name;
+
+	                content += '<div class="info_wrap">' ;
+	                content += '    <div class="info_title">' ;
+	                content += '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+	                if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+	                	content += '('+amenities.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	                		fac_detail_nm += '('+amenities.vil_dong_nm +  'DONG)';
+	    				}
+	    				else{	//한글
+	    					content += '동)';
+	    					fac_detail_nm += '('+amenities.vil_dong_nm + '동)';
+	    				}
+	                }
+
+					// 층수 표시
+	                if(langType == 'eng') { // 영문
+						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+							content += ' ' + amenities.flr_cd;
+							fac_detail_nm += ' ' + amenities.flr_cd;
+						}
+	                } else {
+	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+	                		content += ' ' + amenities.flr_nm;
+	                		fac_detail_nm += ' ' + amenities.flr_nm;
+						}
+	                }
+					
+	                content += '</p></a>';
+	                content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+	                /* content += '        <p class="eng_title"><span><span></p>' ; */
+	                content += '    </div>' ;
+	                content += '<div class="bus_infoStartEnd">';
+	                content += '<div class="btn">';
+	                content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+	                if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+	                	content += '('+amenities.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					//content += '동)';
+	    					content += encodeURIComponent('동')+')';
+	    				}
+	                 }
+
+					// 층수 표시
+	                if(langType == 'eng') { // 영문
+						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+							content += ' ' + amenities.flr_cd;
+						}
+	                } else {
+	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+	                		content += ' ' + amenities.flr_nm;
+						}
+	                }
+					
+	         		if(langType == 'eng'){ // 영문
+	         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+	         		}
+	         		else{	//한글
+	         			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+	         		}
+
+	         		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+	    			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+	    				content += '('+amenities.vil_dong_nm;
+	                	if(langType == 'eng'){ // 영문
+	                		content += 'DONG)';
+	    				}
+	    				else{	//한글
+	    					//content += '동)';
+	    					content += encodeURIComponent('동')+')';
+	    				}
+	    			}
+
+					// 층수 표시
+	                if(langType == 'eng') { // 영문
+						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+							content += ' ' + amenities.flr_cd;
+						}
+	                } else {
+	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+	                		content += ' ' + amenities.flr_nm;
+						}
+	                }
+					
+	    			if(langType == 'eng'){ // 영문
+	    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+	    			}
+	    			else{	//한글
+	    				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+	    			}
+	                content += '</div>';
+	                content += '</div>';
+	                content += '</div>';
+
+	                var infowindow = new daum.maps.CustomOverlay({});
+
+		            infowindow = new daum.maps.CustomOverlay({
+						content: content,
+						position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+					});
+
+		            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+		            overlays.push(infowindow);
+
+		            menuHtml += '<div class="place" onmouseover="mouseoverFunction(' + i + ')" onmouseout="mouseoutFunction(' + i + ')">';
+					menuHtml += '<span class="position3"><img src="' + menu_image_src + '" alt="시설아이콘"></span>';
+					menuHtml += '<div class="placeCon"><a href="#url" class="placeChoice"><strong>' + fac_detail_nm + '</strong></a>';
+					menuHtml += '<div class="clickPlace" style="display:none">';
+					menuHtml += '<button class="imgBg startBtn" type="button" onclick="location.href=\'/web/search_road.action?sName=' + encodeURIComponent(fac_detail_nm) + '&start_lat=' + amenities.lat_val + '&start_lon=' + amenities.lon_val + '\'">출발</button>'
+					menuHtml += '<button class="imgBg endBtn" type="button" onclick="location.href=\'/web/search_road.action?eName=' + encodeURIComponent(fac_detail_nm) + '&end_lat=' + amenities.lat_val + '&end_lon=' + amenities.lon_val + '\'">도착</button>';
+					menuHtml += '<a href="/web/facility_detail.action?lat_val=' + amenities.lat_val + '&lon_val=' + amenities.lon_val + '&convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd=' + amenities.convin_inst_knd_cd + '">상세보기<span class="arr"></span> </a>';
+					menuHtml += '</div></div></div>';
+
+                }else{			// 주차장 및 나들문(up_convin_inst_knd_cd = 26)
+
+                    if(amenities.convin_inst_knd_cd == "27"){   //지상 주차장
+                        var path = [];
+                        if(amenities.path != null){
+	                        var _pathList = amenities.path.split('|');
+	                        for(var j = 0 ; j < _pathList.length; j++){
+	                            path.push(new daum.maps.LatLng(_pathList[j].split(',')[0], _pathList[j].split(',')[1]));
+	                        }
+                    	}else{
+
+                    	}
+
+                        var upperParkingLot  = new daum.maps.Polygon({});
+                        upperParkingLot.setPath(path);
+                        upperParkingLot.setOptions(upperPolygonOption);
+                        upperParkingLot.setMap(map);
+                        upperParkingLotList.push(upperParkingLot);
+
+                        var upperParkingCenter = new daum.maps.Marker({
+                            map : map,
+                            position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val),
+                            image : upperParkingLotImage2,
+                            clickable : true
+                        });
+
+                        amenitiesMarkers.push(upperParkingCenter);
+
+                        var content = '';
+                        var convin_name='';
+                        if(langType == 'eng'){
+                        	convin_name = amenities.convin_inst_eng_nm;
+                        } else {
+                        	convin_name = amenities.convin_inst_kor_nm;
+                        }
+                        fac_detail_nm = convin_name;
+                        content += '<div class="info_wrap">';
+                        content += '    <div class="info_title">';
+                        //content += '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+                        content += '        <a href="#"><p class="kor_title">'+convin_name;
+                        if(amenities.vil_dong_nm != '' &&  amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+                        		fac_detail_nm += 'DONG)';
+            				}
+            				else{	//한글
+            					content += '동)';
+            					fac_detail_nm += '동)';
+            				}
+                        }
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    							fac_detail_nm += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    	                		fac_detail_nm += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+                        content += '</p></a>';
+                        content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+                        /* content += '        <p class="eng_title"><span><span></p>' ; */
+                        content += '    </div>';
+                        content += '<div class="bus_infoStartEnd">';
+                        content += '<div class="btn">';
+                        content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+                         }
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+                 		if(langType == 'eng'){ // 영문
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+                 		}
+                 		else{	//한글
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+                 		}
+
+                 		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+            			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+            				content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+            			}
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+            			if(langType == 'eng'){ // 영문
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+            			}
+            			else{	//한글
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+            			}
+                        content += '</div>';
+                        content += '</div>';
+                        content += '</div>';
+
+                        var infowindow = new daum.maps.CustomOverlay({});
+
+        	            infowindow = new daum.maps.CustomOverlay({
+        					content: content,
+        					position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+        				});
+
+        	            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+        	            overlays.push(infowindow);
+
+                    }else if(amenities.convin_inst_knd_cd == "30"){   //지하 주차장
+
+                        var path = [];
+                        if(amenities.path != null){
+                        var _pathList = amenities.path.split('|');
+                        for(var j = 0 ; j < _pathList.length; j++){
+                            path.push(new daum.maps.LatLng(_pathList[j].split(',')[0], _pathList[j].split(',')[1]));
+                        }
+                        }else{
+
+                        }
+
+                        var underParkingLot  = new daum.maps.Polygon({});
+                        underParkingLot.setPath(path);
+                        underParkingLot.setOptions(underPolygonOption);
+                        underParkingLot.setMap(map);
+                        underParkingLotList.push(underParkingLot);
+
+                        var underParkingCenter = new daum.maps.Marker({
+                            map : map,
+                            position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val),
+                            image : underParkingLotImage2,
+                            clickable : true
+                        });
+
+                       amenitiesMarkers.push(underParkingCenter);
+                       var content = '';
+                       var convin_name='';
+                       if(langType == 'eng'){
+                       	convin_name = amenities.convin_inst_eng_nm;
+                       } else {
+                       	convin_name = amenities.convin_inst_kor_nm;
+                       }
+                       fac_detail_nm = convin_name;
+                        content += '<div class="info_wrap">' ;
+                        content += '    <div class="info_title">';
+                        //content += '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+                        content += '        <a href="#"><p class="kor_title">'+convin_name;
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					content += '동)';
+            				}
+                        }
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+                        content += '</p></a>' ;
+                        content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()" style="cursor:pointer"/>' ;
+                        /* content += '        <p class="eng_title"><span><span></p>' ; */
+                        content += '    </div>' ;
+                        content += '<div class="bus_infoStartEnd">';
+                        content += '<div class="btn">';
+                        content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+                         }
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+                 		if(langType == 'eng'){ // 영문
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+                 		}
+                 		else{	//한글
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+                 		}
+
+                 		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+            			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+            				content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+            			}
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+            			if(langType == 'eng'){ // 영문
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+            			}
+            			else{	//한글
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+            			}
+                        content += '</div>';
+                        content += '</div>';
+                        content += '</div>';
+
+                        var infowindow = new daum.maps.CustomOverlay({});
+
+        	            infowindow = new daum.maps.CustomOverlay({
+        					content: content,
+        					position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+        				});
+
+        	            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+        	            overlays.push(infowindow);
+
+                    }else if(amenities.convin_inst_knd_cd == "28"){   //나들문
+                        var point = [];
+                        if(amenities.path != null){
+                            point  = amenities.path.split(',');
+                        }
+
+                        var gatePosition = new daum.maps.LatLng(point[0],point[1]);
+
+                        gateMarker = new daum.maps.Marker({
+                        	map : map,
+                        	position : gatePosition,
+                        	image : gateImage2,
+                        	clickable : true
+                        });
+
+                        gateList.push(gateMarker);
+                        amenitiesMarkers.push(gateMarker);
+
+                        var content = '';
+                        var convin_name='';
+                        if(langType == 'eng'){
+                        	convin_name = amenities.convin_inst_eng_nm;
+                        } else {
+                        	convin_name = amenities.convin_inst_kor_nm;
+                        }
+                        fac_detail_nm = convin_name;
+                        content += '<div class="info_wrap">' ;
+                        content += '    <div class="info_title">';
+                        //content +=  '        <a href="/web/facility_detail.action?convin_inst_seq='+amenities.convin_inst_seq+'&convin_inst_knd_cd='+amenities.convin_inst_knd_cd+'&convin_inst_knd_kor_nm='+amenities.convin_inst_knd_kor_nm+'&lat_val='+amenities.lat_val+'&lon_val='+amenities.lon_val+'"><p class="kor_title">'+convin_name;
+                        content +=  '        <a href="#"><p class="kor_title">'+convin_name;
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					content += '동)';
+            				}
+                        }
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+                        content += '</p></a>' ;
+                        content +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()"/>' ;
+                        /* content += '        <p class="eng_title"><span><span></p>' ; */
+                        content += '    </div>';
+                        content += '<div class="bus_infoStartEnd">';
+                        content += '<div class="btn">';
+                        content += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                        if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+                        	content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+                         }
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+                 		if(langType == 'eng'){ // 영문
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+                 		}
+                 		else{	//한글
+                 			content += '&start_lat='+amenities.lat_val+'&start_lon='+amenities.lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+                 		}
+
+                 		content += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+            			if(amenities.vil_dong_nm != '' && amenities.vil_dong_nm != null){
+            				content += '('+amenities.vil_dong_nm;
+                        	if(langType == 'eng'){ // 영문
+                        		content += 'DONG)';
+            				}
+            				else{	//한글
+            					//content += '동)';
+            					content += encodeURIComponent('동')+')';
+            				}
+            			}
+
+    					// 층수 표시
+    	                if(langType == 'eng') { // 영문
+    						if(amenities.flr_cd != null && amenities.flr_cd != '') {
+    							content += ' ' + amenities.flr_cd;
+    						}
+    	                } else {
+    	                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+    	                		content += ' ' + amenities.flr_nm;
+    						}
+    	                }
+    					
+            			if(langType == 'eng'){ // 영문
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+            			}
+            			else{	//한글
+            				content += '&end_lat='+amenities.lat_val+'&end_lon='+amenities.lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+            			}
+                        content += '</div>';
+                        content += '</div>';
+                        content += '</div>';
+
+                        var infowindow = new daum.maps.CustomOverlay({});
+
+        	            infowindow = new daum.maps.CustomOverlay({
+        					content: content,
+        					position : new daum.maps.LatLng(amenities.lat_val, amenities.lon_val)
+        				});
+
+        	            daum.maps.event.addListener(amenitiesMarkers[i], 'mouseover', makeOverListener(map, amenitiesMarkers[i], infowindow));
+
+        	            overlays.push(infowindow);
+
+                    }
+
+	                menuHtml += '<div class="place" onmouseover="mouseoverFunction(' + i + ')" onmouseout="mouseoutFunction(' + i + ')">';
+					menuHtml += '<span class="position3"><img src="/web/common/images/marker/marker_facilities_1.png" alt="시설아이콘"></span>';
+					menuHtml += '<div class="placeCon"><a href="#url" class="placeChoice"><strong>' + fac_detail_nm + '</strong></a>';
+					menuHtml += '<div class="clickPlace" style="display:none">';
+					menuHtml += '<button class="imgBg startBtn" type="button" onclick="location.href=\'/web/search_road.action?sName=' + encodeURIComponent(fac_detail_nm) + '&start_lat=' + amenities.lat_val + '&start_lon=' + amenities.lon_val + '\'">출발</button>'
+					menuHtml += '<button class="imgBg endBtn" type="button" onclick="location.href=\'/web/search_road.action?eName=' + encodeURIComponent(fac_detail_nm) + '&end_lat=' + amenities.lat_val + '&end_lon=' + amenities.lon_val + '\'">도착</button>';
+					menuHtml += '</div></div></div>';
+                }
+
+            }
+
+            mouseoverFunction = function(i){
+		    	var search_img2='';
+
+
+		    	if(langType == 'eng'){
+                	convin_name = amenitiesList[i].convin_inst_eng_nm;
+				} else {
+					convin_name = amenitiesList[i].convin_inst_kor_nm;
+				}
+
+		    	if(amenitiesList[i].convin_inst_knd_cd == '1'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_1.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '2'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_2.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '3'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_3.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '4'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_4.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '5' || amenitiesList[i].convin_inst_knd_cd == '6' || amenitiesList[i].convin_inst_knd_cd == '7'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_5.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '8' || amenitiesList[i].convin_inst_knd_cd == '9' || amenitiesList[i].convin_inst_knd_cd == '10' || amenitiesList[i].convin_inst_knd_cd == '11'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_8.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '12' || amenitiesList[i].convin_inst_knd_cd == '13' || amenitiesList[i].convin_inst_knd_cd == '14' || amenitiesList[i].convin_inst_knd_cd == '15'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_12.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '16'  || amenitiesList[i].convin_inst_knd_cd == '17' || amenitiesList[i].convin_inst_knd_cd == '18' || amenitiesList[i].convin_inst_knd_cd == '19'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_16.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '20'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_20.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '21'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_21.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '22' || amenitiesList[i].convin_inst_knd_cd == '23' || amenitiesList[i].convin_inst_knd_cd == '24'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_22.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '27' || amenitiesList[i].convin_inst_knd_cd == '30'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_27.png';
+		    		} else if(amenitiesList[i].convin_inst_knd_cd == '28'){
+		    		search_img2 ='/web/common/images/marker/marker_facilities_30.png';
+		    		} else {
+		    		search_img2 ='/web/common/images/marker/marker_facilities_0.png';
+		    		}
+		    	var content2 ='';
+				content2 += '<div class="info_wrap">';
+				content2 += '    <div class="info_title">';
+				// 주차장/나들문 분기
+				if(amenitiesList[i].up_convin_inst_knd_cd != "26"){
+					content2 += '        <a href="'+url+'"><p class="kor_title">'+convin_name;
+				}else{
+					content2 += '        <a href="#"><p class="kor_title">'+convin_name;
+				}
+
+				//content2 += '        <a href="'+url+'"><p class="kor_title">'+convin_name;
+				if(amenitiesList[i].vil_dong_nm != '' && amenitiesList[i].vil_dong_nm != null){
+					content2 += '('+amenitiesList[i].vil_dong_nm;
+					if(langType == 'eng'){ // 영문
+			    		content2 += 'DONG)';
+					}
+					else{	//한글
+						content2 += '동)';
+					}
+				}
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content2 += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content2 += ' ' + amenities.flr_nm;
+					}
+                }
+				
+				content2 += '</p></a>';
+				content2 +=   '		<img class="info_close_btn" src="/m/img/btn/menu_close.png" alt="" onclick="closeOverlay()"/>' ;
+
+				content2 += '    </div>' ;
+				content2 += '<div class="bus_infoStartEnd">';
+                content2 += '<div class="btn">';
+
+                content2 += '<a href="#url" class="start" onClick="location.href=\'/web/search_road.action?sName='+encodeURIComponent(convin_name);
+                if(amenitiesList[i].vil_dong_nm != '' && amenitiesList[i].vil_dong_nm != null){
+                	content2 += '('+ amenitiesList[i].vil_dong_nm;
+                	if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					//content2 += '동)';
+    					content2 += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content2 += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content2 += ' ' + amenities.flr_nm;
+					}
+                }
+				
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&start_lat='+amenitiesList[i].lat_val+'&start_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/b_start_eng.png" alt="출발"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&start_lat='+amenitiesList[i].lat_val+'&start_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/btn_start.png" alt="출발"></a>';
+    			}
+    			content2 += '<a href="#url" class="end" onClick="location.href=\'/web/search_road.action?eName='+encodeURIComponent(convin_name);
+    			if(amenitiesList[i].vil_dong_nm != '' && amenitiesList[i].vil_dong_nm != null){
+    				content2 += '('+ amenitiesList[i].vil_dong_nm;
+    				if(langType == 'eng'){ // 영문
+                		content2 += 'DONG)';
+    				}
+    				else{	//한글
+    					//content2 += '동)';
+    					content2 += encodeURIComponent('동')+')';
+    				}
+    			}
+
+				// 층수 표시
+                if(langType == 'eng') { // 영문
+					if(amenities.flr_cd != null && amenities.flr_cd != '') {
+						content2 += ' ' + amenities.flr_cd;
+					}
+                } else {
+                	if(amenities.flr_nm != null && amenities.flr_nm != '') {
+                		content2 += ' ' + amenities.flr_nm;
+					}
+                }
+				
+    			if(langType == 'eng'){ // 영문
+    				content2 += '&end_lat='+amenitiesList[i].lat_val+'&end_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/b_end_eng.png" alt="도착"></a>';
+    			}
+    			else{	//한글
+    				content2 += '&end_lat='+amenitiesList[i].lat_val+'&end_lon='+amenitiesList[i].lon_val+'\'"><img src="common/images/btn_end.png" alt="도착"></a>';
+    			}
+
+                content2 += '</div>';
+                content2 += '</div>';
+				content2 += '</div>';
+
+			    var infowindow2 = new daum.maps.CustomOverlay({});
+			    infowindow2 = new daum.maps.CustomOverlay({
+					content: content2,
+					position : new daum.maps.LatLng(amenitiesList[i].lat_val, amenitiesList[i].lon_val)
+				});
+
+			    makeOverListener2(map, searchMarkers[i], infowindow2);
+			    overlays.push(infowindow2);
+
+			    panLatLngTo(amenitiesList[i].lat_val, amenitiesList[i].lon_val);
+
+			};
+
+			 mouseoutFunction = function(i){
+				 closeOverlay();
+			 };
+
+
+            $('.search_list2 ul').html(html);
+            //$('#add_category').html(menuHtml);
+
+            $('#category_result').html(menuHtml);
+            $('#category_result').show();
+            $('#add_category').hide();
+        };
+
+        amenitiesDetailFailCallback = function(request, status, error){
+        	//alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+            //("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+        };
+
+		function cate_list_show(obj) {
+			$(obj).next("ul").toggle();
+			$(obj).toggleClass('on');
+		}
+
+		function main_pop_show(obj) {
+			$("#"+obj).show();
+			$("#mask").show();
+			if(obj == 'map_copy'){
+				$('#staticMap img').remove();
+				var staticMapContainer = document.getElementById('staticMap'); // 이미지 지도를 표시할 div
+				var staticMapOption;
+				if(mouseOverMarker == undefined){
+		      	  	 staticMapOption = {
+		   	            center: new daum.maps.LatLng(37.45928245921213 , 126.95367978038104), // 지도의 중심좌표
+		   	            level: 4, // 이미지 지도의 확대 레벨 *
+		   	        };
+				}else{
+					staticMapOption = {
+		   	            center: mouseOverMarker.getPosition(), // 이미지 지도의 중심좌표
+		   	            level: 3, // 이미지 지도의 확대 레벨 *
+		   	            marker: mouseOverMarker // 이미지 지도에 표시할 마커
+		   	        };
+				}
+				// 이미지 지도를 생성합니다
+				var staticMap = new daum.maps.StaticMap(staticMapContainer, staticMapOption);
+				$('#staticMap a').attr({'href' : '#', 'target' : ''});
+			}
+		}
+
+		function main_pop_hide(obj) {
+			$("#"+obj).hide();
+			$("#mask").hide();
+		}
+
+	function main_pop_download(){
+		var src = $('#staticMap img').attr('src');
+		$('#img_download').attr({'target' : '_blank' , 'href' : src});
+		main_pop_hide('map_copy');
+	}
+
+   	function popupConfimFunction() {
+		document.getElementById("notiPopup").style.visibility = "hidden";
+		$("#enterCurCntTable").html("");
+	}
+
+
+	showCate = function(){
+		if( $("#add_category").css("display") == "none" ) {
+			$('#category_result').hide();
+			$('#add_category').show();
+		}else{
+			$('#add_category').hide();
+			$('#category_result').show();
+		}
+	};
+	//]]>
+	</script>
+</body>
+</html>

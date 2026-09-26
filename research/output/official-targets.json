@@ -1,0 +1,642 @@
+[
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95398",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 아시아언어문명학부 사무실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 8동: 1층 출입구 옆"
+      }
+    ],
+    "lat_val1": "489821",
+    "ename": "Doosan Humanities Hall",
+    "img_url": "/upload/default/F_BUILD_0000008.jpg",
+    "lat_val": "37.46016",
+    "name": "두산인문관",
+    "con_type": "F",
+    "vil_dong_nm": "8",
+    "lon_val1": "1100209",
+    "seq": 8
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95326",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "9",
+        "convin_inst_kor_nm": "신양인문학술 정보관 우리 지점"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "6",
+        "convin_inst_kor_nm": "머그(인문대점)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "2",
+        "convin_inst_kor_nm": "신양인문학술정보관 정보검색실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 4동: 1층 경비실 옆"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "46",
+        "convin_inst_kor_nm": "인문대학 신양학술정보관"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "46",
+        "convin_inst_kor_nm": "인문대학 신양학술정보관"
+      }
+    ],
+    "lat_val1": "489662",
+    "ename": "Shinyang Hall II ",
+    "img_url": "/upload/default/F_BUILD_0000004.jpg",
+    "lat_val": "37.46089",
+    "name": "신양인문학술정보관",
+    "con_type": "F",
+    "vil_dong_nm": "4",
+    "lon_val1": "1100411",
+    "seq": 4
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95234",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 국문학과사무실(언어연구소)"
+      },
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 중문학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 1동: 2층 복도 중앙 휴게공간"
+      }
+    ],
+    "lat_val1": "489459",
+    "ename": "College of Humanities 1",
+    "img_url": "/upload/default/F_BUILD_0000001.jpg",
+    "lat_val": "37.46027",
+    "name": "인문관1",
+    "con_type": "F",
+    "vil_dong_nm": "1",
+    "lon_val1": "1100239",
+    "seq": 1
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95295",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 언어학과사무실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 영문학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 독문학과사무실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 2동: 1층 화장실 옆"
+      }
+    ],
+    "lat_val1": "489593",
+    "ename": "College of Humanities 2",
+    "img_url": "/upload/default/F_BUILD_0000002.jpg",
+    "lat_val": "37.46038",
+    "name": "인문관2",
+    "con_type": "F",
+    "vil_dong_nm": "2",
+    "lon_val1": "1100270",
+    "seq": 2
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95355",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 서어서문학과사무실"
+      },
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 노어노문학과사무실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 3동: 1층 화장실 옆"
+      }
+    ],
+    "lat_val1": "489726",
+    "ename": "College of Humanities 3",
+    "img_url": "/upload/default/F_BUILD_0000003.jpg",
+    "lat_val": "37.46071",
+    "name": "인문관3",
+    "con_type": "F",
+    "vil_dong_nm": "3",
+    "lon_val1": "1100361",
+    "seq": 3
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95393",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 종교학과사무실"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 고고미술사학과사무실"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 불어불문학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "인문대학 행정실 (교.학)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "인문대학 행정실(서무)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "인문대학 행정실(기획)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 5동: 2층 복도 중앙 휴게공간"
+      }
+    ],
+    "lat_val1": "489810",
+    "ename": "College of Humanities 4",
+    "img_url": "/upload/default/F_BUILD_0000005.jpg",
+    "lat_val": "37.4606",
+    "name": "인문관4",
+    "con_type": "F",
+    "vil_dong_nm": "5",
+    "lon_val1": "1100331",
+    "seq": 5
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95452",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 철학과사무실/철학사상연구소사무"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "10",
+        "convin_inst_kor_nm": "인문관5 농협ATM"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 미학과사무실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 6동: 1층 경비실 앞"
+      }
+    ],
+    "lat_val1": "489941",
+    "ename": "College of Humanities 5",
+    "img_url": "/upload/default/F_BUILD_0000006.jpg",
+    "lat_val": "37.46073",
+    "name": "인문관5",
+    "con_type": "F",
+    "vil_dong_nm": "6",
+    "lon_val1": "1100367",
+    "seq": 6
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95436",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 국사학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 서양사학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 7동: 2층 서쪽출입구방향 로비벽면"
+      }
+    ],
+    "lat_val1": "489905",
+    "ename": "College of Humanities 6",
+    "img_url": "/upload/default/F_BUILD_0000007.jpg",
+    "lat_val": "37.46022",
+    "name": "인문관6",
+    "con_type": "F",
+    "vil_dong_nm": "7",
+    "lon_val1": "1100225",
+    "seq": 7
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95499",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 동양사학과사무실"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 서양고전학전공 사무실"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 인지과학전공 사무실"
+      },
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 비교문학전공 사무실"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 기록관리학전공 사무실"
+      },
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "인문대학 공연예술학전공 사무실"
+      },
+      {
+        "flr_nm": "지하1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "인문대 14동: 지하1층 경비실 앞"
+      }
+    ],
+    "lat_val1": "490045",
+    "ename": "College of Humanities 7",
+    "img_url": "/upload/default/F_BUILD_0000015.jpg",
+    "lat_val": "37.46093",
+    "name": "인문관7",
+    "con_type": "F",
+    "vil_dong_nm": "14",
+    "lon_val1": "1100422",
+    "seq": 15
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.9548",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "",
+        "convin_inst_knd_cd": "50",
+        "convin_inst_kor_nm": "사범대학 9동 앞"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "9동(사범대) 1층"
+      }
+    ],
+    "lat_val1": "490003",
+    "ename": "College of Education 1",
+    "img_url": "/upload/default/F_BUILD_0000009.jpg",
+    "lat_val": "37.46017",
+    "name": "사범관1",
+    "con_type": "F",
+    "vil_dong_nm": "9",
+    "lon_val1": "1100211",
+    "seq": 9
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95536",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "",
+        "convin_inst_knd_cd": "39",
+        "convin_inst_kor_nm": "asdf"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 지리교육과 학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 수학교육과사무실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "사범대 10동 : 1층 로비"
+      }
+    ],
+    "lat_val1": "490126",
+    "ename": "College of Education 2",
+    "img_url": "/upload/default/F_BUILD_0000010.jpg",
+    "lat_val": "37.46031",
+    "name": "사범관2",
+    "con_type": "F",
+    "vil_dong_nm": "10",
+    "lon_val1": "1100250",
+    "seq": 10
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.9552",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "10",
+        "convin_inst_kor_nm": "사범관3 농협ATM"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 교육학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 국어교육과 학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 영어교육과 학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 불어교육과 학과사무실 및 학과장실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 독어교육과 학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 사회교육과 학과사무실1"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 사회교육과 학과사무실2"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 역사교육과 학과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 윤리교육과사무실"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "사범대학 행정실(서무)"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "사범대학 행정실(교학,기획,통합)"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "사범대학 행정실(연구)"
+      },
+      {
+        "flr_nm": "지상3층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "사범대학 행정실(교학,기획,통합)"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "11동(사범대) 1층"
+      }
+    ],
+    "lat_val1": "490091",
+    "ename": "College of Education 3",
+    "img_url": "/upload/default/F_BUILD_0000012.jpg",
+    "lat_val": "37.45979",
+    "name": "사범관3",
+    "con_type": "F",
+    "vil_dong_nm": "11",
+    "lon_val1": "1100106",
+    "seq": 12
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95479",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지하1층",
+        "convin_inst_knd_cd": "6",
+        "convin_inst_kor_nm": "더 랩 24/7"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "12동(사범대) 1층"
+      }
+    ],
+    "lat_val1": "490000",
+    "ename": "Teacher Training Center",
+    "img_url": "/upload/default/F_BUILD_0000013.jpg",
+    "lat_val": "37.45962",
+    "name": "사범교육협력센터",
+    "con_type": "F",
+    "vil_dong_nm": "12",
+    "lon_val1": "1100059",
+    "seq": 13
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95389",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 물리교육과 사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 화학교육과사무실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 생물교육과 사무실"
+      },
+      {
+        "flr_nm": "지상4층",
+        "convin_inst_knd_cd": "23",
+        "convin_inst_kor_nm": "사범대학 지구과학교육과 행정실"
+      },
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "사범대 13동: 1층 출입구 오른쪽"
+      }
+    ],
+    "lat_val1": "489801",
+    "ename": "Science Education Building",
+    "img_url": "/upload/default/F_BUILD_0000014.jpg",
+    "lat_val": "37.45927",
+    "name": "과학교육관",
+    "con_type": "F",
+    "vil_dong_nm": "13",
+    "lon_val1": "1099962",
+    "seq": 14
+  },
+  {
+    "fac_type": "OTHER",
+    "distance": 0,
+    "lon_val": "126.95174",
+    "area_path": [],
+    "knd_cd": null,
+    "floor_info": [
+      {
+        "flr_nm": "지상1층",
+        "convin_inst_knd_cd": "10",
+        "convin_inst_kor_nm": "법학관1 농협ATM"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "2",
+        "convin_inst_kor_nm": "법학대학 정보검색실"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "법과대학 행정실(교.학)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "법학전문대학원 행정실(교.학)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "법과대학 행정실(서무)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "24",
+        "convin_inst_kor_nm": "법과대학 행정실(교.학)"
+      },
+      {
+        "flr_nm": "지상2층",
+        "convin_inst_knd_cd": "0",
+        "convin_inst_kor_nm": "법대 15동(법학관1): 2층 서무행정실 앞"
+      }
+    ],
+    "lat_val1": "489326",
+    "ename": "College of Law 1",
+    "img_url": "/upload/default/F_BUILD_0000016.jpg",
+    "lat_val": "37.46233",
+    "name": "법학관1",
+    "con_type": "F",
+    "vil_dong_nm": "15",
+    "lon_val1": "1100811",
+    "seq": 16
+  }
+]

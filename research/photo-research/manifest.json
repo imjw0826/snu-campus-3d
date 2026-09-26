@@ -1,0 +1,79 @@
+{
+  "researchDate": "2026-09-20",
+  "status": "collecting",
+  "reuse": "Unknown; official SNU website publication is verified, but no reuse license was supplied.",
+  "buildings": [
+    {
+      "number": 1,
+      "officialName": "인문관1",
+      "latitude": 37.46027,
+      "longitude": 126.95234,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46027&lon_val=126.95234&convinType=Y&inst_seq=1",
+      "images": [
+        {
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000001.jpg",
+          "localPath": "../../dist/assets/photos/01-official.jpg",
+          "confidence": "high",
+          "observations": "Brown brick infill, white horizontal concrete bands and vertical columns, rectangular paired windows, glass vertical stair tower, flat roof with white railing. Courtyard view includes adjacent wings; facade numeral 1 visible at left. Four main levels visible."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "officialName": "두산인문관",
+      "images": [
+        {
+          "sourcePage": "https://chio.snu.ac.kr/chio/greeting.php",
+          "imageUrl": "https://chio.snu.ac.kr/images/sub/greeting.jpg",
+          "localPath": "08-chio-official.jpg",
+          "confidence": "high",
+          "observations": "Brown brick with dark metal horizontal bands and narrow vertical window strips; tall recessed entrance/pilotis; projecting glazed side bay, flat roof and open upper screen. Number 8 visible."
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "officialName": "인문관7",
+      "images": [
+        {
+          "sourcePage": "https://www.snu.ac.kr/snunow/snu_story?bbsidx=143580&md=v",
+          "imageUrl": "https://www.snu.ac.kr/webdata/boardimages/konews/img_20230918_001.jpg",
+          "localPath": "14-history-official.jpg",
+          "confidence": "high",
+          "observations": "Exposed light gray concrete slab edges and numerous narrow vertical fins; brown brick infill and tall slim windows. Large flat overhanging canopy with open terrace below; glazed lower level."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "officialName": "인문관2",
+      "latitude": 37.46038,
+      "longitude": 126.95295,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46038&lon_val=126.95295&convinType=Y&inst_seq=2",
+      "images": [
+        {
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000002.jpg",
+          "localPath": "../../dist/assets/photos/02-official.jpg",
+          "confidence": "high",
+          "observations": "Pending visual inspection"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "officialName": "인문관3",
+      "latitude": 37.46071,
+      "longitude": 126.95355,
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46071&lon_val=126.95355&convinType=Y&inst_seq=3",
+      "images": [
+        {
+          "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000003.jpg",
+          "localPath": "../../dist/assets/photos/03-official.jpg",
+          "confidence": "high",
+          "observations": "Pending visual inspection"
+        }
+      ]
+    }
+  ],
+  "note": "localPath는 이 manifest.json 파일이 있는 폴더 기준 상대경로입니다. 원본 조사 자료와 배포용 사진은 프로젝트 내부에 보관합니다."
+}
