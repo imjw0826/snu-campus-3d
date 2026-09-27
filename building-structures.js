@@ -652,55 +652,136 @@ function education13(b){
 // Contemporary infill: tan brick cut by vertical window slots of deliberately
 // uneven width, a black metal bay hung off the corner, a two-storey entrance
 // void, and an open brick screen standing above the top floor.
+// 8동: explicit elevation schedules, traced from the archived front / end photos.
+// Building 5 is beside local +X; the photographed long facade faces local -Z.
+// All dimensions remain photo estimates within the mapped footprint.
 function doosan8(b){
   const m=builder(b),{box,polygon}=m;
-  const outline=localFootprint(b),sign=ringSign(outline),main=longestEdge(outline);
-  const floors=6,fh=3.55,top=floors*fh;
-  const wall=offsetRing(outline,sign,-.12);
-  polygon('brick-volume',wall,0,top,tanBrick);
-  polygon('floor-edge-reveal',offsetRing(outline,sign,.03),0,.1,blackMetal);
-  // Vertical slots: width, height and floor span vary per bay from a fixed hash,
-  // reproducing the syncopated rhythm without inventing a regular grid.
-  facades(outline,sign,({length,nx,nz,angle,at,index})=>{
-    const bays=Math.max(3,Math.round(length/2.45));
-    for(let j=0;j<bays;j++){
-      const seed=hash(index+1,j+1);
-      const t=(j+.5)/bays,[x,z]=at(t);
-      const wide=(seed>>3)%5===0;
-      const w=Math.min(length/bays*.84,wide?2.3:(seed%3)*.22+.82);
-      for(let f=0;f<floors;f++){
-        const tall=(hash(index+1,j+1,f+1)>>5)%4===0;
-        if((hash(index+1,j+1,f+2)>>7)%7===0)continue;
-        const h=tall?fh*.78:fh*.52;
-        box('vertical-window-slot',x+nx*.16,f*fh+fh*.5,z+nz*.16,w+.34,h+.34,.2,blackMetal,angle);
-        box('window-glazing',x+nx*.26,f*fh+fh*.5,z+nz*.26,w,h,.16,glass,angle);
+  const w=b.box.width,d=b.box.depth,x0=-w/2,x1=w/2,z0=-d/2,z1=d/2;
+  const fh=3.5,roof=17.5,screen=21;
+  const masonry=new THREE.MeshStandardMaterial({color:'#a18b77',roughness:.96});
+  // Small physical-scale brick joints, shared across the individual wall pieces.
+  masonry.onBeforeCompile=shader=>{
+    shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vBrickWorld;');
+    shader.vertexShader=shader.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
+      vec4 brickPosition=vec4(transformed,1.0);
+      #ifdef USE_INSTANCING
+        brickPosition=instanceMatrix*brickPosition;
+      #endif
+      vBrickWorld=(modelMatrix*brickPosition).xyz;`);
+    shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 vBrickWorld;');
+    shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+      float row=floor(vBrickWorld.y/.085);
+      float u=(vBrickWorld.x+vBrickWorld.z)/.25+mod(row,2.)*.5;
+      float v=vBrickWorld.y/.085;
+      vec2 joint=abs(fract(vec2(u,v))-.5);
+      vec2 aa=max(fwidth(vec2(u,v)),vec2(.015));
+      float mortar=max(smoothstep(.46-aa.x,.49+aa.x,joint.x),smoothstep(.445-aa.y,.49+aa.y,joint.y));
+      float tint=fract(sin(dot(vec2(floor(u),row),vec2(12.9898,78.233)))*43758.5453);
+      diffuseColor.rgb*=mix(.92,1.07,tint);
+      diffuseColor.rgb=mix(diffuseColor.rgb,vec3(.48,.46,.42),mortar*.32);`);
+  };
+  masonry.customProgramCacheKey=()=> 'doosan-brick-20260927';
+  const zinc=new THREE.MeshStandardMaterial({color:'#38434b',roughness:.67,metalness:.24});
+  const glazing=new THREE.MeshStandardMaterial({color:'#72909b',roughness:.28,metalness:.35});
+  const frame=new THREE.MeshStandardMaterial({color:'#909da0',roughness:.62,metalness:.3});
+  const recess=new THREE.MeshStandardMaterial({color:'#64594e',roughness:.98});
+  // The entry wraps the near (+X/-Z) corner. No full-volume box behind this void.
+  const entryLeft=w*.10,entryBack=z1-3.0;
+  box('lower-rear-masonry',0,3.5,(entryBack+z1)/2,w,7,z1-entryBack,masonry,0,true);
+  box('lower-front-solid-wing',(x0+entryLeft)/2,3.5,(z0+entryBack)/2,entryLeft-x0,7,entryBack-z0,masonry,0,true);
+  box('entry-corner-brick-pier',x1-.85,3.5,z0+.85,1.7,7,1.7,masonry,0,true);
+  box('entry-soffit',(entryLeft+x1)/2,7.04,(z0+entryBack)/2,x1-entryLeft,.16,entryBack-z0,zinc,0,true);
+  box('entry-recess-back-wall',(entryLeft+x1)/2,3.5,entryBack-.10,x1-entryLeft,7,.20,recess,0,true);
+  box('entry-interior-side-wall',entryLeft+.02,3.5,(z0+entryBack)/2,.08,7,entryBack-z0,recess);
+  box('entry-recess-glass-doors',(entryLeft+x1)/2,1.48,entryBack-.23,4.5,2.95,.12,glazing);
+  for(let i=-2;i<=2;i++)box('entry-door-mullion',(entryLeft+x1)/2+i*.9,1.48,entryBack-.32,.055,2.95,.08,zinc);
+  box('entry-door-transom',(entryLeft+x1)/2,2.65,entryBack-.33,4.5,.06,.08,zinc);
+  // Interior floor plates stop at the inside of the facade. Outer cladding is
+  // assembled from wall panels around openings, so reveals have actual depth.
+  box('upper-inset-core',0,12.25,0,w-1.05,10.5,d-1.05,masonry,0,true);
+  for(const y of [7,10.5,14,17.5])box('internal-floor-plate',0,y,0,w-.35,.16,d-.35,zinc);
+  // Front schedules run left to right as viewed from outside (-Z).
+  // Wide blind end wall; progressively narrower vertical slots and broad piers.
+  const frontRows=[
+    [[.04,.032],[.12,.034],[.20,.036],[.28,.042],[.36,.032],[.44,.034],[.52,.036],[.60,.04],[.68,.033],[.76,.035]],
+    [[.05,.034],[.13,.028],[.21,.037],[.29,.038],[.37,.035],[.45,.04],[.53,.03],[.61,.038],[.69,.034],[.77,.03]],
+    [[.045,.03],[.125,.033],[.205,.035],[.285,.04],[.365,.029],[.445,.037],[.525,.043],[.605,.03],[.685,.036],[.765,.032]]
+  ];
+  const endRows=[[[.12,.05],[.40,.065],[.68,.16]],[[.18,.05],[.49,.11],[.75,.055]],[[.13,.13],[.47,.045],[.73,.14]]];
+  // Local side parameter reversal puts the projecting bay at the entry end.
+  function elevation(name,length,origin,angle,rows,reverse=false){
+    const c=Math.cos(angle),s=Math.sin(angle);
+    const place=(part,t,y,ww,hh,depth,offset,mat,pick=false)=>{
+      const u=(t-.5)*length;
+      box(name+'-'+part,origin[0]+c*u+s*offset,y,origin[1]-s*u+c*offset,ww,hh,depth,mat,angle,pick);
+    };
+    for(let f=0;f<3;f++){
+      const slots=rows[f].map(([t,ww])=>[reverse?1-t:t,ww]).sort((a,b)=>a[0]-b[0]);
+      let start=0;const y=7+f*fh;
+      for(const [t,ww] of slots){
+        const left=t-ww/2,right=t+ww/2;
+        if(left>start)place('brick-pier',(start+left)/2,y+fh/2,(left-start)*length,fh-.10,.46,0,masonry,true);
+        place('full-height-slot',t,y+fh/2,ww*length,fh-.1,.16,-.13,zinc);
+        const gh=fh*.64,gy=y+fh*.53;
+        place('recessed-glass',t,gy,ww*length-.13,gh,.075,-.035,glazing);
+        for(const side of [-1,1])place('thin-window-jamb',t+side*(ww/2-.025/length),gy,.045,gh+.08,.09,.01,frame);
+        for(const yy of [gy-gh/2,gy+gh/2])place('thin-window-transom',t,yy,ww*length,.055,.09,.01,frame);
+        if(ww*length>1.5)place('opening-light-mullion',t+ww*.22,gy,.045,gh,.09,.01,frame);
+        start=right;
       }
+      if(start<1)place('brick-end-wall',(1+start)/2,y+fh/2,(1-start)*length,fh-.1,.46,0,masonry,true);
+      place('horizontal-metal-joint',.5,y,length,.065,.13,.25,zinc);
     }
-  });
-  // Cantilevered black bay beside the entrance.
-  const a=outline[main],c=outline[(main+1)%outline.length];
-  const [nx,nz]=edgeNormal(a,c,sign),angle=-Math.atan2(c[1]-a[1],c[0]-a[0]);
-  const length=edgeLength(a,c);
-  const bx=a[0]+(c[0]-a[0])*.34,bz=a[1]+(c[1]-a[1])*.34;
-  box('cantilevered-metal-bay',bx+nx*1.35,fh*3.5,bz+nz*1.35,5.4,fh*3,2.9,blackMetal,angle,true);
-  for(let f=2;f<5;f++)box('metal-bay-glazing',bx+nx*2.85,f*fh+fh*.5,bz+nz*2.85,3.9,fh*.62,.16,glass,angle);
-  // Two-storey entrance void cut into the base under the overhanging brick.
-  const ex=a[0]+(c[0]-a[0])*.52,ez=a[1]+(c[1]-a[1])*.52,evw=Math.min(length*.3,12);
-  box('entrance-void',ex+nx*-1.9,fh,ez+nz*-1.9,evw,fh*2,4.2,voidDark,angle,true);
-  box('entrance-void-head',ex+nx*.2,fh*2+.35,ez+nz*.2,evw+1.6,.7,1.2,blackMetal,angle);
-  box('entrance-lobby-glazing',ex+nx*-3.4,fh*.62,ez+nz*-3.4,evw*.8,fh*1.1,.2,darkGlass,angle);
-  // Open brick screen: fins with real gaps, so sky shows through at roof level.
-  facades(outline,sign,({length,nx,nz,angle,at})=>{
-    const fins=Math.max(3,Math.round(length/2.2));
-    for(let j=0;j<fins;j++){
-      if((hash(Math.round(length),j)>>4)%4===0)continue;
-      const [x,z]=at((j+.5)/fins);
-      box('open-roof-screen-fin',x+nx*.05,top+1.55,z+nz*.05,length/fins*.62,3.1,.42,tanBrick,angle);
+    place('roof-edge-band',.5,roof,length,.10,.16,.24,zinc);
+    return place;
+  }
+  const front=elevation('courtyard',w,[0,z0],Math.PI,frontRows,true);
+  const end=elevation('entry-end',d,[x1,0],Math.PI/2,endRows);
+  // Back elevations are deliberately restrained: available photos only show
+  // parts behind building 7. No copied random all-around window treatment.
+  elevation('rear',w,[0,z1],0,[[[.12,.045],[.8,.06]],[[.12,.045],[.8,.06]],[[.12,.045],[.8,.06]]]);
+  elevation('far-end',d,[x0,0],-Math.PI/2,[[[.18,.06],[.82,.05]],[[.18,.06],[.82,.05]],[[.18,.06],[.82,.05]]]);
+  // Thin joints across the otherwise predominantly solid two-storey base.
+  for(const y of [0.1,3.5]){
+    box('base-long-horizontal-joint',(x0+entryLeft)/2,y,z0-.025,entryLeft-x0,.065,.11,zinc);
+    box('base-side-horizontal-joint',x1+.025,y,(entryBack+z1)/2,.11,.065,z1-entryBack,zinc);
+  }
+  for(const x of [x0+3,x0+7,x0+11])box('base-panel-joint',x,3.5,z0-.025,.035,6.9,.07,zinc);
+  box('base-vent',x0+4,1.65,z0-.07,1,2.35,.12,zinc);
+  for(let y=.55;y<2.8;y+=.13)box('vent-louvre',x0+4,y,z0-.15,.92,.035,.09,frame);
+  // The projecting dark bay occupies TWO upper levels, near the entrance end,
+  // rather than a three-storey block in the middle of the elevation.
+  const bayX=x1-4.0,bayW=2.65,bayBottom=10.5,bayTop=17.5;
+  box('two-level-projecting-bay',bayX,(bayBottom+bayTop)/2,z0-.65,bayW,bayTop-bayBottom,1.30,zinc,0,true);
+  for(const y of [12.5,16.0]){
+    box('bay-glass',bayX,y,z0-1.315,bayW-.28,2.05,.07,glazing);
+    box('bay-vertical-mullion',bayX+.43,y,z0-1.36,.055,2.05,.06,zinc);
+    box('bay-horizontal-mullion',bayX,y+.42,z0-1.36,bayW-.28,.06,.06,zinc);
+  }
+  // Sixth level: open framed terrace screen, with a continuous top lintel.
+  // Solid wide end panels alternate with openings; no crenellated roof teeth.
+  function screenWall(place,slots,length){
+    let start=0;
+    for(const [t,ww] of slots){
+      const l=t-ww/2,r=t+ww/2;
+      if(l>start)place('terrace-brick-panel',(start+l)/2,19.25,(l-start)*length,3.5,.42,0,masonry,true);
+      place('terrace-low-metal-guard',t,18.15,ww*length,1.15,.13,-.04,zinc);
+      start=r;
     }
-  });
-  polygon('roof-deck',offsetRing(outline,sign,-.6),top,.2,roofMaterial);
-  box('rooftop-plant-enclosure',0,top+1.5,0,b.box.width*.2,3,b.box.depth*.34,blackMetal,0,true);
-  return m.finish(top+3.1,['uneven-vertical-window-slots','cantilevered-metal-bay','two-storey-entrance-void','open-brick-roof-screen']);
+    if(start<1)place('terrace-solid-end',(start+1)/2,19.25,(1-start)*length,3.5,.42,0,masonry,true);
+    place('continuous-top-lintel',.5,screen,length,.13,.46,0,zinc,true);
+  }
+  screenWall(front,[[.12,.08],[.25,.07],[.39,.06],[.51,.05],[.63,.06],[.74,.05]],w);
+  screenWall(end,[[.12,.13],[.40,.13],[.72,.13]],d);
+  // Roof floor set below the screen, with a setback enclosed room at the rear.
+  box('terrace-floor',0,17.52,0,w-.8,.16,d-.8,roofMaterial);
+  box('setback-sixth-floor',-2,19.2,4,w*.57,3.3,d*.48,masonry,0,true);
+  box('setback-roof',-2,20.89,4,w*.57+.1,.12,d*.48+.1,zinc,0,true);
+  box('rear-rooftop-equipment',x0+3,21.5,z1-4,4.6,3.0,4.2,zinc,0,true);
+  // Modest entrance approach; campus terrain is still flat and not surveyed.
+  for(let j=0;j<5;j++)box('entry-threshold-step',(entryLeft+x1)/2,.08*(j+1),z0-2+j*.4,x1-entryLeft,.16*(j+1),.42,concrete);
+  return m.finish(23,['explicit-floor-window-schedules','recessed-full-height-slots','two-storey-open-corner-entry','two-level-offset-metal-bay','continuous-terrace-lintel','setback-roof-room']);
 }
 
 // --- 12동 사범교육협력센터 ---------------------------------------------------
