@@ -1,0 +1,80 @@
+{
+  "building": "8",
+  "queries": [],
+  "candidates": [
+    {
+      "cid": "b05fda99",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfODAg/MDAxNzc1OTk3NzIyNDI0.LrgFDJxbaJyLg1SzOFm-Y_IOsU4d1Lm30O_LDiWVo8Yg.LWSVALGbc2ixukl85l4po1ajjZzzS7gtkjavZlOOaZ0g.JPEG/900_20260411_152701.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "source": "네이버 블로그",
+      "title": "서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "publishedDate": "2026-04-12",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA0MTJfODAg/MDAxNzc1OTk3NzIyNDI0.LrgFDJxbaJyLg1SzOFm-Y_IOsU4d1Lm30O_LDiWVo8Yg.LWSVALGbc2ixukl85l4po1ajjZzzS7gtkjavZlOOaZ0g.JPEG/900_20260411_152701.jpg?type=w966",
+      "query": "post:hasub2-224250029050",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "캡션 '5동과 8동'·'7 숫자가 보이는 1층'; 황갈색 벽돌·흑색 세로 창 슬롯이 8동 공식 사진과 일치",
+      "context": "아래 사진에 7 숫자가 보이는 1층에서 출발했어요.",
+      "path": "buildings/008/photos/n-b05fda99.jpg"
+    },
+    {
+      "cid": "8a2ae7b4",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfOTAg/MDAxNzc1OTk3NzIxNTMz.Bj1mm_c6XhD9QjWOWpCSclfNtzL1mdNynDc0LVIxu_0g.3OVKOMX1YTI_nKfELft-oA7RMglLUz1BIIbaMgqn8Rog.JPEG/900_20260411_154533.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "source": "네이버 블로그",
+      "title": "서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "publishedDate": "2026-04-12",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA0MTJfOTAg/MDAxNzc1OTk3NzIxNTMz.Bj1mm_c6XhD9QjWOWpCSclfNtzL1mdNynDc0LVIxu_0g.3OVKOMX1YTI_nKfELft-oA7RMglLUz1BIIbaMgqn8Rog.JPEG/900_20260411_154533.jpg?type=w966",
+      "query": "post:hasub2-224250029050",
+      "status": "skipped",
+      "reason": "검토에서 제외 또는 중복 판정. 파일 삭제, rejected-photos.json에 근거 보존.",
+      "identifiedBy": "캡션 '5동과 8동'·'7 숫자가 보이는 1층'; 황갈색 벽돌·흑색 세로 창 슬롯이 8동 공식 사진과 일치",
+      "context": "5동과 8동 건물이 보이고요, 3동과 5동을 연결하는 통로가 보이네요."
+    },
+    {
+      "cid": "d3536cf3",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTAy/MDAxNzc1OTk3NzIwNzE1.7dwPhq-cJOi40KOKOKc-Fo04tb-8DfYNDfIQQh9y5gMg.KP347Xfx6KSykv77ac7JnuHffH0Ddnjc59S1UkRGaSEg.JPEG/900_20260411_154540.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "source": "네이버 블로그",
+      "title": "서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "publishedDate": "2026-04-12",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA0MTJfMTAy/MDAxNzc1OTk3NzIwNzE1.7dwPhq-cJOi40KOKOKc-Fo04tb-8DfYNDfIQQh9y5gMg.KP347Xfx6KSykv77ac7JnuHffH0Ddnjc59S1UkRGaSEg.JPEG/900_20260411_154540.jpg?type=w966",
+      "query": "post:hasub2-224250029050",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "캡션 '5동과 8동'·'7 숫자가 보이는 1층'; 황갈색 벽돌·흑색 세로 창 슬롯이 8동 공식 사진과 일치",
+      "context": "5동과 8동 건물이 보이고요, 3동과 5동을 연결하는 통로가 보이네요.",
+      "path": "buildings/008/photos/n-d3536cf3.jpg"
+    },
+    {
+      "cid": "5c9ac275",
+      "originalUrl": "http://blogfiles.naver.net/20121120_240/archur_13533652849444gRhd_JPEG/%BD%C2%C8%BF%BB%F3%C0%CC%B7%CE%C0%E7-12-%B5%CE%BB%EA%C0%CE%B9%AE%B0%FC-2.jpg",
+      "sourcePage": "https://blog.naver.com/archur/40172950367",
+      "source": "네이버 블로그",
+      "title": "관악구 서울대학교-인문대학 Campus(1974)",
+      "publishedDate": null,
+      "thumb": "https://postfiles.pstatic.net/20121120_240/archur_13533652849444gRhd_JPEG/%BD%C2%C8%BF%BB%F3%C0%CC%B7%CE%C0%E7-12-%B5%CE%BB%EA%C0%CE%B9%AE%B0%FC-2.jpg?type=w966",
+      "query": "post:archur-40172950367",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "왼쪽 '5' 모서리(5동)와 그 옆 황갈색 벽돌·세로 슬롯·출입 공동. 8동 공식 사진과 동일 건물",
+      "context": "",
+      "path": "buildings/008/photos/n-5c9ac275.jpg"
+    },
+    {
+      "cid": "fcc4c61a",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMzAg/MDAxNzgxMDkzOTQzNDE1.p9a2pu4A7csyGCqFQmi3i8Fe6PC906Cj6ekDkCnMmfYg.5YKlYTDjKz3C1tWezszAtGDHPLvrZyYtJ78AI7K5Kysg.JPEG/20260608_150447.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "source": "네이버 블로그",
+      "title": "서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "publishedDate": "2026-06-10",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA2MTBfMzAg/MDAxNzgxMDkzOTQzNDE1.p9a2pu4A7csyGCqFQmi3i8Fe6PC906Cj6ekDkCnMmfYg.5YKlYTDjKz3C1tWezszAtGDHPLvrZyYtJ78AI7K5Kysg.JPEG/20260608_150447.jpg?type=w966",
+      "query": "post:crete22-224312188877",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "캡션 '인문대쪽'; 황갈색 벽돌·세로 슬롯·측면 계단. 8동 여부는 원본 판정",
+      "context": "인문대쪽이었던 것 같아요..",
+      "path": "buildings/008/photos/n-fcc4c61a.jpg"
+    }
+  ]
+}

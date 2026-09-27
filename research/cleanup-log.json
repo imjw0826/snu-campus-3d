@@ -1,0 +1,1019 @@
+{
+  "date": "2026-09-27",
+  "beforeBytes": 251293118,
+  "afterBytes": 144191633,
+  "removedBytes": 107089383,
+  "removed": [
+    {
+      "path": "research/buildings/004/photos/04-facade-kodos.jpg",
+      "bytes": 292649,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/04-roof-kodos.jpg",
+      "bytes": 257696,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-01.jpg",
+      "bytes": 244890,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-03.jpg",
+      "bytes": 189361,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-04.jpg",
+      "bytes": 102874,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-05.jpg",
+      "bytes": 105014,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-06.jpg",
+      "bytes": 97288,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-07.jpg",
+      "bytes": 144365,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-08.jpg",
+      "bytes": 144570,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-12.jpg",
+      "bytes": 270920,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-13.jpg",
+      "bytes": 261510,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-14.jpg",
+      "bytes": 244952,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-15.jpg",
+      "bytes": 225389,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-16.jpg",
+      "bytes": 368886,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-17.jpg",
+      "bytes": 125905,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-18.jpg",
+      "bytes": 294548,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-19.jpg",
+      "bytes": 152981,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-20.jpg",
+      "bytes": 290552,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/kodos-21.jpg",
+      "bytes": 274315,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/snu-2014.jpg",
+      "bytes": 42509,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/snu-2008-head.gif",
+      "bytes": 96338,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/snu-2008-opening.gif",
+      "bytes": 1629,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/snu-art.jpg",
+      "bytes": 316281,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/foundation-entrance.jpg",
+      "bytes": 650190,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/n-123ef1dc.jpg",
+      "bytes": 261139,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/n-b5821997.jpg",
+      "bytes": 382478,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-9e715157.jpg",
+      "bytes": 251836,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/n-56828cc5.jpg",
+      "bytes": 582961,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/004/photos/n-2eeff162.jpg",
+      "bytes": 563154,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/003/photos/n-2eeff162.jpg",
+      "bytes": 563154,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/003/photos/n-e4f84300.jpg",
+      "bytes": 656855,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/003/photos/n-ad5fd16c.jpg",
+      "bytes": 537285,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/002/photos/n-818db467.jpg",
+      "bytes": 668311,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/002/photos/n-39cbf673.jpg",
+      "bytes": 572538,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/005/photos/n-8a2ae7b4.jpg",
+      "bytes": 484263,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/005/photos/n-d3536cf3.jpg",
+      "bytes": 487861,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/008/photos/n-8a2ae7b4.jpg",
+      "bytes": 484263,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/111/photos/n-54168b4d.jpg",
+      "bytes": 6991844,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/111/photos/n-4439c6ef.jpg",
+      "bytes": 3257812,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/111/photos/n-caf221a9.jpg",
+      "bytes": 5034794,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/003/photos/n-83cfb991.jpg",
+      "bytes": 5189959,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/003/photos/n-b713f9a8.jpg",
+      "bytes": 5171949,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-64af387e.jpg",
+      "bytes": 138170,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-bb1d973c.jpg",
+      "bytes": 66947,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-47e6e6be.jpg",
+      "bytes": 78513,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-0b3eeed3.jpg",
+      "bytes": 109116,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-f379d07c.jpg",
+      "bytes": 230583,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-1ec7208b.jpg",
+      "bytes": 83955,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-0cd0fb3d.jpg",
+      "bytes": 96135,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-9fa86c0a.jpg",
+      "bytes": 93456,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-3dc2a886.jpg",
+      "bytes": 58429,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-1869e6f9.jpg",
+      "bytes": 86213,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-41e35df4.jpg",
+      "bytes": 49418,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/P-humanities/photos/n-8d3181c7.jpg",
+      "bytes": 94910,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-78196ca3.jpg",
+      "bytes": 622619,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-c363ce56.jpg",
+      "bytes": 576054,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/002/photos/n-78196ca3.jpg",
+      "bytes": 622619,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/012/photos/n-e990a06b.jpg",
+      "bytes": 281162,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-97cc74c2.jpg",
+      "bytes": 176722,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-4c3b969f.jpg",
+      "bytes": 105771,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-52fdde36.jpg",
+      "bytes": 103695,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-25472a5c.jpg",
+      "bytes": 687347,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/buildings/001/photos/n-94db52b8.jpg",
+      "bytes": 385914,
+      "reason": "제외 판정 또는 중복 사진"
+    },
+    {
+      "path": "research/source/official-map.txt",
+      "bytes": 37162,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/osm-map.xml",
+      "bytes": 2965352,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/supplemental-photos.json",
+      "bytes": 1830,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/search-humanities.json",
+      "bytes": 41584,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/official-search-utf8.json",
+      "bytes": 532046,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/official-map.png",
+      "bytes": 2978506,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/search-education-all.json",
+      "bytes": 42872,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/official-detail.html",
+      "bytes": 103811,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/official-web.html",
+      "bytes": 177913,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/search-education.json",
+      "bytes": 70588,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/source/search-law.json",
+      "bytes": 10484,
+      "reason": "미사용 원본 페이지·구형 입력/파생 데이터"
+    },
+    {
+      "path": "research/sources/pages/kiiimspoon-223011414251.html",
+      "bytes": 638694,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/diamond31-224399815935.html",
+      "bytes": 413696,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/romantic3road-223874180319.html",
+      "bytes": 231066,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/sbkim527-223426760628.html",
+      "bytes": 782544,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/seocho7979-224415773731.html",
+      "bytes": 392219,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/dahee-ary103-224216445823.html",
+      "bytes": 372338,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/family_yes-224098031423.html",
+      "bytes": 312435,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/mississippin78505-224413515173.html",
+      "bytes": 264752,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/onepick48-224394765291.html",
+      "bytes": 359515,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/crojw21-224411967009.html",
+      "bytes": 318980,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/lv1000000-220306761569.html",
+      "bytes": 274027,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/hasub2-224250029050.html",
+      "bytes": 307041,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/laquint-110147087709.html",
+      "bytes": 198101,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/lv1000000-220189135929.html",
+      "bytes": 329344,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/gkoodieiwoypx-224342035430.html",
+      "bytes": 745090,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/roomcoco-224149818510.html",
+      "bytes": 221143,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/buron_love-224371353503.html",
+      "bytes": 714782,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/bongyeong49-224405555513.html",
+      "bytes": 1019517,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/whitelinia-224200122160.html",
+      "bytes": 302197,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/nanabi_flower-224416433195.html",
+      "bytes": 384811,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/philatelia-223134888721.html",
+      "bytes": 349828,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/dog_story-220170999366.html",
+      "bytes": 183960,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/u_labconsulting-224411259010.html",
+      "bytes": 342153,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/crojw21-224394668559.html",
+      "bytes": 1148160,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/travel_baek-224012099020.html",
+      "bytes": 369330,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/lumifam-224276665373.html",
+      "bytes": 230335,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/ubuntu-jg-224415745871.html",
+      "bytes": 302832,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/smart-mobility-223818906905.html",
+      "bytes": 305994,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/jh5205_-224401704383.html",
+      "bytes": 279370,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/romantic3road-224369643214.html",
+      "bytes": 212469,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/twinstar76-224406195748.html",
+      "bytes": 356366,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/uncachorro-223202326101.html",
+      "bytes": 311269,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/bhoice-223812943968.html",
+      "bytes": 298044,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/2jhg_log-224372233052.html",
+      "bytes": 347575,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/kmu2333-221890371172.html",
+      "bytes": 404452,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/cutie_twins-224113799079.html",
+      "bytes": 809076,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/daechifltoos-224418819454.html",
+      "bytes": 395895,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/kwonjina67-224350627771.html",
+      "bytes": 189700,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/dependentorigination-222337830031.html",
+      "bytes": 835090,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/cymmcymm-224408177397.html",
+      "bytes": 227861,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/jeongyoonk-224158460143.html",
+      "bytes": 2258701,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/everythn-224411141654.html",
+      "bytes": 441299,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/starwon1215-224304317080.html",
+      "bytes": 524176,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/archur-40172950367.html",
+      "bytes": 246459,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/thehiger8-224418117584.html",
+      "bytes": 344109,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/koreabookceo-224397716372.html",
+      "bytes": 245744,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/ck227799-224282599606.html",
+      "bytes": 374189,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/gascop7-223826500181.html",
+      "bytes": 447459,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/jjeong2006-223107301597.html",
+      "bytes": 221186,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/trim9134-224206206711.html",
+      "bytes": 1331219,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/jjung4754-224388354805.html",
+      "bytes": 278674,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/crojw21-224276049335.html",
+      "bytes": 306540,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/i_findear-224321331855.html",
+      "bytes": 186260,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/politieren-224274981937.html",
+      "bytes": 290053,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/honeybi_0405-224420764143.html",
+      "bytes": 504838,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/arangjoeul-223956795318.html",
+      "bytes": 2485721,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/arangjoeul-224294743879.html",
+      "bytes": 2578794,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/suwonloves-224388255176.html",
+      "bytes": 384870,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/lawpic-224243100729.html",
+      "bytes": 284239,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/racecarve-224393707741.html",
+      "bytes": 762463,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/hongmoyang-223761557886.html",
+      "bytes": 389207,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/mbti_life-224407181951.html",
+      "bytes": 676208,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/libartsedu-50152950712.html",
+      "bytes": 207106,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/romantic3road-224354424122.html",
+      "bytes": 259918,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/areum159-224257035127.html",
+      "bytes": 298436,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/eduallbarun-223822223246.html",
+      "bytes": 342327,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/goodallpass-224421951949.html",
+      "bytes": 358605,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/jessica_yena_mommy-223925158929.html",
+      "bytes": 356673,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/luckycmw-60116582970.html",
+      "bytes": 249893,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/dt_info-224130845174.html",
+      "bytes": 269193,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/wiseatoz-224129616167.html",
+      "bytes": 1130304,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/chaechae518-224419326983.html",
+      "bytes": 297384,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/wkdusdmltnv-224300727323.html",
+      "bytes": 1740809,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/romantic3road-224383024596.html",
+      "bytes": 239337,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/love_thelifeyoulive-224311673091.html",
+      "bytes": 341603,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/yabrielus-223238936570.html",
+      "bytes": 285033,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/oyeyes-120049633135.html",
+      "bytes": 185198,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/jgmoon11-224074213706.html",
+      "bytes": 254462,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/dogys_-224358007874.html",
+      "bytes": 370093,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/endiary-224381568867.html",
+      "bytes": 609488,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/ss920527-222425804479.html",
+      "bytes": 359615,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/albatross_01-224377574602.html",
+      "bytes": 263035,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/cutie_twins-224396898004.html",
+      "bytes": 1695337,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/sanjung060-222950862784.html",
+      "bytes": 1926492,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/pf_fairydobby-223708700626.html",
+      "bytes": 402292,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/teachersgard-220731032053.html",
+      "bytes": 221665,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/flower11_18-224414207518.html",
+      "bytes": 219257,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/art0011-224261312162.html",
+      "bytes": 2189756,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/differance-dolly-224243446617.html",
+      "bytes": 279939,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/iloveoti-224242131851.html",
+      "bytes": 234848,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/wyddl85-224408538439.html",
+      "bytes": 233416,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/crete22-224312188877.html",
+      "bytes": 276574,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/ubuntu-jg-224419587613.html",
+      "bytes": 398160,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/wnsgurqw-224406473869.html",
+      "bytes": 293551,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/dailyart_officail-224326917871.html",
+      "bytes": 216174,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/milo_planning-224270682013.html",
+      "bytes": 263473,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/choi840726-224083433225.html",
+      "bytes": 286691,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/mcnia-224352980922.html",
+      "bytes": 364811,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/1ocal-224344553546.html",
+      "bytes": 387493,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/olivia4708-223806416308.html",
+      "bytes": 493600,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/ewha_media-224298288909.html",
+      "bytes": 380707,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/si127p-224235538775.html",
+      "bytes": 388618,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/sources/pages/mjactive_pic-224081412446.html",
+      "bytes": 427194,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/build-review.py",
+      "bytes": 10261,
+      "reason": "refs.py로 대체된 구형 생성기"
+    },
+    {
+      "path": "research/fetch-photos.py",
+      "bytes": 3051,
+      "reason": "최신 사진 목록을 덮어쓰는 구형 수집기"
+    },
+    {
+      "path": "research/photo-research/14-history-official.jpg",
+      "bytes": 225212,
+      "reason": "현재 동별 사진과 출처 기록에 통합된 중복 자료"
+    },
+    {
+      "path": "research/photo-research/manifest.json",
+      "bytes": 3381,
+      "reason": "현재 동별 사진과 출처 기록에 통합된 중복 자료"
+    },
+    {
+      "path": "research/photo-research/08-chio-official.jpg",
+      "bytes": 106153,
+      "reason": "현재 동별 사진과 출처 기록에 통합된 중복 자료"
+    },
+    {
+      "path": "research/output/official-targets.json",
+      "bytes": 17514,
+      "reason": "구형 사진 수집기의 미사용 산출물"
+    },
+    {
+      "path": "research/reference/ui-concept.png",
+      "bytes": 2797886,
+      "reason": "사용하지 않는 생성 UI 시안"
+    },
+    {
+      "path": "research/reference/modern-ui-concept.png",
+      "bytes": 2078986,
+      "reason": "사용하지 않는 생성 UI 시안"
+    },
+    {
+      "path": "research/buildings/008/revisions/structures-before-20260927.js",
+      "bytes": 52109,
+      "reason": "다른 동 회귀 검사용 해시로 대체된 전체 소스 사본"
+    },
+    {
+      "path": "research/buildings/004/pages/foundation.html",
+      "bytes": 24311,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/tomylove.html",
+      "bytes": 55510,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/contact.html",
+      "bytes": 35061,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/art.html",
+      "bytes": 80835,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/kodos-585.html",
+      "bytes": 57605,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/landscape.html",
+      "bytes": 18022,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/story.html",
+      "bytes": 109037,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/foundation17.html",
+      "bytes": 22552,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/oga.html",
+      "bytes": 109322,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/newsletter-unavailable.html",
+      "bytes": 1454,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/buildings/004/pages/opening.html",
+      "bytes": 105538,
+      "reason": "저장 웹페이지"
+    },
+    {
+      "path": "research/__pycache__/refs.cpython-314.pyc",
+      "bytes": 50977,
+      "reason": "파이썬 실행 캐시"
+    },
+    {
+      "path": ".DS_Store",
+      "bytes": 6148,
+      "reason": "운영체제 메타데이터"
+    },
+    {
+      "path": "research/.DS_Store",
+      "bytes": 6148,
+      "reason": "운영체제 메타데이터"
+    },
+    {
+      "path": "dist/.DS_Store",
+      "bytes": 6148,
+      "reason": "운영체제 메타데이터"
+    },
+    {
+      "path": "docs/서울대-3D-모델링-정리.md",
+      "bytes": 15179,
+      "reason": "현재 README·체크리스트와 중복되고 폐기된 경로·명령을 안내하는 구형 문서"
+    }
+  ],
+  "deletedFileCount": 202
+}

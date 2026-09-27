@@ -1,0 +1,1393 @@
+{
+  "schemaVersion": 1,
+  "minimum": 5,
+  "updatedAt": "2026-09-27",
+  "records": [
+    {
+      "building": "1",
+      "path": "buildings/001/photos/01-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46027&lon_val=126.95234&convinType=Y&inst_seq=1",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000001.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도(촬영일 미확인). 안뜰에서 본 두 날개의 교차부: 백색 층 밴드·기둥과 갈색 벽돌, 지붕 위로 솟은 초록 유리 계단탑, 깊은 백색 처마, 왼쪽 날개 지상층 개방부, 안뜰 퍼걸러.",
+      "captureDate": null,
+      "sha256": "a309686c941f30c0232e5ac3ee1bfcf2b38cdbcb4596ef35096acef3f87e7a2e",
+      "bytes": 645831,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "측면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "2",
+      "path": "buildings/002/photos/02-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46038&lon_val=126.95295&convinType=Y&inst_seq=2",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000002.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 남서쪽 지면에서 올려다본 2동 장변: 하부 두 층 넓은 띠창·상부 작은 펀칭창, 매우 깊은 백색 처마와 보, 지상층 창살 난간. 왼쪽 배경에 8동.",
+      "captureDate": null,
+      "sha256": "84855adcbff1bcad94bcb579d91545ed5620beb51100a51c945c48d680519347",
+      "bytes": 351147,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "세부"
+      ]
+    },
+    {
+      "building": "3",
+      "path": "buildings/003/photos/03-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46071&lon_val=126.95355&convinType=Y&inst_seq=3",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000003.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. '3' 숫자가 붙은 모서리를 올려다봄: 처마 모서리와 돌출 보·홈통, 백색 층 밴드와 기둥, 끝 벽의 외부 발코니 슬래브, 벽돌 줄눈. 오른쪽은 인접 동 타일 외벽.",
+      "captureDate": null,
+      "sha256": "8bdb353b1c49235a1f246f3629ca5c744da290f40c7fadc576366eb273e27684",
+      "bytes": 286650,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "측면",
+        "세부"
+      ]
+    },
+    {
+      "building": "4",
+      "path": "buildings/004/photos/04-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46089&lon_val=126.95326&convinType=Y&inst_seq=4",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000004.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "겨울 전면 전체. 연속 곡면 유리 외피, 후퇴한 지상층, 기둥, 흰 곡선 캐노피, 넓은 얇은 처마와 옥상 난간 확인. 후면·치수는 확인 불가.",
+      "captureDate": null,
+      "sha256": "ff8ab698fc08e759abcd93159e9d8a03949348430f431d94b95df354bc404c90",
+      "bytes": 648670,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "5",
+      "path": "buildings/005/photos/05-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.4606&lon_val=126.95393&convinType=Y&inst_seq=5",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000005.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. '5' 모서리: 백색 프레임과 어두운 벽돌, 모서리를 감싼 지상층 유리 출입홀, 왼쪽 원형 기둥 위 유리 연결 구름다리, 오른쪽 외부 계단과 난간, 깊은 처마.",
+      "captureDate": null,
+      "sha256": "4924afc1cab6fd5cb7434d98b72630dce25f9f70989056bd078bfd91d5030b93",
+      "bytes": 349073,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "측면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "6",
+      "path": "buildings/006/photos/06-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46073&lon_val=126.95452&convinType=Y&inst_seq=6",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000006.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. '6' 모서리: 붉은빛 벽돌, 끝 벽의 넓은 무창 벽돌 면, 장변의 띠창과 창 차양, 왼쪽 끝 캔틸레버 발코니 슬래브, 깊은 처마와 홈통.",
+      "captureDate": null,
+      "sha256": "c14b3c0e865dd53485d1a6e3fd9149af5829870755de809ceb2cc03945efc296",
+      "bytes": 498255,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "측면",
+        "정면"
+      ]
+    },
+    {
+      "building": "7",
+      "path": "buildings/007/photos/07-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46022&lon_val=126.95436&convinType=Y&inst_seq=7",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000007.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도(촬영일 미확인, 2026 증축 공사 이전 외관). '7' 끝 벽: 벽돌 면을 뚫은 깊은 로지아 공동, 노출된 처마 보, 경사 대지의 석축 난간과 램프, 장변 창 배열. 증축 이후 외관은 별도 확인 필요.",
+      "captureDate": null,
+      "sha256": "a6bd2ec0ce00159eed4ed379e065a0b0c499507531b3c761cc6499ee93b00957",
+      "bytes": 549445,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "측면",
+        "정면"
+      ]
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/08-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46016&lon_val=126.95398&convinType=Y&inst_seq=8",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000008.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 8동 주 입면: 황갈색 벽돌과 흑색 금속 세로 창 슬롯의 불규칙 배열, 왼쪽 상부 흑색 돌출 베이, 2개 층 높이 출입 공동과 흑색 헤드, 지붕 위 개방 스크린, 오른쪽 경사로와 계단.",
+      "captureDate": null,
+      "sha256": "ddb5849035ce010458b224b0c07bb2881439713745e4ee51d07ef61bb909932e",
+      "bytes": 625658,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/08-chio-official.jpg",
+      "sourcePage": "https://chio.snu.ac.kr/chio/greeting.php",
+      "imageUrl": "https://chio.snu.ac.kr/images/sub/greeting.jpg",
+      "sourceName": "서울대학교 공식 자료",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "인문대 국제협력센터 페이지 사진. 모서리를 올려다본 시점: 최상부의 뚫린 벽돌 스크린(하늘이 보임), 측면 흑색 돌출 베이의 깊이, 출입 공동 위 흑색 수평 부재, '8' 표지.",
+      "captureDate": null,
+      "sha256": "7d51099508115e0fb93af07a2feded6dc5e77c5d9e0d26b50edede451dd575c3",
+      "bytes": 106153,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "측면",
+        "세부"
+      ]
+    },
+    {
+      "building": "9",
+      "path": "buildings/009/photos/09-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46017&lon_val=126.9548&convinType=Y&inst_seq=9",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000009.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. '9' 모서리: 강한 백색 격자(밴드+기둥)와 벽돌 패널, 오른쪽 수직 계단 공동과 가로보, 장변 창마다 돌출 박스 차양, 지상층 유리 출입구와 계단, 옥상 난간.",
+      "captureDate": null,
+      "sha256": "d2ba9296027442c4381cc4c49b4a2ac9efe035eb6b84dd8b1169cc5575bdba0f",
+      "bytes": 453821,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "측면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "10",
+      "path": "buildings/010/photos/10-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46031&lon_val=126.95536&convinType=Y&inst_seq=10",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000010.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 출입부 입면: 창마다 두꺼운 백색 돌출 테두리, 오른쪽 오목한 발코니 층, 출입 캐노피 슬래브와 유리문, 거친 석재 기단, 게시판.",
+      "captureDate": null,
+      "sha256": "cea1b87270aec6bde8a564b166fa8c430c8d2276d7b964994ddc1ba4c01a54b6",
+      "bytes": 356584,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "11",
+      "path": "buildings/011/photos/11-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.45979&lon_val=126.9552&convinType=Y&inst_seq=12",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000012.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 'COLLEGE OF EDUCATION 11' 처마: 붉은빛 벽돌과 백색 밴드, 옥상 난간, 오른쪽의 더 높은 밝은 벽돌 계단·설비동과 그 하부 출입 캐노피.",
+      "captureDate": null,
+      "sha256": "bae0efec72df65355cb6ad71c0b133f79bb78228d5d2af7d2173bc9836292ef0",
+      "bytes": 421312,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "측면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "12",
+      "path": "buildings/012/photos/12-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.45962&lon_val=126.95479&convinType=Y&inst_seq=13",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000013.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 곡면 상부 매스: 2개 층 깊은 수직 콘크리트 날개와 띠창, 그 아래 금속판 곡면 하부, 원형 기둥 필로티, 지상층 유리와 'COLLEGE OF EDUCATION 12', 중간층 테라스 난간과 화분, 왼쪽 외부 계단.",
+      "captureDate": null,
+      "sha256": "e9b73cac98d0ecfbbb20ad3c3f76bc362e5a4026edfed1b42a7c504169eaf82a",
+      "bytes": 418628,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "출입부"
+      ]
+    },
+    {
+      "building": "13",
+      "path": "buildings/013/photos/13-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.45927&lon_val=126.95389&convinType=Y&inst_seq=14",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000014.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 경사지 아래에서 올려다봄: 처마 'COLLEGE OF EDUCATION 13' 와 처마 위 별도 보, 장변의 오목한 창 베이, 왼쪽 무창 벽돌 면과 하부 캔틸레버 슬래브, 녹색 유리 계단탑, 대지 계단.",
+      "captureDate": null,
+      "sha256": "004b0a37794e7292c9c9fc9c6aff70daa572e64bb282018f8459ee7974c1afe8",
+      "bytes": 537979,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "측면",
+        "정면"
+      ]
+    },
+    {
+      "building": "14",
+      "path": "buildings/014/photos/14-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46093&lon_val=126.95499&convinType=Y&inst_seq=15",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000015.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "기존 모델 참고 사진. 새 기준의 시점·구조 대조는 재검토 대기.",
+      "captureDate": null,
+      "sha256": "38822ec3e6e95d47b5f40e978823bf42807e018ab23c39fad8f369819cad9035",
+      "bytes": 337090,
+      "reviewDate": null
+    },
+    {
+      "building": "14",
+      "path": "buildings/014/photos/14-history-official.jpg",
+      "sourcePage": "https://www.snu.ac.kr/snunow/snu_story?bbsidx=143580&md=v",
+      "imageUrl": "https://www.snu.ac.kr/webdata/boardimages/konews/img_20230918_001.jpg",
+      "sourceName": "서울대학교 공식 자료",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "기존 모델 참고 사진. 새 기준의 시점·구조 대조는 재검토 대기.",
+      "captureDate": null,
+      "sha256": "e824bb07525c1807660a081343fe280e22e7e06fa12a9dfcdd320d138e097911",
+      "bytes": 225212,
+      "reviewDate": null
+    },
+    {
+      "building": "14",
+      "path": "buildings/014/photos/14-terrace-official.jpg",
+      "sourcePage": "https://humanities.snu.ac.kr/community/department?bbsidx=3485&md=v",
+      "imageUrl": "https://humanities.snu.ac.kr/webdata/upimages/02cz8dazd82zaabz4cdzabcz1cezf18z1d6z945ze6.jpg",
+      "sourceName": "서울대학교 인문대학 · 6층 테라스",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "기존 모델 참고 사진. 새 기준의 시점·구조 대조는 재검토 대기.",
+      "captureDate": null,
+      "sha256": "2a8ba07f4eea26d38a5c079ba25c794cfb2f0c0f9223ad4295cf95f9ec5a79fe",
+      "bytes": 158633,
+      "reviewDate": null
+    },
+    {
+      "building": "14",
+      "path": "buildings/014/photos/14-terrace-detail-official.jpg",
+      "sourcePage": "https://humanities.snu.ac.kr/community/department?bbsidx=3485&md=v",
+      "imageUrl": "https://humanities.snu.ac.kr/webdata/upimages/0d6z374z5a7z48az803z6eaz5fcze1dze15zc85z5e.jpg",
+      "sourceName": "서울대학교 인문대학 · 6층 테라스",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "기존 모델 참고 사진. 새 기준의 시점·구조 대조는 재검토 대기.",
+      "captureDate": null,
+      "sha256": "a32d6c8411cd19e7d7ebfa5fada741ef70079a5c5e207f967721f38b4e4c7380",
+      "bytes": 196766,
+      "reviewDate": null
+    },
+    {
+      "building": "15",
+      "path": "buildings/015/photos/15-official.jpg",
+      "sourcePage": "https://map.snu.ac.kr/web/facility_detail.action?lat_val=37.46233&lon_val=126.95174&convinType=Y&inst_seq=16",
+      "imageUrl": "https://map.snu.ac.kr/api/upload/default/F_BUILD_0000016.jpg",
+      "sourceName": "서울대학교 공식 지도",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "공식 지도. 커튼월 장변: 밝은 패널과 유리 격자, 전면 전층 원형 금속 기둥 열, 후퇴 최상층 고측창, 오른쪽 청회색 유리 승강기탑과 상부 루버, 대지 옹벽과 계단.",
+      "captureDate": null,
+      "sha256": "54d2fe1b671b4e35e02fe71cee8b27f483e40cc641860a5ef5b2f30bb9ca70c2",
+      "bytes": 363385,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "측면"
+      ]
+    },
+    {
+      "building": "4",
+      "path": "buildings/004/photos/kodos-02.jpg",
+      "sourcePage": "https://kodos.tistory.com/585",
+      "imageUrl": "https://t1.daumcdn.net/cfile/tistory/1114F2415000B4D20C",
+      "sourceName": "Sungjin Kim / KODOS",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "광장 쪽 유리 전면과 왼쪽 경사 보행로. 나무가 상층부를 가림. 유리면 하단과 포장 접점 확인.",
+      "captureDate": null,
+      "publishedDate": "2012-07-14",
+      "sha256": "0690c5a8465e59df722832216c2aac52fd5b2f0b57020f65d28e012b6572bcac",
+      "bytes": 282646,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "원경"
+      ]
+    },
+    {
+      "building": "4",
+      "path": "buildings/004/photos/kodos-09.jpg",
+      "sourcePage": "https://kodos.tistory.com/585",
+      "imageUrl": "https://t1.daumcdn.net/cfile/tistory/1826023E5000B4D71D",
+      "sourceName": "Sungjin Kim / KODOS",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "전면 유리 패널 근접. 청록·회백색 패널, 은색 수평·수직 멀리언 확인. 줄기에 가려진 부분은 추론 금지.",
+      "captureDate": null,
+      "publishedDate": "2012-07-14",
+      "sha256": "7f066d79e124f6a1c873310c07075553a5b056851aec77eab4cf8af368d74eed",
+      "bytes": 262418,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "세부"
+      ]
+    },
+    {
+      "building": "4",
+      "path": "buildings/004/photos/kodos-10.jpg",
+      "sourcePage": "https://kodos.tistory.com/585",
+      "imageUrl": "https://t1.daumcdn.net/cfile/tistory/1420AF3E5000B4D823",
+      "sourceName": "Sungjin Kim / KODOS",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "전면 유리면과 지면 접점. 일부 개폐창과 창틀의 깊이를 확인. 실제 층수와 패널 행 수를 혼동하지 않아야 함.",
+      "captureDate": null,
+      "publishedDate": "2012-07-14",
+      "sha256": "12e9bb563e85a10eab5e869a7162c363b3cb8a616b56928a66c95f757f2a8c5b",
+      "bytes": 292649,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "정면",
+        "세부"
+      ]
+    },
+    {
+      "building": "4",
+      "path": "buildings/004/photos/kodos-11.jpg",
+      "sourcePage": "https://kodos.tistory.com/585",
+      "imageUrl": "https://t1.daumcdn.net/cfile/tistory/1726CC3E5000B4D91E",
+      "sourceName": "Sungjin Kim / KODOS",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "아래에서 올려다본 처마. 외벽 위로 돌출된 얇은 지붕과 반복 리브 확인. 후면 지붕 형상은 보이지 않음.",
+      "captureDate": null,
+      "publishedDate": "2012-07-14",
+      "sha256": "514c17afc8429493e30ddc752cc598caa677cd0f2c894e3e97724e65ad7ba835",
+      "bytes": 257696,
+      "reviewDate": "2026-09-26",
+      "views": [
+        "세부"
+      ]
+    },
+    {
+      "building": "4",
+      "path": "buildings/004/photos/n-dffe7afc.jpg",
+      "sourcePage": "https://blog.naver.com/dog_story/220170999366",
+      "imageUrl": "http://blogfiles.naver.net/20141104_269/dog_story_1415065535351UgQU3_JPEG/DSC_4600.JPG",
+      "sourceName": "네이버 블로그 · 서울대학교 신양인문학술정보관 전경",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "잔디 정원 오른쪽 먼 위치에서 본 사선 원경(EXIF 2010-08-17). 4개 층 유리 외피의 전체 길이와 왼쪽 끝 모서리, 후퇴한 지상층 유리·기둥 열을 한 화면에 확인. 오른쪽에는 인접 백색 밴드 벽돌동과 퍼걸러. 상층 뒤쪽·지붕은 나무에 가림.",
+      "captureDate": "2010-08-17 13:41:03",
+      "publishedDate": null,
+      "sha256": "d545c42f949475eb3f548e6c1392af6bf8fbd9f06056d5cdd2fc1c26456967c7",
+      "bytes": 250278,
+      "reviewDate": "2026-09-26",
+      "pixels": [
+        900,
+        597
+      ],
+      "dhash": "c38363234b4e0d7f",
+      "views": [
+        "원경",
+        "측면"
+      ],
+      "discoveredBy": "post:dog_story-220170999366",
+      "identifiedBy": "곡면 유리 외피·청록/회백 패널·흰 곡선 캐노피가 공식 4동 사진과 일치; dog_story 글 제목이 신양인문학술정보관"
+    },
+    {
+      "building": "111",
+      "path": "buildings/111/photos/n-a7e2270c.jpg",
+      "sourcePage": "https://blog.naver.com/jjeong2006/223107301597",
+      "imageUrl": "http://blogfiles.naver.net/MjAyMzA1MjBfMTE4/MDAxNjg0NTg5NTc1NTk3.nUhnPcHPdqqQbbRaqA4EAykJRfD6-gxk4DBMxrN8J7Ig.c9zQbCOA4EwKEixWqylg8QNy_Qr7gw6mSXYP991lw_sg.JPEG.jjeong2006/IMG_5369.jpg",
+      "sourceName": "네이버 블로그 · (대학탐방)5월 서울대학교 정기견학2-서울대 인문대 서울대 사범대 탐방",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "도로 쪽 정면(2023 게시): 2층 매스. 지상층 벽돌 벽과 유리 카페 전면(CAFFE PASCUCCI), 2층 전체 유리+목재 세로 루버, 얇은 돌출 지붕판, 오른쪽 기둥 하나로 받친 2층 캔틸레버. 앞에 흉상.",
+      "captureDate": null,
+      "publishedDate": "2023-05-20",
+      "sha256": "9e4c14e456005fa89a0e888b99acfd468b94f15c9c23194407044fa9d6f75faf",
+      "bytes": 311433,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        900,
+        668
+      ],
+      "dhash": "2307363be7243958",
+      "views": [
+        "정면"
+      ],
+      "discoveredBy": "post:jjeong2006-223107301597",
+      "identifiedBy": "글 본문 '사범대 인근(111동)에 위치한 파스쿠찌'; 간판 CAFFE PASCUCCI"
+    },
+    {
+      "building": "111",
+      "path": "buildings/111/photos/n-c59913a3.jpg",
+      "sourcePage": "https://blog.naver.com/romantic3road/223874180319",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTA1MjJfNDgg/MDAxNzQ3ODkzMjg4MjE0.7RpswxW5RujwNiVHPpjUFgOPEWqAOlWlJ0yOOn6R3OUg.GZ1m-xFWBCLLtSj2ZdTbqSX63YlMKFWBlj8KMJFdpiQg.JPEG/SE-72bba8c1-1f0b-466e-9122-a7c971bc8816.jpg",
+      "sourceName": "네이버 블로그 · 서울대 힐링로드 숲세권,  시간의 결을 따라 걷는 인문·사범대 권역",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "주차장 쪽 모서리 사선(2025 게시): 벽돌 하부 매스보다 2층 유리·루버 매스가 넓게 돌출, 모서리 벽돌 기둥, 2층 바닥판 테두리, 지붕판 두께. 뒤쪽 경사 숲.",
+      "captureDate": null,
+      "publishedDate": "2025-05-22",
+      "sha256": "759e33988b5671f0c9bda2ff570b3cd80f7e3e2c674db0937a968947ebe95d8a",
+      "bytes": 4415989,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        2705,
+        1571
+      ],
+      "dhash": "0c0a19203234e6f8",
+      "views": [
+        "측면",
+        "후면"
+      ],
+      "discoveredBy": "post:romantic3road-223874180319",
+      "identifiedBy": "글 본문 '사범대 인근(111동)에 위치한 파스쿠찌'; 간판 CAFFE PASCUCCI"
+    },
+    {
+      "building": "3",
+      "path": "buildings/003/photos/n-56828cc5.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTM2/MDAxNzc1OTk3NzIwNzYy.zY8B7P_eiwVM9LSD6x_Tv_DcqW4OaoX5FKdduvlBaIgg.nU9q3VdqC_5Xz2KNUBge_80hHa2MNLGUZpi2Gx-Gbt4g.JPEG/900_20260411_153915.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "안뜰 개울가에서 동쪽으로 본 3동 서쪽(안뜰) 입면 정면 원경. 4개 층 백색 밴드·벽돌, 중앙 지상층의 열린 통로와 퍼걸러, 오른쪽 2동·왼쪽 4동과의 상대 위치 확인. 캡션 '좌에서 우로 4동, 3동, 2동'이 평면도와 일치.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "47ac599175994e8c2b6a24099c4b02ec327d035ca0c5e11247d811d3b9bc9e87",
+      "bytes": 582961,
+      "reviewDate": "2026-09-26",
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "31470f9e1f7fbe99",
+      "views": [
+        "정면",
+        "원경"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '4동, 3동, 2동'·'2동과 3동 사이'; 백색 밴드 벽돌·깊은 처마가 3동 공식 사진과 일치(판정은 원본 검토에서)"
+    },
+    {
+      "building": "3",
+      "path": "buildings/003/photos/n-39cbf673.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTE1/MDAxNzc1OTk3NzIzMzcx.qYt8NEbDcfB_CJY5I4Ws-hI69427LviClh2QUgeZoQ4g.qb5ZP-5qcPwbrEjpdoW7XCi249u6y8kCpg1f3Nv9Nu8g.JPEG/900_20260411_154054.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "3동 남쪽 끝 입면과 2동으로 이어지는 연결부 근경. 3동의 격자형 백색 프레임(층 밴드+기둥)과 벽돌 패널 비율, 처마 깊이, 지상층 필로티 아래 계단과 2층 높이 연결 블록(현수막)을 확인.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "0cff0c005571f9f0942592a7becb0021c0a6f04f61cd3944fcf40f8e9ddb9aad",
+      "bytes": 572538,
+      "reviewDate": "2026-09-26",
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "f9bb2b8e8f1efdc9",
+      "views": [
+        "측면",
+        "출입부",
+        "세부"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '4동, 3동, 2동'·'2동과 3동 사이'; 백색 밴드 벽돌·깊은 처마가 3동 공식 사진과 일치(판정은 원본 검토에서)"
+    },
+    {
+      "building": "2",
+      "path": "buildings/002/photos/n-e4f84300.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMjE3/MDAxNzc2MDAxNjgzODkw.uWvuyM8NfCKEFaQG04G1KGryvuDaClA7lQ-2zI6dIawg.3Ob6fkcNEQ3quR6gEYUFkVFd23Epac5zwGZxvUNoJLkg.JPEG/SE-fe143143-366c-11f1-a19b-576920e89c7a.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "안뜰 동쪽에서 남서쪽으로 본 2동 동북 장변 전체(초광각, 2026-04 게시). 4개 층 벽돌 띠와 백색 층 밴드·기둥, 깊은 처마, 동쪽 끝의 백색 수직 발코니 스택, 지상층 창살. 왼쪽 끝에 3동과의 연결 통로 구조, 오른쪽에 1동. 평면도(reference/precincts)의 배치와 일치.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "86af7724b1d2359634ed7efa0ca663ff15d2d4abada416ef9dfb185291f6d373",
+      "bytes": 656855,
+      "reviewDate": "2026-09-26",
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "82868979e1bbfab9",
+      "views": [
+        "정면",
+        "측면"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '2동과 1동'·'2동과 3동 사이'; 판정은 원본 검토에서"
+    },
+    {
+      "building": "2",
+      "path": "buildings/002/photos/n-ad5fd16c.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfODkg/MDAxNzc1OTk3NzIwNzM2.2FQTUdAxW6KmYsdNhW5S-aTJOrrgiouMKjVvD8EAktwg.Ism3anoSW_i46i3qn8uDMgcq-pBQyScWdSfRfI5s5ksg.JPEG/900_20260411_154053.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "2동과 3동 사이 보행로에서 본 2동 동쪽 끝 입면 근경(오른쪽). 층 밴드 돌출 깊이, 기둥 간격, 창 크기, 지상층 창살, 처마 하부가 명확. 가운데는 3동과 이어지는 연결부·계단.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "8157ce2cb42c1e5a14e9f11527a38a9698a497c7577f23256597bd795a6c5091",
+      "bytes": 537285,
+      "reviewDate": "2026-09-26",
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "c95b376fcf7b5b99",
+      "views": [
+        "측면",
+        "세부"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '2동과 1동'·'2동과 3동 사이'; 판정은 원본 검토에서"
+    },
+    {
+      "building": "1",
+      "path": "buildings/001/photos/n-818db467.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTcg/MDAxNzc2MDAxNzE4MjY5.62lO6NXAiW0Av0THSQWutysU1saa9pxnTzUyegmurJog.BwzSClCy-OJTN1PbC3TmSkdecVFd3rYa_9c4QIMFXb8g.JPEG/SE-fe139502-366c-11f1-a19b-216371515b2c.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "e7153452dcf39e31182b1405d746f6878c9e077d293051ff2a1adb8d8141acac",
+      "bytes": 668311,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "04841a72e2ba73d1",
+      "views": [],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '연결통로가 있고 2동과 1동'"
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/n-b05fda99.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfODAg/MDAxNzc1OTk3NzIyNDI0.LrgFDJxbaJyLg1SzOFm-Y_IOsU4d1Lm30O_LDiWVo8Yg.LWSVALGbc2ixukl85l4po1ajjZzzS7gtkjavZlOOaZ0g.JPEG/900_20260411_152701.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "남서쪽 도로에서 본 8동 긴 입면(2026-04): 평면이 꺾여 입면이 휘어 보이는 형태, 층마다 폭·높이가 다른 세로 창 슬롯, 옥상 흑색 기계실 매스와 안테나. 오른쪽에 7동 끝 벽과 두 동 사이 간격.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "fc25bdce94e264fea2c84091cf44a5b0c079d5d446c24d15addc96d307aad1a2",
+      "bytes": 934403,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        900,
+        1200
+      ],
+      "dhash": "b8b9edcbc19cb18c",
+      "views": [
+        "측면",
+        "지붕"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '5동과 8동'·'7 숫자가 보이는 1층'; 황갈색 벽돌·흑색 세로 창 슬롯이 8동 공식 사진과 일치"
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/n-d3536cf3.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTAy/MDAxNzc1OTk3NzIwNzE1.7dwPhq-cJOi40KOKOKc-Fo04tb-8DfYNDfIQQh9y5gMg.KP347Xfx6KSykv77ac7JnuHffH0Ddnjc59S1UkRGaSEg.JPEG/900_20260411_154540.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "5동 모서리에서 본 8동 서쪽 모서리(2026-04). '8' 표지, 2개 층 높이 출입 공동과 흑색 헤드, 최상부 뚫린 벽돌 스크린, 오른쪽 가장자리 흑색 돌출 베이. 08-chio와 같은 모서리지만 지면의 단차(아래층 출입구로 내려가는 계단·램프·옹벽)를 새로 확인.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "13038ee41f1a51b476fddc62092e0e64bbdb40892fc7e63de77ad875d3efce7a",
+      "bytes": 487861,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "4a32271646161f8f",
+      "views": [
+        "측면",
+        "출입부"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '5동과 8동'·'7 숫자가 보이는 1층'; 황갈색 벽돌·흑색 세로 창 슬롯이 8동 공식 사진과 일치"
+    },
+    {
+      "building": "61",
+      "path": "buildings/061/photos/n-2310a716.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMjAw/MDAxNzc1OTk3NzIzOTUz.Gko0IrXLzqDUk9Y9E0Oj0AEaqEuua4x-iJ06gmlGJ5Mg.CapCp4gyMzsb1DqEPGRbluDEPsCfobvm7vf_YE1Y24gg.JPEG/900_20260411_153129.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "c0d039eb3e29bc4c6c351029a75f3a4990290c5271bf959ee5e997f52098633e",
+      "bytes": 481008,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "fbff2222173ff78f",
+      "views": [],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 'SNUC 건물이 61동'; 외벽 SNUC 표지"
+    },
+    {
+      "building": "61",
+      "path": "buildings/061/photos/n-dd1c4e0e.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfNyAg/MDAxNzc1OTk3NzE4MDI3.HRVZYVUHLbbAaH0N4D1p6KT_YrAbzi0gUlOwoqABp7Ug.bSBk14wPoOTarMe--udowskj-aR3zfQX8CWe1ClAMYAg.JPEG/900_20260411_153126.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "42adab67bd4b05a3e39341e07e1b82e2d5a234ea2d86eb3bef7d83dbe86bee7a",
+      "bytes": 484993,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "fff7a6a616ecfc3c",
+      "views": [],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 'SNUC 건물이 61동'; 외벽 SNUC 표지"
+    },
+    {
+      "building": "62-1",
+      "path": "buildings/62-1/photos/n-589c483a.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTA0/MDAxNzc1OTk3NzI0OTIy.LryfHOJHdwlgtxLLZrImsRC-f86awYbZhPGxPk7_2Kgg.cTF2CiireEUjx4Taz7kDkGOZZzrpz4w6YKUsjEb-ztwg.JPEG/900_20260411_152930.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "d7756eb1ad7162936181a443436905fc387b813352dbe416b81a10b03aca4800",
+      "bytes": 412231,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "8189c1c0c4c87575",
+      "views": [],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '장서 230만 권… 도서를 보관'; 상부가 크게 돌출된 관정관 형태"
+    },
+    {
+      "building": "62-1",
+      "path": "buildings/62-1/photos/n-f59e56a6.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMjg3/MDAxNzc1OTk3NzIzMzAx.wUl22vOq9jz6oZTq0g2vIgNHzF9iUr0L4CIm5RGgTGwg.psb9MLZBPidJYu3Hu_sVDjTOz3e8Wkyl8cr5yK1ONcUg.JPEG/900_20260411_152936.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "176f3798ca0094e3f8a1dbc9fcab35d8d81c546b47c62a41c39a41a798ab8432",
+      "bytes": 380707,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "c7c34367613434d2",
+      "views": [],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '장서 230만 권… 도서를 보관'; 상부가 크게 돌출된 관정관 형태"
+    },
+    {
+      "building": "250",
+      "path": "buildings/250/photos/n-75e57a95.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTQ2/MDAxNzc1OTk3NzIwNjcw.wBwgNAtrrBPeIrZIdFPf99dXXUdgpq6MVLAzhHj7UkAg.vsFeMSqouy2jcT6O2HQXIy5gBLxbQddO-gAl2VxnGsQg.JPEG/900_20260411_155356.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "d6c4c6bbe8a3534c8c93a39ddb12805f88d2439bc9915a8d1bba58820ea87fb9",
+      "bytes": 325823,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        675
+      ],
+      "dhash": "36861616150d83a1",
+      "views": [],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "엘리베이터 안 '인문대학 연결통로 위치도(1동~8동, 14동)' 안내도. 사진이 아닌 도면 자료"
+    },
+    {
+      "building": "252",
+      "path": "buildings/252/photos/n-9e715157.jpg",
+      "sourcePage": "https://blog.naver.com/jjeong2006/223107301597",
+      "imageUrl": "http://blogfiles.naver.net/MjAyMzA1MjBfODgg/MDAxNjg0NTg5Nzg3NjIw.FM9_n09kfQzGhkyZBkJOGyi4dH0IGKbLMX-eUJEfTF8g.kNkF94EFqe3_LBmahrI7qUgSML2oZ3-kjUtHNR8ANKYg.JPEG.jjeong2006/IMG_5391.jpg",
+      "sourceName": "네이버 블로그 · (대학탐방)5월 서울대학교 정기견학2-서울대 인문대 서울대 사범대 탐방",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": null,
+      "publishedDate": "2023-05-20",
+      "sha256": "53bb362c2468c70b135ebf0598377d5b2e5ba9f2a0f495a61e77de419dccba7d",
+      "bytes": 251836,
+      "reviewDate": null,
+      "pixels": [
+        900,
+        676
+      ],
+      "dhash": "49a5753b913595b1",
+      "views": [],
+      "discoveredBy": "post:jjeong2006-223107301597",
+      "identifiedBy": "사범대 구간 연속 사진(원글 #9~#11). 두 날개 사이 유리 엘리베이터탑 — 10·11동 연결부 후보. 확정 전 판정 보류"
+    },
+    {
+      "building": "7",
+      "path": "buildings/007/photos/n-b05fda99.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfODAg/MDAxNzc1OTk3NzIyNDI0.LrgFDJxbaJyLg1SzOFm-Y_IOsU4d1Lm30O_LDiWVo8Yg.LWSVALGbc2ixukl85l4po1ajjZzzS7gtkjavZlOOaZ0g.JPEG/900_20260411_152701.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "8동 쪽(남서)에서 본 7동 끝 벽 사선(2026-04 게시): '7' 표지, 벽돌 면의 오목한 로지아와 백색 난간 박스, 층 밴드, 지상층 출입구와 볼라드, 경사 도로. 07-official과 반대쪽 각도이며 2026년 4월에도 증축 전 외관이 유지됨을 확인.",
+      "captureDate": null,
+      "publishedDate": "2026-04-12",
+      "sha256": "fc25bdce94e264fea2c84091cf44a5b0c079d5d446c24d15addc96d307aad1a2",
+      "bytes": 934403,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        900,
+        1200
+      ],
+      "dhash": "b8b9edcbc19cb18c",
+      "views": [
+        "측면"
+      ],
+      "discoveredBy": "post:hasub2-224250029050",
+      "identifiedBy": "캡션 '7 숫자가 보이는 1층'; 끝 벽 '7' 표지"
+    },
+    {
+      "building": "111",
+      "path": "buildings/111/photos/n-cf0c6a11.jpg",
+      "sourcePage": "https://blog.naver.com/starwon1215/224304317080",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MDNfMjE2/MDAxNzgwNDkzMzk4Nzg5.PzprZftcXpDnuOiVDwjyuZD5Q9H5U1i7K8-G7gYtTp4g.rFyTm_CwZ_WbN-UU91kr3EbgOGOVHdTXps4U36AkZ2Ag.JPEG/SE-FC4B38C4-5550-4FA5-93E6-66750B186F91.jpg",
+      "sourceName": "네이버 블로그 · 가족,연인 주말 나들이, 서울대학교 관악캠퍼스 하루 코스 산책 여행 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "돌출된 2층 아래 출입부 근경(2026 게시): 원형 기둥 2개, 2층 바닥 하부 마감과 매입 조명, 유리 벽과 야외 좌석, 2층 루버 속 원형 간판.",
+      "captureDate": null,
+      "publishedDate": "2026-06-02",
+      "sha256": "f38bf7af36c8878f7111fc581b16e34f45abaad4e7dbf4b550ee166bff021325",
+      "bytes": 4725519,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        2250,
+        3000
+      ],
+      "dhash": "a67603406262db11",
+      "views": [
+        "출입부",
+        "세부"
+      ],
+      "discoveredBy": "post:starwon1215-224304317080",
+      "identifiedBy": "글 캡션 '파스쿠찌 센트로서울대점'·'카페 맞은편 사범대학'; 벽돌 하부와 목재 루버 유리 상부, 곡면 캐노피 테라스가 a7e2270c·c59913a3과 같은 건물"
+    },
+    {
+      "building": "12",
+      "path": "buildings/012/photos/n-4439c6ef.jpg",
+      "sourcePage": "https://blog.naver.com/starwon1215/224304317080",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA1MzBfMjk0/MDAxNzgwMDkwOTU5NTM5.QeWUCyclXOVfAaXm3vGZY3zRjKTHrKwO4BzxUpgh2nkg.-CfslRBqeKAXKrVwUPBn3oxu9II6kZBckEkRTGlpf4gg.JPEG/IMG_8087.JPG",
+      "sourceName": "네이버 블로그 · 가족,연인 주말 나들이, 서울대학교 관악캠퍼스 하루 코스 산책 여행 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "12동 곡면 금속 하부 아래 테라스를 남서쪽으로 본 근경(EXIF 2026-05-09): 매끈한 금속판 하부면과 매입 원형 조명, 원형 기둥 간격, 강선 난간, 테라스 끝 유리 난간과 계단 출입 박스, 필로티 아래로 보이는 맞은편 동.",
+      "captureDate": "2026-05-09 15:09:16",
+      "publishedDate": "2026-06-02",
+      "sha256": "3af6add548edda2738b78cafbcb1415d3ebb79ef9abf5fa81ab165b324c4d88b",
+      "bytes": 3257812,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        4032,
+        3024
+      ],
+      "dhash": "3f1fcf774f0e141d",
+      "views": [
+        "세부",
+        "출입부"
+      ],
+      "discoveredBy": "post:starwon1215-224304317080",
+      "identifiedBy": "글 캡션 '카페 맞은편 사범대학'; 곡면 금속 하부·원형 기둥·테라스 난간이 12동 공식 사진과 일치"
+    },
+    {
+      "building": "12",
+      "path": "buildings/012/photos/n-caf221a9.jpg",
+      "sourcePage": "https://blog.naver.com/starwon1215/224304317080",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA1MzBfMTk4/MDAxNzgwMDkwOTU0MTIx.jajBOB4WdurrScQiEaM8QxWw89pW69KoIsxpCiWV4zkg.BNNoIjBaPiWhg4gGCr0HFCgnVPJpWuKhBBpjWYbCEI8g.JPEG/IMG_8068.JPG",
+      "sourceName": "네이버 블로그 · 가족,연인 주말 나들이, 서울대학교 관악캠퍼스 하루 코스 산책 여행 후기",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "같은 테라스를 곡선 방향으로 본 근경(EXIF 2026-05-09, 6분 차): 하부 곡면 가장자리의 휘어진 윤곽, 기둥 열이 곡선을 따라 배치됨, 오른쪽 지상층 유리 파빌리온 외벽, 테라스 바닥 마감. 4439c6ef와 다른 방향의 부재를 확인.",
+      "captureDate": "2026-05-09 15:03:11",
+      "publishedDate": "2026-06-02",
+      "sha256": "8f69eb3ba38cb02aa1614b69503bc626be27e948afa307230261cfbfbf1d7377",
+      "bytes": 5034794,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        4032,
+        3024
+      ],
+      "dhash": "77379f1595836263",
+      "views": [
+        "세부",
+        "측면"
+      ],
+      "discoveredBy": "post:starwon1215-224304317080",
+      "identifiedBy": "글 캡션 '카페 맞은편 사범대학'; 곡면 금속 하부·원형 기둥·테라스 난간이 12동 공식 사진과 일치"
+    },
+    {
+      "building": "311",
+      "path": "buildings/311/photos/n-42a95868.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfMjc3/MDAxNzM5NTk4MjUzNzAw.GMgUqsb8dDqJ2iv_jiKY-SprVm2U5nHMAZwET89jeIYg.Q7CNWP2dELXE8jYbA2vBBHqiBYXp3eVG01Dh-W4PwFUg.JPEG/KakaoTalk_20250215_141051015_19.jpg",
+      "sourceName": "네이버 블로그 · 서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2025-02-15 10:51:19",
+      "publishedDate": "2025-02-19",
+      "sha256": "f270799ec33a55e060fe79c779f7be4009d95e113a8cb0adb2bf45c140f8cb45",
+      "bytes": 4364285,
+      "reviewDate": null,
+      "pixels": [
+        3000,
+        4000
+      ],
+      "dhash": "ccc1d088cd031638",
+      "views": [],
+      "discoveredBy": "post:hongmoyang-223761557886",
+      "identifiedBy": "외벽 '311' 번호와 '화학공정신기술연구소' 표지판"
+    },
+    {
+      "building": "301",
+      "path": "buildings/301/photos/n-fdcaf4da.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfODkg/MDAxNzM5NTk4MzEyNTE4.eydinuaJz7ct7NPEw4DbD3cR_F07ib6LNdxqhps66IUg.4dOu5bsFE1RFq7huC6U9k-pdCmx3fXCZEixppd1VWwsg.JPEG/KakaoTalk_20250215_141051015_12.jpg",
+      "sourceName": "네이버 블로그 · 서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2025-02-15 10:53:59",
+      "publishedDate": "2025-02-19",
+      "sha256": "23d91c75077ec9bde5d8e500e2a01572e7976911900f4e8104e11707bee386cd",
+      "bytes": 3839647,
+      "reviewDate": null,
+      "pixels": [
+        3000,
+        4000
+      ],
+      "dhash": "18386ccce533bd4d",
+      "views": [],
+      "discoveredBy": "post:hongmoyang-223761557886",
+      "identifiedBy": "출입 캐노피 위 '301'과 'ENGINEERING' 문자"
+    },
+    {
+      "building": "22",
+      "path": "buildings/022/photos/n-e438a79c.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfOTMg/MDAxNzM5NTk4ODI5OTU2.8R_Ny1WCbWrmWH0W-UAQ5Gbjp-a0OeYsitrF91D0PVEg.kZL4SCJ5hLCbREzAwjAlb467uDNg1gj7yKgdLklyXQgg.JPEG/KakaoTalk_20250215_140650839_23.jpg",
+      "sourceName": "네이버 블로그 · 서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2025-02-15 12:00:50",
+      "publishedDate": "2025-02-19",
+      "sha256": "628e2c39c717a678b64a1bbb7b59c13d2034e71f29cc03f9005cf95bd16729e7",
+      "bytes": 4033373,
+      "reviewDate": null,
+      "pixels": [
+        4000,
+        3000
+      ],
+      "dhash": "c5f219cc6e0ba32b",
+      "views": [],
+      "discoveredBy": "post:hongmoyang-223761557886",
+      "identifiedBy": "출입부 외벽 '22동' 표지"
+    },
+    {
+      "building": "25-1",
+      "path": "buildings/25-1/photos/n-f083b9a8.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfMTkz/MDAxNzM5NTk4OTI5OTIy.ueWPdiu1_kRvzrA8aAAr6u3vB0vQQ1B2fSZM1bR5TI0g.oBK7FG5082gR6UjXdGVKtkhpV-NJMRGwbtEe5Tw4FqYg.JPEG/KakaoTalk_20250215_140650839_11.jpg",
+      "sourceName": "네이버 블로그 · 서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2025-02-15 12:14:34",
+      "publishedDate": "2025-02-19",
+      "sha256": "817bccaccaa1fea1f4b1ee6c920d3cdabf85cbfe8239e713614d5fd6b3032267",
+      "bytes": 2002312,
+      "reviewDate": null,
+      "pixels": [
+        4000,
+        3000
+      ],
+      "dhash": "e6d26a2a0be3ff1d",
+      "views": [],
+      "discoveredBy": "post:hongmoyang-223761557886",
+      "identifiedBy": "외벽 '25-1' 번호, 왼쪽 '24'"
+    },
+    {
+      "building": "24",
+      "path": "buildings/024/photos/n-f083b9a8.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfMTkz/MDAxNzM5NTk4OTI5OTIy.ueWPdiu1_kRvzrA8aAAr6u3vB0vQQ1B2fSZM1bR5TI0g.oBK7FG5082gR6UjXdGVKtkhpV-NJMRGwbtEe5Tw4FqYg.JPEG/KakaoTalk_20250215_140650839_11.jpg",
+      "sourceName": "네이버 블로그 · 서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2025-02-15 12:14:34",
+      "publishedDate": "2025-02-19",
+      "sha256": "817bccaccaa1fea1f4b1ee6c920d3cdabf85cbfe8239e713614d5fd6b3032267",
+      "bytes": 2002312,
+      "reviewDate": null,
+      "pixels": [
+        4000,
+        3000
+      ],
+      "dhash": "e6d26a2a0be3ff1d",
+      "views": [],
+      "discoveredBy": "post:hongmoyang-223761557886",
+      "identifiedBy": "외벽 '24' 번호(왼쪽 가장자리)"
+    },
+    {
+      "building": "17",
+      "path": "buildings/017/photos/n-5614b3de.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfMTYy/MDAxNzM5NTk4OTc4NzI2.I3h9A3ESjbynNLtwav8baiZlYQC3zGcaaiXo4ftVHdMg.JAVdA4YECR1HAG0uW1PIhp1y1WbFCsLSkigda-Mhaccg.JPEG/KakaoTalk_20250215_140650839_06.jpg",
+      "sourceName": "네이버 블로그 · 서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2025-02-15 12:19:02",
+      "publishedDate": "2025-02-19",
+      "sha256": "733631a2f395c9d269bf19a14cdc56f40cd9dae3d65552d07bbb803da6713681",
+      "bytes": 3235872,
+      "reviewDate": null,
+      "pixels": [
+        4000,
+        3000
+      ],
+      "dhash": "2678e9aca259c186",
+      "views": [],
+      "discoveredBy": "post:hongmoyang-223761557886",
+      "identifiedBy": "출입 캐노피 '서울대학교 법학전문대학원' 문자. 법학관2(17동) 후보 — 원본에서 확정"
+    },
+    {
+      "building": "1",
+      "path": "buildings/001/photos/n-b34f3844.jpg",
+      "sourcePage": "https://blog.naver.com/archur/40172950367",
+      "imageUrl": "http://blogfiles.naver.net/20121120_63/archur_13533652824357d2nB_JPEG/14-20.jpg",
+      "sourceName": "네이버 블로그 · 관악구 서울대학교-인문대학 Campus(1974)",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "'1' 모서리를 남쪽 보행로에서 올려다본 끝 벽(2008년 전후, 504px 저해상도). 층마다 돌출한 백색 발코니 박스 3단, 끝 벽 벽돌 면과 층 밴드, 깊은 처마 모서리, 석축 기단. 초록 유리 계단탑이 아직 없음 → 탑은 이후 증설. 01-official과 다른 면.",
+      "captureDate": null,
+      "publishedDate": null,
+      "sha256": "e209450d479fd9e406b59b4ad83052c8a6429e2bbceed04ade749fb4288aa0aa",
+      "bytes": 65675,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        504,
+        384
+      ],
+      "dhash": "91b13e9ada9e98c6",
+      "views": [
+        "측면",
+        "세부"
+      ],
+      "discoveredBy": "post:archur-40172950367",
+      "identifiedBy": "모서리 '1' 표지; 1동 끝 벽의 돌출 발코니 박스. 초록 유리 계단탑이 없는 증설 이전 시기 사진"
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/n-5c9ac275.jpg",
+      "sourcePage": "https://blog.naver.com/archur/40172950367",
+      "imageUrl": "http://blogfiles.naver.net/20121120_240/archur_13533652849444gRhd_JPEG/%BD%C2%C8%BF%BB%F3%C0%CC%B7%CE%C0%E7-12-%B5%CE%BB%EA%C0%CE%B9%AE%B0%FC-2.jpg",
+      "sourceName": "네이버 블로그 · 관악구 서울대학교-인문대학 Campus(1974)",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "5동 '5' 모서리 옆에서 본 8동 전면(2012년 준공 직후 추정, 504px): 건물 폭 전체의 넓은 전면 계단, 2개 층 높이 출입 공동, 불규칙 세로 슬롯, 최상부 스크린. 08-official보다 왼쪽·낮은 위치라 5동과의 간격과 계단 폭이 새로 보임.",
+      "captureDate": null,
+      "publishedDate": null,
+      "sha256": "a4e63ce7f442ee9259cdc0041103d1bb8028158dce189e975f32fce2dfdc211d",
+      "bytes": 52397,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        504,
+        383
+      ],
+      "dhash": "c6e1b3d2eace9eb2",
+      "views": [
+        "정면",
+        "출입부"
+      ],
+      "discoveredBy": "post:archur-40172950367",
+      "identifiedBy": "왼쪽 '5' 모서리(5동)와 그 옆 황갈색 벽돌·세로 슬롯·출입 공동. 8동 공식 사진과 동일 건물"
+    },
+    {
+      "building": "103",
+      "path": "buildings/103/photos/n-e3d484ae.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMTg2/MDAxNzgxMDkzNzAwNTQz.5xGEMwbMEEeIk3xQQtjE9vd3gr9aqnO-tBqVrgVkTegg.kFJC95uYvWQHdxDpeen3-IZ9uUNFmGXryXRraZWqL3wg.JPEG/20260608_145023.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2026-06-08 14:50:24",
+      "publishedDate": "2026-06-10",
+      "sha256": "ec36ed309f3f87bd1ea320766d4c39422502bdb38f7f285da2c9c28d323e666a",
+      "bytes": 3721013,
+      "reviewDate": null,
+      "pixels": [
+        4032,
+        3024
+      ],
+      "dhash": "24988e2645898800",
+      "views": [],
+      "discoveredBy": "post:crete22-224312188877",
+      "identifiedBy": "규장각 현판·표지석(055c82d7의 '奎章閣'), 기와 형태 지붕과 원형 기둥"
+    },
+    {
+      "building": "103",
+      "path": "buildings/103/photos/n-5b5e3858.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMzUg/MDAxNzgxMDkzNzAwNjMx.8L7-z-BtQwPZE2Wcvbhna03HqV08VazsheSxvO7uI44g.DTCsl3tLs4cTwSrLL9pGfU_wClbTr0m5Ku10fco0hiwg.JPEG/20260608_145303.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2026-06-08 14:53:04",
+      "publishedDate": "2026-06-10",
+      "sha256": "8551daf92a45f67a9cc28235c12a0548c76aa7544ac3c16e56394d23201420a8",
+      "bytes": 3684163,
+      "reviewDate": null,
+      "pixels": [
+        4032,
+        3024
+      ],
+      "dhash": "3b2322a3608f8fef",
+      "views": [],
+      "discoveredBy": "post:crete22-224312188877",
+      "identifiedBy": "규장각 현판·표지석(055c82d7의 '奎章閣'), 기와 형태 지붕과 원형 기둥"
+    },
+    {
+      "building": "84",
+      "path": "buildings/084/photos/n-a8bb2896.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfNjgg/MDAxNzgxMDkzNzM0MjIx.ELgAlGkwMnsVhcBVDT0I_vxr0u6AEL8UQwZcQhmalHwg.G5m_r4_s2YHBkgbC_BcwxRPz0oAQZs7jkcPcqtoT3k8g.JPEG/20260608_145413.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2026-06-08 14:54:14",
+      "publishedDate": "2026-06-10",
+      "sha256": "7c796e83c6270816315ce5dc6737a4414274daf330246ca310c2cb8d96f4016d",
+      "bytes": 3374582,
+      "reviewDate": null,
+      "pixels": [
+        4032,
+        3024
+      ],
+      "dhash": "1b0f2d0f86072c07",
+      "views": [],
+      "discoveredBy": "post:crete22-224312188877",
+      "identifiedBy": "외벽 '84' 번호와 '근대법학교육100주년기념관' 문자"
+    },
+    {
+      "building": "84",
+      "path": "buildings/084/photos/n-806d1438.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMjY1/MDAxNzgxMDkzNzc4MTA4.datK_uWESLN3hmbnfTHHt7mjvhsqd_3aYnCBLa8K4Ekg.lbS6vPM0r6MmBNunKrbMJuNpkACOZR181pSvYwFVDsYg.JPEG/20260608_145540.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2026-06-08 14:55:41",
+      "publishedDate": "2026-06-10",
+      "sha256": "0df53886532d64c28bb9d407d1ef1e5948941ddafc0f9212a7481f6066a6f177",
+      "bytes": 5866561,
+      "reviewDate": null,
+      "pixels": [
+        3024,
+        4032
+      ],
+      "dhash": "f893ff864ccf1e62",
+      "views": [],
+      "discoveredBy": "post:crete22-224312188877",
+      "identifiedBy": "외벽 '84' 번호와 '근대법학교육100주년기념관' 문자"
+    },
+    {
+      "building": "111",
+      "path": "buildings/111/photos/n-8d06cfb2.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMTI2/MDAxNzgxMDkzOTY5NTc1.gGtoy4m4A9-aOklnNEXhzrLk3vUjhYjFqvFE0ExrzbAg.hVOX9hj5ArsBt1RV1PXe_OI_YlDW-wqvVziOm0JoN4Yg.JPEG/20260608_151017.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2026-06-08 15:10:17",
+      "publishedDate": "2026-06-10",
+      "sha256": "c85aa688c88f154939d4190af3e6a0652f95a6ca8cb076dc66f3d2255b10dd4e",
+      "bytes": 4088848,
+      "reviewDate": null,
+      "pixels": [
+        4032,
+        3024
+      ],
+      "dhash": "fad35f430e58f0a2",
+      "views": [],
+      "discoveredBy": "post:crete22-224312188877",
+      "identifiedBy": "간판 CAFFE PASCUCCI"
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/n-fcc4c61a.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMzAg/MDAxNzgxMDkzOTQzNDE1.p9a2pu4A7csyGCqFQmi3i8Fe6PC906Cj6ekDkCnMmfYg.5YKlYTDjKz3C1tWezszAtGDHPLvrZyYtJ78AI7K5Kysg.JPEG/20260608_150447.jpg",
+      "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "대계단 아래에서 올려다본 8동 계단 쪽 입면(EXIF 2026-06-08): '두산인문관 Doosan Humanities Hall' 사인과 '8' 표지 2곳, 왼쪽 출입 공동의 깊이와 흑색 헤드, 입면이 여러 면으로 꺾이며 물러나는 형태, 중간 높이의 흑색 금속 돌출 베이 하부, 세로 슬롯 창, 최상부 뚫린 스크린 개구. 대계단 폭과 경사, 오른쪽 옹벽을 새로 확인.",
+      "captureDate": "2026-06-08 15:04:47",
+      "publishedDate": "2026-06-10",
+      "sha256": "a009c667fbc8cf309904914c51c50ccbb3104753d2de2823112714291c4870fd",
+      "bytes": 5097140,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        3024,
+        4032
+      ],
+      "dhash": "8f090f4f4f3fefa4",
+      "views": [
+        "측면",
+        "출입부",
+        "세부"
+      ],
+      "discoveredBy": "post:crete22-224312188877",
+      "identifiedBy": "캡션 '인문대쪽'; 황갈색 벽돌·세로 슬롯·측면 계단. 8동 여부는 원본 판정"
+    },
+    {
+      "building": "62-1",
+      "path": "buildings/62-1/photos/n-e59c8a77.jpg",
+      "sourcePage": "https://blog.naver.com/lumifam/224276665373",
+      "imageUrl": "http://blogfiles.naver.net/MjAyNjA1MDZfMjA2/MDAxNzc4MDUxNDk2MDU1.xN_hd0LYeYnyNdNrEoEytwl0PXHRSSqpoiyn_Ir3yeUg.LeY8yXkXNLV2R02saHTwakMwmcCdaFzbWaMxPc1BW3Qg.JPEG/KakaoTalk_Photo_2026-04-26-15-16-44_013.jpeg",
+      "sourceName": "네이버 블로그 · [서울대 정기견학 후기] 미래의 샤:인 꿈꾸며ㅎㅎ",
+      "decision": "pending",
+      "reviewed": false,
+      "countsTowardMinimum": false,
+      "observations": "다운로드 완료, 검토 대기.",
+      "captureDate": "2026-04-25 15:28:19",
+      "publishedDate": "2026-05-06",
+      "sha256": "14cf50b5b8b4103f39631626f51414bac85fecefd558f6abd577fffc562b9108",
+      "bytes": 3988838,
+      "reviewDate": null,
+      "pixels": [
+        3000,
+        4000
+      ],
+      "dhash": "01c0146467337b3b",
+      "views": [],
+      "discoveredBy": "post:lumifam-224276665373",
+      "identifiedBy": "상부가 크게 돌출된 체커 패턴 외피 — 관정관"
+    },
+    {
+      "building": "1",
+      "path": "buildings/001/photos/n-ed38594d.jpg",
+      "sourcePage": "https://blog.naver.com/etoile1016/223036991764",
+      "imageUrl": "http://blogfiles.naver.net/MjAyMzAzMDlfOTYg/MDAxNjc4MjkwNzE3MjU2.hE3vxJgrA6lUT7otoideHIb1W2-Idu-xytT57idhpXEg.-PpXDFxcJHBMxau2XQudzHr1xKROzc2yhQ3MSPZYplMg.JPEG.etoile1016/167828958615201.jpg",
+      "sourceName": "네이버 블로그 · 인문학걷기 108차. 서울 <서울대학교>",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "자하연 남쪽 물가 너머로 본 1동 북측 장변(자하연은 1동 바로 북쪽). 4개 층 백색 층 밴드와 벽돌, 층마다 돌출한 백색 발코니 박스, 깊은 처마, 연못가 석축 위에 선 지상층.",
+      "captureDate": null,
+      "publishedDate": "2023-03-07",
+      "sha256": "f875ad96e2c03de379e24cb3c36d291636e0dee2d020054653749ff736c391dc",
+      "bytes": 547492,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        900,
+        600
+      ],
+      "dhash": "941c75c4bb6f34d8",
+      "views": [
+        "측면"
+      ],
+      "discoveredBy": "서울대 인문대학 1동 건물"
+    },
+    {
+      "building": "10",
+      "path": "buildings/010/photos/n-97cc74c2.jpg",
+      "sourcePage": "https://blog.naver.com/gumpda00/223081243730",
+      "imageUrl": "http://blogfiles.naver.net/MjAyMzA0MjFfMTUz/MDAxNjgyMDM0OTQ3NzAy.OdjUq0l9u9BtmH3wttpd1rBog9iy0XY52equDB-zScIg.jer2OEeeUbOgXaE5evFelG10HZA4yjUGIqDH7TgKcsAg.JPEG.romoo/IMG_0036.JPG",
+      "sourceName": "네이버 블로그 · 서울대 아침 산책 사범대학 인문대학",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": true,
+      "observations": "10동 안뜰 쪽 입면(처마에 '10 College of Education'). 4개 층 백색 밴드·벽돌, 오른쪽 ㄱ자로 꺾인 날개의 층별 발코니 박스, 지상층 유리 출입부, 앞의 등나무 퍼걸러(벽돌 기둥). 처마 위 옥상 난간.",
+      "captureDate": null,
+      "publishedDate": "2023-05-01",
+      "sha256": "98a8ab25708db984f59300606ec876a6fa35ee9f3ed227e0aa3f0332d3bdfdea",
+      "bytes": 176722,
+      "reviewDate": "2026-09-27",
+      "pixels": [
+        740,
+        556
+      ],
+      "dhash": "d1c3d6e430687cdc",
+      "views": [
+        "정면",
+        "측면"
+      ],
+      "discoveredBy": "서울대 인문대학 1동 건물"
+    },
+    {
+      "building": "8",
+      "path": "buildings/008/photos/user-reference-20260927.png",
+      "sourceKind": "user-attachment",
+      "sourcePage": "buildings/008/photos/user-reference-20260927.png",
+      "imageUrl": "buildings/008/photos/user-reference-20260927.png",
+      "sourceName": "사용자 제공 2026-09-27 외관 사진 · 웹 원출처 미제공",
+      "decision": "accepted",
+      "reviewed": true,
+      "countsTowardMinimum": false,
+      "observations": "사용자가 지적한 목표 외관. 긴 세로 창, 벽돌 면, 얇은 수평 금속 띠, 입구 캐노피, 옥상 상단 보의 비교 기준. 원본 웹 출처는 제공되지 않아 인터넷 사진 수에는 추가하지 않음.",
+      "views": [
+        "정면",
+        "세부"
+      ],
+      "captureDate": null,
+      "reviewDate": "2026-09-27",
+      "sha256": "3f7fbe06726fccb946dcb558976eb49056c0963e22615ef584ca3b1630049564",
+      "bytes": 353558
+    }
+  ]
+}

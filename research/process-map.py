@@ -5,7 +5,7 @@ import json, math, re, xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / 'research/source/osm-campus-full.xml'
+SRC = ROOT / 'research/map-inputs/osm-campus-full.xml'
 r = ET.parse(SRC).getroot()
 nodes = {n.attrib['id']: [float(n.attrib['lon']), float(n.attrib['lat'])] for n in r.findall('node')}
 def tags(e): return {t.attrib['k']: t.attrib['v'] for t in e.findall('tag')}
@@ -35,7 +35,7 @@ campus_rel = next(e for e in r.findall('relation') if tags(e).get('name') == 'ì„
 campus_refs = join([ways[m.attrib['ref']]['refs'] for m in campus_rel.findall('member') if m.attrib['type']=='way' and m.attrib['role']=='outer' and m.attrib['ref'] in ways])
 assert campus_refs, 'Campus boundary is incomplete'
 boundary = [ring_points(p) for p in campus_refs]
-official_path = ROOT/'research/source/official-building-list-utf8.json'
+official_path = ROOT/'research/map-inputs/official-building-list-utf8.json'
 official_records = json.loads(official_path.read_text())['rows'] if official_path.exists() else []
 official_points = [local([float(x['lon_val']),float(x['lat_val'])]) for x in official_records]
 def inside(p,poly):

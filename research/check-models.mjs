@@ -20,6 +20,31 @@ for (const b of review) {
 const source = (await readFile(new URL('building-structures.js', dist), 'utf8'))
   .replace("from 'three'", `from '${new URL('assets/three.module.js', dist).href}'`);
 const { createBuildingStructure } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+// Every reviewed building must have a photo-derived structure, not a base box.
+for (const b of review) {
+  const structure = createBuildingStructure(b);
+  assert.ok(structure, `${b.number}: no dedicated structure`);
+  const names = new Set();
+  structure.group.traverse(object => { if (object.name) names.add(object.name); });
+  assert.ok(names.size >= 6, `${b.number}: only ${names.size} distinct parts — still a box`);
+  assert.ok(structure.height > 8 && structure.height < 40, `${b.number}: implausible height ${structure.height}`);
+  // Attachments (eaves, canopies, towers) may overhang, but not run away.
+  const clone = structure.group;
+  clone.rotation.y = 0; clone.position.set(0, 0, 0); clone.updateMatrixWorld(true);
+  const size = new THREE.Box3().setFromObject(clone).getSize(new THREE.Vector3());
+  assert.ok(size.x < b.box.width + 26 && size.z < b.box.depth + 26,
+    `${b.number}: geometry ${size.x.toFixed(0)}x${size.z.toFixed(0)} far exceeds footprint ${b.box.width.toFixed(0)}x${b.box.depth.toFixed(0)}`);
+}
+// No two buildings may share an identical part list: that would be one facade
+// repeated, which the project brief classifies as a draft rather than a model.
+const signatures = new Map();
+for (const b of review) {
+  const names = new Set();
+  createBuildingStructure(b).group.traverse(o => { if (o.name) names.add(o.name); });
+  const key = [...names].sort().join('|');
+  assert.ok(!signatures.has(key), `${b.number}: identical part list to ${signatures.get(key)}`);
+  signatures.set(key, b.number);
+}
 for (const number of ['4', '14']) {
   const b = review.find(b => b.number === number);
   const {group} = createBuildingStructure(b);
@@ -42,5 +67,5 @@ for (const number of ['4', '14']) {
     }
   }
 }
-console.log(`PASS: ${campus.buildings.length} models, 1–15 profiles, ${imageCount} photo files, 4/14 geometry and open-space checks.`);
+console.log(`PASS: ${campus.buildings.length} models, 15 dedicated structures (all distinct), ${imageCount} photo files, 4/14 geometry and open-space checks.`);
 console.log('This checks implementation consistency, not accuracy against surveyed dimensions.');

@@ -5,7 +5,7 @@
   <title>서울대학교 3D 캠퍼스</title>
   <meta name="description" content="관악캠퍼스의 건물 윤곽과 1동부터 15동까지 사진 기반 외관 추정 모형을 둘러보는 지도">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23162e50'/%3E%3Cpath d='M9 30V15l11-6 11 6v15H9m11-21v21M9 21h22' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./styles.css?v=20260926-modern3">
+  <link rel="stylesheet" href="./styles.css?v=20260926-research">
   <script type="importmap">{"imports":{"three":"./assets/three.module.js"}}</script>
 </head>
 <body>
@@ -32,6 +32,6 @@
     </section>
   </main>
   <dialog id="sources-dialog"><div class="dialog-heading"><h2>자료와 제작 기준</h2><button id="close-sources" class="icon-button" aria-label="자료 창 닫기">×</button></div><p>실제 지도 위에 올린, 검토용 건축 모형입니다.</p><dl class="sources-list"><dt>위치와 면적</dt><dd>OpenStreetMap의 캠퍼스 건물 윤곽과 서울대 공식 지도의 위치·건물 목록을 대조했습니다. 면적은 건물의 지면 윤곽으로 계산한 근삿값이며, 연면적이나 공적 장부의 건축면적이 아닙니다.</dd><dt>기본 모형</dt><dd>건물 윤곽을 감싸는 최소 회전 사각형을 직육면체로 만듭니다. OSM의 건물 높이·층수 태그가 없으면 4층 × 3.6m를 기본값으로 사용합니다.</dd><dt>1–15동 외관</dt><dd>공식 건물 사진에서 확인한 색상, 창 배열, 지붕 형태를 간략화해 반영합니다. 보이지 않는 면과 치수는 추정입니다. 사진측량이나 정밀 실측 모델이 아닙니다.</dd><dt>자료의 범위</dt><dd id="coverage-note"></dd><dt>길과 가로수</dt><dd>길은 지도 데이터를 사용합니다. 가로수는 도로 주변에 단순화해 배치한 모형이며 실제 수목 위치를 측량한 결과가 아닙니다. 건물 구조 단독 보기와 2D에서는 숨깁니다.</dd><dt>지형과 시점</dt><dd>지형 고도는 반영하지 않은 평면 지도입니다. 원본 사진의 촬영 시점이 명시되지 않은 경우 현재 외관과 다를 수 있습니다. 7동은 2026년 증축 공사 중이므로 기존 외관을 참고한 모형입니다.</dd></dl><div class="source-links"><a href="./data/snu-campus-map.pdf" target="_blank">서울대 공식 2D 지도 PDF ↗</a><a href="./data/buildings.geojson" download>건물 윤곽 GeoJSON 다운로드 ↓</a><a href="./data/campus.json" download>전체 지도 데이터 다운로드 ↓</a><a href="https://map.snu.ac.kr/web/main.action" target="_blank" rel="noreferrer">서울대 공식 캠퍼스 지도 ↗</a></div><p class="fine-print">수집일 2026.09.20 · 지도 데이터 ODbL 1.0 · 사진 저작권은 각 출처에 있습니다.</p></dialog>
-  <script type="module" src="./app.js?v=20260926-modern3"></script>
+  <script type="module" src="./app.js?v=20260927-doosan8c"></script>
 </body>
 </html>

@@ -153,6 +153,46 @@
           "sourceName": "서울대학교 공식 자료",
           "confidence": "high",
           "observations": "Brown brick with dark metal horizontal bands and narrow vertical window strips; tall recessed entrance/pilotis; projecting glazed side bay, flat roof and open upper screen. Number 8 visible."
+        },
+        {
+          "path": "./assets/photos/08-n-b05fda99.jpg",
+          "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfODAg/MDAxNzc1OTk3NzIyNDI0.LrgFDJxbaJyLg1SzOFm-Y_IOsU4d1Lm30O_LDiWVo8Yg.LWSVALGbc2ixukl85l4po1ajjZzzS7gtkjavZlOOaZ0g.JPEG/900_20260411_152701.jpg",
+          "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+          "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+          "confidence": "사진 확인 · 치수 추정",
+          "observations": "남서쪽 도로에서 본 8동 긴 입면(2026-04): 평면이 꺾여 입면이 휘어 보이는 형태, 층마다 폭·높이가 다른 세로 창 슬롯, 옥상 흑색 기계실 매스와 안테나. 오른쪽에 7동 끝 벽과 두 동 사이 간격."
+        },
+        {
+          "path": "./assets/photos/08-n-d3536cf3.jpg",
+          "imageUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTAy/MDAxNzc1OTk3NzIwNzE1.7dwPhq-cJOi40KOKOKc-Fo04tb-8DfYNDfIQQh9y5gMg.KP347Xfx6KSykv77ac7JnuHffH0Ddnjc59S1UkRGaSEg.JPEG/900_20260411_154540.jpg",
+          "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+          "sourceName": "네이버 블로그 · 서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+          "confidence": "사진 확인 · 치수 추정",
+          "observations": "5동 모서리에서 본 8동 서쪽 모서리(2026-04). '8' 표지, 2개 층 높이 출입 공동과 흑색 헤드, 최상부 뚫린 벽돌 스크린, 오른쪽 가장자리 흑색 돌출 베이. 08-chio와 같은 모서리지만 지면의 단차(아래층 출입구로 내려가는 계단·램프·옹벽)를 새로 확인."
+        },
+        {
+          "path": "./assets/photos/08-n-5c9ac275.jpg",
+          "imageUrl": "http://blogfiles.naver.net/20121120_240/archur_13533652849444gRhd_JPEG/%BD%C2%C8%BF%BB%F3%C0%CC%B7%CE%C0%E7-12-%B5%CE%BB%EA%C0%CE%B9%AE%B0%FC-2.jpg",
+          "sourcePage": "https://blog.naver.com/archur/40172950367",
+          "sourceName": "네이버 블로그 · 관악구 서울대학교-인문대학 Campus(1974)",
+          "confidence": "사진 확인 · 치수 추정",
+          "observations": "5동 '5' 모서리 옆에서 본 8동 전면(2012년 준공 직후 추정, 504px): 건물 폭 전체의 넓은 전면 계단, 2개 층 높이 출입 공동, 불규칙 세로 슬롯, 최상부 스크린. 08-official보다 왼쪽·낮은 위치라 5동과의 간격과 계단 폭이 새로 보임."
+        },
+        {
+          "path": "./assets/photos/08-n-fcc4c61a.jpg",
+          "imageUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMzAg/MDAxNzgxMDkzOTQzNDE1.p9a2pu4A7csyGCqFQmi3i8Fe6PC906Cj6ekDkCnMmfYg.5YKlYTDjKz3C1tWezszAtGDHPLvrZyYtJ78AI7K5Kysg.JPEG/20260608_150447.jpg",
+          "sourcePage": "https://blog.naver.com/crete22/224312188877",
+          "sourceName": "네이버 블로그 · 서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+          "confidence": "사진 확인 · 치수 추정",
+          "observations": "대계단 아래에서 올려다본 8동 계단 쪽 입면(EXIF 2026-06-08): '두산인문관 Doosan Humanities Hall' 사인과 '8' 표지 2곳, 왼쪽 출입 공동의 깊이와 흑색 헤드, 입면이 여러 면으로 꺾이며 물러나는 형태, 중간 높이의 흑색 금속 돌출 베이 하부, 세로 슬롯 창, 최상부 뚫린 스크린 개구. 대계단 폭과 경사, 오른쪽 옹벽을 새로 확인."
+        },
+        {
+          "path": "./assets/photos/08-user-reference-20260927.png",
+          "imageUrl": "buildings/008/photos/user-reference-20260927.png",
+          "sourcePage": "./assets/photos/08-user-reference-20260927.png",
+          "sourceName": "사용자 제공 2026-09-27 외관 사진 · 웹 원출처 미제공",
+          "confidence": "사진 확인 · 치수 추정",
+          "observations": "사용자가 지적한 목표 외관. 긴 세로 창, 벽돌 면, 얇은 수평 금속 띠, 입구 캐노피, 옥상 상단 보의 비교 기준. 원본 웹 출처는 제공되지 않아 인터넷 사진 수에는 추가하지 않음."
         }
       ]
     },

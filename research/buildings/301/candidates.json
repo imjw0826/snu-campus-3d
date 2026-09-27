@@ -1,0 +1,21 @@
+{
+  "building": "301",
+  "queries": [],
+  "candidates": [
+    {
+      "cid": "fdcaf4da",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfODkg/MDAxNzM5NTk4MzEyNTE4.eydinuaJz7ct7NPEw4DbD3cR_F07ib6LNdxqhps66IUg.4dOu5bsFE1RFq7huC6U9k-pdCmx3fXCZEixppd1VWwsg.JPEG/KakaoTalk_20250215_141051015_12.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "source": "네이버 블로그",
+      "title": "서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "publishedDate": "2025-02-19",
+      "thumb": "https://postfiles.pstatic.net/MjAyNTAyMTVfODkg/MDAxNzM5NTk4MzEyNTE4.eydinuaJz7ct7NPEw4DbD3cR_F07ib6LNdxqhps66IUg.4dOu5bsFE1RFq7huC6U9k-pdCmx3fXCZEixppd1VWwsg.JPEG/KakaoTalk_20250215_141051015_12.jpg?type=w966",
+      "query": "post:hongmoyang-223761557886",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "출입 캐노피 위 '301'과 'ENGINEERING' 문자",
+      "context": "# 한국 사람이라면 대부분 가고 싶었던 서울대를, 오늘 나도 갔다. 아이들을 이끌고 서울대 투어를 온 학부모가 적지 않았다. 서울대 투어는 시내버스를 타고 종점까지 올라가, 고지대에서 낮은 쪽으로 내려오며 구경하는 ",
+      "path": "buildings/301/photos/n-fdcaf4da.jpg"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Missing outlines remain visibly unverified schematic rectangles; no invented are
 import json,math
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-p=R/'dist/data/campus.json';data=json.loads(p.read_text());records=json.loads((R/'research/source/official-building-list-utf8.json').read_text())['rows'];sx=111320*math.cos(math.radians(data['origin'][1]));sy=111132
+p=R/'dist/data/campus.json';data=json.loads(p.read_text());records=json.loads((R/'research/map-inputs/official-building-list-utf8.json').read_text())['rows'];sx=111320*math.cos(math.radians(data['origin'][1]));sy=111132
 def local(r):return [(float(r['lon_val'])-data['origin'][0])*sx,-(float(r['lat_val'])-data['origin'][1])*sy]
 def inside(p,poly):
  c=False;x,y=p

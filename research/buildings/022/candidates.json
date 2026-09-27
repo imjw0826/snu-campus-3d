@@ -1,0 +1,21 @@
+{
+  "building": "22",
+  "queries": [],
+  "candidates": [
+    {
+      "cid": "e438a79c",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNTAyMTVfOTMg/MDAxNzM5NTk4ODI5OTU2.8R_Ny1WCbWrmWH0W-UAQ5Gbjp-a0OeYsitrF91D0PVEg.kZL4SCJ5hLCbREzAwjAlb467uDNg1gj7yKgdLklyXQgg.JPEG/KakaoTalk_20250215_140650839_23.jpg",
+      "sourcePage": "https://blog.naver.com/hongmoyang/223761557886",
+      "source": "네이버 블로그",
+      "title": "서울대, 관악산 자락 넓은 교정 한 바퀴 돌아보기",
+      "publishedDate": "2025-02-19",
+      "thumb": "https://postfiles.pstatic.net/MjAyNTAyMTVfOTMg/MDAxNzM5NTk4ODI5OTU2.8R_Ny1WCbWrmWH0W-UAQ5Gbjp-a0OeYsitrF91D0PVEg.kZL4SCJ5hLCbREzAwjAlb467uDNg1gj7yKgdLklyXQgg.JPEG/KakaoTalk_20250215_140650839_23.jpg?type=w966",
+      "query": "post:hongmoyang-223761557886",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "출입부 외벽 '22동' 표지",
+      "context": "<",
+      "path": "buildings/022/photos/n-e438a79c.jpg"
+    }
+  ]
+}

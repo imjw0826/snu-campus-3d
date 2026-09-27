@@ -1,0 +1,36 @@
+{
+  "building": "84",
+  "queries": [],
+  "candidates": [
+    {
+      "cid": "a8bb2896",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfNjgg/MDAxNzgxMDkzNzM0MjIx.ELgAlGkwMnsVhcBVDT0I_vxr0u6AEL8UQwZcQhmalHwg.G5m_r4_s2YHBkgbC_BcwxRPz0oAQZs7jkcPcqtoT3k8g.JPEG/20260608_145413.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "source": "네이버 블로그",
+      "title": "서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "publishedDate": "2026-06-10",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA2MTBfNjgg/MDAxNzgxMDkzNzM0MjIx.ELgAlGkwMnsVhcBVDT0I_vxr0u6AEL8UQwZcQhmalHwg.G5m_r4_s2YHBkgbC_BcwxRPz0oAQZs7jkcPcqtoT3k8g.JPEG/20260608_145413.jpg?type=w966",
+      "query": "post:crete22-224312188877",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "외벽 '84' 번호와 '근대법학교육100주년기념관' 문자",
+      "context": "성폭력관련이었습니다.",
+      "path": "buildings/084/photos/n-a8bb2896.jpg"
+    },
+    {
+      "cid": "806d1438",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA2MTBfMjY1/MDAxNzgxMDkzNzc4MTA4.datK_uWESLN3hmbnfTHHt7mjvhsqd_3aYnCBLa8K4Ekg.lbS6vPM0r6MmBNunKrbMJuNpkACOZR181pSvYwFVDsYg.JPEG/20260608_145540.jpg",
+      "sourcePage": "https://blog.naver.com/crete22/224312188877",
+      "source": "네이버 블로그",
+      "title": "서울대학교 관악캠퍼스 산책 - 민주화의길. 규장각. 근대법학교육100주년기념관. 인문대. 버들골 풍산마당",
+      "publishedDate": "2026-06-10",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA2MTBfMjY1/MDAxNzgxMDkzNzc4MTA4.datK_uWESLN3hmbnfTHHt7mjvhsqd_3aYnCBLa8K4Ekg.lbS6vPM0r6MmBNunKrbMJuNpkACOZR181pSvYwFVDsYg.JPEG/20260608_145540.jpg?type=w966",
+      "query": "post:crete22-224312188877",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "외벽 '84' 번호와 '근대법학교육100주년기념관' 문자",
+      "context": "네 죄를 네가 알렸다!로 시작되고 통했던 오랜 시기를 지났겠습니다..",
+      "path": "buildings/084/photos/n-806d1438.jpg"
+    }
+  ]
+}

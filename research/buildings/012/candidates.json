@@ -1,0 +1,50 @@
+{
+  "building": "12",
+  "queries": [],
+  "candidates": [
+    {
+      "cid": "4439c6ef",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA1MzBfMjk0/MDAxNzgwMDkwOTU5NTM5.QeWUCyclXOVfAaXm3vGZY3zRjKTHrKwO4BzxUpgh2nkg.-CfslRBqeKAXKrVwUPBn3oxu9II6kZBckEkRTGlpf4gg.JPEG/IMG_8087.JPG",
+      "sourcePage": "https://blog.naver.com/starwon1215/224304317080",
+      "source": "네이버 블로그",
+      "title": "가족,연인 주말 나들이, 서울대학교 관악캠퍼스 하루 코스 산책 여행 후기",
+      "publishedDate": "2026-06-02",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA1MzBfMjk0/MDAxNzgwMDkwOTU5NTM5.QeWUCyclXOVfAaXm3vGZY3zRjKTHrKwO4BzxUpgh2nkg.-CfslRBqeKAXKrVwUPBn3oxu9II6kZBckEkRTGlpf4gg.JPEG/IMG_8087.JPG?type=w966",
+      "query": "post:starwon1215-224304317080",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "글 캡션 '카페 맞은편 사범대학'; 곡면 금속 하부·원형 기둥·테라스 난간이 12동 공식 사진과 일치",
+      "context": "카페 맞은편 사범대학",
+      "path": "buildings/012/photos/n-4439c6ef.jpg"
+    },
+    {
+      "cid": "caf221a9",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA1MzBfMTk4/MDAxNzgwMDkwOTU0MTIx.jajBOB4WdurrScQiEaM8QxWw89pW69KoIsxpCiWV4zkg.BNNoIjBaPiWhg4gGCr0HFCgnVPJpWuKhBBpjWYbCEI8g.JPEG/IMG_8068.JPG",
+      "sourcePage": "https://blog.naver.com/starwon1215/224304317080",
+      "source": "네이버 블로그",
+      "title": "가족,연인 주말 나들이, 서울대학교 관악캠퍼스 하루 코스 산책 여행 후기",
+      "publishedDate": "2026-06-02",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA1MzBfMTk4/MDAxNzgwMDkwOTU0MTIx.jajBOB4WdurrScQiEaM8QxWw89pW69KoIsxpCiWV4zkg.BNNoIjBaPiWhg4gGCr0HFCgnVPJpWuKhBBpjWYbCEI8g.JPEG/IMG_8068.JPG?type=w966",
+      "query": "post:starwon1215-224304317080",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "글 캡션 '카페 맞은편 사범대학'; 곡면 금속 하부·원형 기둥·테라스 난간이 12동 공식 사진과 일치",
+      "context": "넓고 쾌적한 테라스가 마련되어 있어요",
+      "path": "buildings/012/photos/n-caf221a9.jpg"
+    },
+    {
+      "cid": "e990a06b",
+      "originalUrl": "http://blogfiles.naver.net/MjAyMzA1MjBfMjA3/MDAxNjg0NTkwODcwOTgx.UcWWndUboDEdAVuhedvFlz00TBnvjxNgR2q8QS6siBYg.PJRE5c17a-yjZfUrBcC8U3mIwqjdzTAAz8a7bmgLmBAg.JPEG.jjeong2006/IMG_5395.jpg",
+      "sourcePage": "https://blog.naver.com/jjeong2006/223107301597",
+      "source": "네이버 블로그",
+      "title": "(대학탐방)5월 서울대학교 정기견학2-서울대 인문대 서울대 사범대 탐방",
+      "publishedDate": "2023-05-20",
+      "thumb": "https://postfiles.pstatic.net/MjAyMzA1MjBfMjA3/MDAxNjg0NTkwODcwOTgx.UcWWndUboDEdAVuhedvFlz00TBnvjxNgR2q8QS6siBYg.PJRE5c17a-yjZfUrBcC8U3mIwqjdzTAAz8a7bmgLmBAg.JPEG.jjeong2006/IMG_5395.jpg?type=w966",
+      "query": "post:jjeong2006-223107301597",
+      "status": "skipped",
+      "reason": "검토에서 제외 또는 중복 판정. 파일 삭제, rejected-photos.json에 근거 보존.",
+      "identifiedBy": "곡면 상부의 깊은 수직 날개와 외부 계단 — 12동 공식 사진과 같은 건물(원글 사범대 구간)",
+      "context": "어쨌든 자기 주관도 있는걸알게되네 느릿느릿해서 분노유발자인 딸이지만 그 성향을 인정해야한다는 생각이 이제든다."
+    }
+  ]
+}

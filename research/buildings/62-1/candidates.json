@@ -1,0 +1,51 @@
+{
+  "building": "62-1",
+  "queries": [],
+  "candidates": [
+    {
+      "cid": "589c483a",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMTA0/MDAxNzc1OTk3NzI0OTIy.LryfHOJHdwlgtxLLZrImsRC-f86awYbZhPGxPk7_2Kgg.cTF2CiireEUjx4Taz7kDkGOZZzrpz4w6YKUsjEb-ztwg.JPEG/900_20260411_152930.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "source": "네이버 블로그",
+      "title": "서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "publishedDate": "2026-04-12",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA0MTJfMTA0/MDAxNzc1OTk3NzI0OTIy.LryfHOJHdwlgtxLLZrImsRC-f86awYbZhPGxPk7_2Kgg.cTF2CiireEUjx4Taz7kDkGOZZzrpz4w6YKUsjEb-ztwg.JPEG/900_20260411_152930.jpg?type=w966",
+      "query": "post:hasub2-224250029050",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "캡션 '장서 230만 권… 도서를 보관'; 상부가 크게 돌출된 관정관 형태",
+      "context": "서울대학교 장서 230만 권인데, 도서를 보관할 수 있는 공간이 부족하던 차에 신규 건물 관정관 2015년 2월 5일 개관 확장했어요.",
+      "path": "buildings/62-1/photos/n-589c483a.jpg"
+    },
+    {
+      "cid": "f59e56a6",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA0MTJfMjg3/MDAxNzc1OTk3NzIzMzAx.wUl22vOq9jz6oZTq0g2vIgNHzF9iUr0L4CIm5RGgTGwg.psb9MLZBPidJYu3Hu_sVDjTOz3e8Wkyl8cr5yK1ONcUg.JPEG/900_20260411_152936.jpg",
+      "sourcePage": "https://blog.naver.com/hasub2/224250029050",
+      "source": "네이버 블로그",
+      "title": "서울대학교 인문대학 학부모 초청 간담회 참석 후기",
+      "publishedDate": "2026-04-12",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA0MTJfMjg3/MDAxNzc1OTk3NzIzMzAx.wUl22vOq9jz6oZTq0g2vIgNHzF9iUr0L4CIm5RGgTGwg.psb9MLZBPidJYu3Hu_sVDjTOz3e8Wkyl8cr5yK1ONcUg.JPEG/900_20260411_152936.jpg?type=w966",
+      "query": "post:hasub2-224250029050",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "캡션 '장서 230만 권… 도서를 보관'; 상부가 크게 돌출된 관정관 형태",
+      "context": "서울대학교 장서 230만 권인데, 도서를 보관할 수 있는 공간이 부족하던 차에 신규 건물 관정관 2015년 2월 5일 개관 확장했어요.",
+      "path": "buildings/62-1/photos/n-f59e56a6.jpg"
+    },
+    {
+      "cid": "e59c8a77",
+      "originalUrl": "http://blogfiles.naver.net/MjAyNjA1MDZfMjA2/MDAxNzc4MDUxNDk2MDU1.xN_hd0LYeYnyNdNrEoEytwl0PXHRSSqpoiyn_Ir3yeUg.LeY8yXkXNLV2R02saHTwakMwmcCdaFzbWaMxPc1BW3Qg.JPEG/KakaoTalk_Photo_2026-04-26-15-16-44_013.jpeg",
+      "sourcePage": "https://blog.naver.com/lumifam/224276665373",
+      "source": "네이버 블로그",
+      "title": "[서울대 정기견학 후기] 미래의 샤:인 꿈꾸며ㅎㅎ",
+      "publishedDate": "2026-05-06",
+      "thumb": "https://postfiles.pstatic.net/MjAyNjA1MDZfMjA2/MDAxNzc4MDUxNDk2MDU1.xN_hd0LYeYnyNdNrEoEytwl0PXHRSSqpoiyn_Ir3yeUg.LeY8yXkXNLV2R02saHTwakMwmcCdaFzbWaMxPc1BW3Qg.JPEG/KakaoTalk_Photo_2026-04-26-15-16-44_013.jpeg?type=w966",
+      "query": "post:lumifam-224276665373",
+      "status": "fetched",
+      "reason": null,
+      "identifiedBy": "상부가 크게 돌출된 체커 패턴 외피 — 관정관",
+      "context": "지루한 설명을 끝내고 먼저 신청한 관심 대학별로 조를 나누어 캠퍼스 투어를 나갔다.",
+      "path": "buildings/62-1/photos/n-e59c8a77.jpg"
+    }
+  ]
+}
