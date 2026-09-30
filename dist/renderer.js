@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/OrbitControls.js';
-import { createBuildingStructure } from './building-structures.js?v=20260927-wings-v2';
+import { createBuildingStructure } from './building-structures.js?v=20260930-cafe302';
 import { roadsideTrees } from './landscape.js';
 
 const UP = new THREE.Vector3(0,1,0);
@@ -169,7 +169,7 @@ export class CampusRenderer {
   setView(view){if(this.view===view)return;this.view=view;this.isolate(null);this.controls.enableRotate=view==='3d';this.controls.mouseButtons.LEFT=view==='2d'?THREE.MOUSE.PAN:THREE.MOUSE.ROTATE;this.controls.touches.ONE=view==='2d'?THREE.TOUCH.PAN:THREE.TOUCH.ROTATE;const target=this.controls.target.clone();const distance=this.camera.position.distanceTo(target);this.camera.position.copy(target).add(view==='2d'?new THREE.Vector3(0,distance,.01):new THREE.Vector3(-.65,.95,1).normalize().multiplyScalar(distance));this.camera.up.set(0,1,0);this.controls.update();this.updateMode()}
   select(id){if(!id)this.isolate(null);this.selected=id;for(const {el,b} of this.labelElements)el.classList.toggle('selected',b.id===id);for(const [key,m] of this.models){m.flat.material.color.set(key===id?'#248b7c':this.data.buildings.find(b=>b.id===key).review?'#6eafa2':this.data.buildings.find(b=>b.id===key).geometryStatus==='schematic'?'#d2bd96':'#c6cecd');m.base.material.emissive.set(key===id?'#13453e':'#000000');m.base.material.emissiveIntensity=.15;}
     if(this.selectionOutline){this.scene.remove(this.selectionOutline);this.selectionOutline.geometry.dispose();this.selectionOutline.material.dispose()}
-    const b=this.data.buildings.find(b=>b.id===id);if(b){const points=b.footprint.map(([x,z])=>new THREE.Vector3(x,this.view==='2d'?1:this.detailed&&['1','2','3','4','5','6','7','8','9','10','14'].includes(b.number)?.2:(this.detailed?b.detailHeight||b.height:b.height)+.8,z));this.selectionOutline=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:'#1f776d'}));this.scene.add(this.selectionOutline)}this.needsRender=true;
+    const b=this.data.buildings.find(b=>b.id===id);if(b){const points=b.footprint.map(([x,z])=>new THREE.Vector3(x,this.view==='2d'?1:this.detailed&&b.review?.2:(this.detailed?b.detailHeight||b.height:b.height)+.8,z));this.selectionOutline=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:'#1f776d'}));this.scene.add(this.selectionOutline)}this.needsRender=true;
   }
   focus(b,close=true){
     this.isolate(null);
@@ -194,14 +194,15 @@ export class CampusRenderer {
       '3':[[.45,.2,1],[1,.23,.5]],'5':[[.65,.2,1],[1,.24,.5]],
       '6':[[-.55,.2,1],[-1,.23,.5]],'7':[[-1,.2,.6],[-1,.24,-.5]],
       '8':[[.65,.12,-1],[1,.12,-.45]],'9':[[1,.2,.65],[1,.24,-.5]],
-      '10':[[.2,.2,-1],[.8,.24,-1]]
+      '10':[[.2,.2,-1],[.8,.24,-1]],'15-1':[[.08,.14,-1],[.7,.3,-1]],'16-1':[[1,.23,-.4],[.6,.26,-1]],'17':[[.15,.17,1],[.7,.25,1]],'20':[[.05,.21,1],[.65,.27,1]],'21':[[.2,.2,1],[.8,.24,1]],'22':[[.2,.2,1],[.8,.24,1]],'23':[[.3,.2,1],[1,.25,.5]],'25-1':[[.18,.23,1],[.8,.26,1]],'28':[[.3,.2,-1],[1,.23,-.6]],'29':[[.08,.16,1],[.65,.23,1]],'30':[[1,.2,.15],[1,.25,1]],'30-2':[[.12,.2,1],[-1,.28,.7]]
     };
     const a=b.box.angle,local=(directions[b.number]?new THREE.Vector3(...directions[b.number][side?1:0]):new THREE.Vector3(side?-1:.15,.34,side?.65:1)).normalize();
+    const facadeWidth=(b.box.width*Math.abs(local.z)+b.box.depth*Math.abs(local.x))/Math.hypot(local.x,local.z);
     local.applyAxisAngle(UP,-a);
     const center=new THREE.Vector3(b.box.center[0],(b.detailHeight||b.height)*.5,b.box.center[1]);
     this.controls.target.copy(center);this.camera.position.copy(center).addScaledVector(local,1500);this.controls.update();
     const aspect=this.container.clientWidth/this.container.clientHeight;
-    const zoom=this.frustum/Math.max((b.box.width+8)/aspect*1.8,(b.detailHeight||b.height)*2.4);
+    const zoom=this.frustum/Math.max((facadeWidth+8)/aspect*1.8,(b.detailHeight||b.height)*2.4);
     this.moveTo(this.offsetForInspector(center,zoom),zoom);
   }
   isolate(id){

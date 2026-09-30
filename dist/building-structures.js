@@ -1026,6 +1026,466 @@ function law15(b){
   return m.finish(top+6.0,['panel-and-glass-curtain-wall','free-standing-steel-colonnade','setback-top-floor','glazed-lift-tower']);
 }
 
+// 15-1: pale-stone teaching wing and an open gateway, from the archived front photo.
+// Heights, concealed elevations and the exact portal alignment remain estimates.
+function lawLecture151(b){
+  const m=builder(b),{box,polygon}=m;
+  const stone=new THREE.MeshStandardMaterial({color:'#d3d3cb',roughness:.86});
+  const joint=new THREE.MeshStandardMaterial({color:'#aaaead',roughness:.9});
+  const glazing=new THREE.MeshStandardMaterial({color:'#6f9299',metalness:.3,roughness:.25});
+  const railGlass=new THREE.MeshStandardMaterial({color:'#9bc4bd',transparent:true,opacity:.48,roughness:.2,depthWrite:false,side:THREE.DoubleSide});
+  const frame=new THREE.MeshStandardMaterial({color:'#c1cac9',metalness:.35,roughness:.45});
+  const pts=localFootprint(b),front=-26.37,back=-19.6,top=14.2;
+  // Divide the wall around holes instead of covering windows or the passage with a solid box.
+  function facade(z,holes){
+    const xs=[-31.1,32.1,...holes.flatMap(h=>[h[0],h[1]])].sort((a,b)=>a-b);
+    const ys=[.25,top,...holes.flatMap(h=>[h[2],h[3]])].sort((a,b)=>a-b);
+    for(let i=1;i<xs.length;i++)for(let j=1;j<ys.length;j++){
+      const x=(xs[i]+xs[i-1])/2,y=(ys[j]+ys[j-1])/2,w=xs[i]-xs[i-1],h=ys[j]-ys[j-1];
+      if(w<.01||h<.01||holes.some(r=>x>r[0]&&x<r[1]&&y>r[2]&&y<r[3]))continue;
+      box('stone-facade-segment',x,y,z,w,h,.36,stone,0,true);
+      for(let yy=Math.ceil(ys[j-1]/.7)*.7;yy<ys[j];yy+=.7)box('stone-horizontal-joint',x,yy,z-.19,w,.015,.01,joint);
+      for(let xx=Math.ceil(xs[i-1]/1.7)*1.7;xx<xs[i];xx+=1.7)box('stone-vertical-joint',xx,y,z-.19,.014,h,.01,joint);
+    }
+    for(const [a,c,lo,hi,open] of holes){
+      if(open)continue;
+      box('recessed-glass', (a+c)/2,(lo+hi)/2,z+.28,c-a,hi-lo,.12,glazing,0,true);
+      for(let x=a;x<=c;x+=1.35)box('window-mullion',x,(lo+hi)/2,z+.16,.055,hi-lo,.13,frame);
+      box('window-sill',(a+c)/2,lo,z,c-a,.12,.7,stone);
+      box('window-head',(a+c)/2,hi,z,c-a,.1,.6,stone);
+      box('window-transom',(a+c)/2,lo+(hi-lo)*.28,z+.15,c-a,.05,.15,frame);
+    }
+  }
+  const portal=[-2.8,16.8,.25,5.4,true],windows=[[-26,-12,1.3,4.9],[-6.5,17.2,6.6,9.8],[23,31,1.4,4.7]];
+  const slits=[9,11.3,13.6,15.9].map(x=>[x,x+.68,11.2,13.05]);
+  facade(front,[portal,...windows,...slits]);
+  facade(back,[portal,[-8,18,6.6,9.8]]);
+  // Portal soffit is above the opening; the full width remains walkable below.
+  box('gateway-soffit',7,5.55,(front+back)/2,19.6,.3,back-front,stone,0,true);
+  for(const x of [-3.05,17.05])box('gateway-return',x,2.8,(front+back)/2,.5,5.1,back-front,stone,0,true);
+  box('gateway-upper-floor',.5,10.05,(front+back)/2,63.2,.3,back-front,stone,0,true);
+  box('gateway-end-wall',32.1,7.2,(front+back)/2,.36,13.9,back-front,stone,0,true);
+  box('gateway-end-wall',-31.1,7.2,(front+back)/2,.36,13.9,back-front,stone,0,true);
+  box('gateway-roof',.5,14.35,(front+back)/2,64,.3,back-front+.5,roofMaterial,0,true);
+  for(const x of [-6.8,-5.5,17.6,18.9]){
+    box('paired-portal-pier',x,4.85,front-.5,.63,9.1,.9,stone,0,true);
+    box('pier-cap',x,9.45,front-.5,.95,.24,1.14,stone);
+    box('pier-base',x,.55,front-.5,.91,.35,1.15,stone);
+  }
+  // The return wing follows the measured L-shaped outline, leaving the court open.
+  const wing=[pts[0],pts[1],pts[2],[-31.1,back+.4],[-13.5,back+.4],pts[7]];
+  polygon('return-wing-mass',wing,.25,13.95,stone);
+  polygon('return-wing-roof',wing,14.2,.35,roofMaterial);
+  for(let z=-15;z<24;z+=3.2){
+    box('courtyard-recess-shadow',-13.65,4.6,z,.14,6,2.6,darkGlass);
+    box('courtyard-window',-13.54,4.6,z,.1,5.65,2.35,glazing);
+    box('courtyard-window-transom',-13.45,4.6,z,.12,.07,2.35,frame);
+  }
+  for(const z of [front-.05,back+.05]){
+    box('roof-glass-balustrade',.5,15.02,z,63.5,1.02,.1,railGlass);
+    box('roof-handrail',.5,15.57,z,63.8,.07,.1,frame);
+    for(let x=-31;x<33;x+=1.65)box('roof-rail-post',x,15,z,.055,1.17,.11,frame);
+  }
+  box('passage-paving',7,.13,(front+back)/2,19.6,.15,back-front+2,concrete);
+  return m.finish(15.65,['L-shaped-stone-wing','open-gateway','paired-entry-piers','upper-window-band','four-upper-slits','glass-roof-rail']);
+}
+
+
+// Shared construction fittings, not shared building masses. All openings are
+// cut into the wall grid; no opaque box is placed behind the glazing.
+function campusElevation(m,e,lo,hi,holes,wall,trim=concrete){
+  const piece=(name,u,y,w,h,d,mat,offset=0,pick=false)=>{
+    const [x,z]=e.at(u/e.length);return m.box(name,x+e.nx*offset,y,z+e.nz*offset,w,h,d,mat,e.angle,pick);
+  };
+  const valid=holes.filter(h=>h.u-h.w/2>=0&&h.u+h.w/2<=e.length&&h.y-h.h/2>=lo&&h.y+h.h/2<=hi);
+  const us=[...new Set([0,e.length,...valid.flatMap(h=>[h.u-h.w/2,h.u+h.w/2])])].sort((a,b)=>a-b);
+  const ys=[...new Set([lo,hi,...valid.flatMap(h=>[h.y-h.h/2,h.y+h.h/2])])].sort((a,b)=>a-b);
+  for(let i=1;i<us.length;i++)for(let j=1;j<ys.length;j++){
+    const u=(us[i-1]+us[i])/2,y=(ys[j-1]+ys[j])/2;
+    if(valid.some(h=>Math.abs(u-h.u)<h.w/2&&Math.abs(y-h.y)<h.h/2))continue;
+    piece('masonry-between-openings',u,y,us[i]-us[i-1],ys[j]-ys[j-1],.38,wall,-.19,true);
+  }
+  for(const h of valid){
+    const d=h.depth||.42;
+    piece('recessed-window-pane',h.u,h.y,h.w,h.h,.08,h.material||glass,-d,true);
+    for(const side of [-1,1]){
+      piece('deep-window-jamb',h.u+side*(h.w/2+.055),h.y,.11,h.h+.16,d+.12,trim,-d/2);
+      piece('window-head-sill',h.u,h.y+side*(h.h/2+.055),h.w+.2,.11,d+.12,trim,-d/2);
+    }
+    for(let k=1,n=Math.max(2,Math.ceil(h.w/1.4));k<n;k++)piece('window-mullion',h.u+h.w*(k/n-.5),h.y,.055,h.h,.12,metal,-d+.1);
+    piece('window-transom',h.u,h.y-h.h*.22,h.w,.05,.12,metal,-d+.1);
+  }
+  return piece;
+}
+function slimRail(m,x,y,z,w){
+  m.box('terrace-handrail',x,y+1.05,z,w,.045,.045,railMaterial);
+  m.box('terrace-midrail',x,y+.53,z,w,.035,.035,railMaterial);
+  for(let t=-w/2;t<=w/2;t+=1.35)m.box('terrace-rail-post',x+t,y+.5,z,.04,1,.04,railMaterial);
+}
+function shinyang161(b){
+  const m=builder(b),{box,polygon}=m,w=b.box.depth,d=b.box.width,front=d/2;
+  m.root.rotation.y+=Math.PI/2; // Short end is the photographed entrance facade.
+  const raw=new THREE.MeshStandardMaterial({color:'#bcbeb5',roughness:.96});
+  const black=new THREE.MeshStandardMaterial({color:'#283d40',roughness:.6});
+  const pts=[[-w/2,-d/2],[w/2,-d/2],[w/2,d/2],[-w/2,d/2]],sign=ringSign(pts),edges=[];facades(pts,sign,e=>edges.push(e));
+  // Parking is empty below a raised entrance terrace. The ground lobby is inset.
+  for(const x of [-w/2+1,w/2-1])for(const z of [-d/2+2,d/2-2])box('parking-pilotis',x,1.65,z,.65,3.3,.65,raw,0,true);
+  polygon('raised-entrance-deck',offsetRing(pts,sign,1),3.15,.4,raw);
+  for(const e of edges){
+    const count=Math.max(1,Math.round(e.length/2.4));
+    const holes=[{u:e.length/2,w:e.length-1.25,y:5.45,h:3.35,depth:1.3}];
+    campusElevation(m,e,3.55,7.65,holes,raw,black);
+  }
+  for(const y of [7.65,11.75,15.85])polygon('exposed-concrete-floor-edge',pts,y,.65,raw);
+  for(const e of edges){
+    for(let level=0;level<2;level++){
+      const y=8.3+level*4.1,frontFace=e.nz>.8,holes=[];
+      if(frontFace)holes.push({u:e.length/2,w:e.length-2,h:3.35,y:y+1.675,depth:.72});
+      else if(e.length>3)for(let j=0,n=Math.max(1,Math.floor(e.length/1.8));j<n;j++)holes.push({u:(j+.5)*e.length/n,w:e.length/n-.65,h:3.35,y:y+1.675,depth:.4});
+      const part=campusElevation(m,e,y,y+3.45,holes,raw,black);
+      if(frontFace)for(let k=0;k<7;k++)part('horizontal-sun-louvre',e.length/2,y+2.25+k*.16,e.length-2,.07,.34,black,.18);
+    }
+  }
+  polygon('flat-concrete-roof',pts,16.5,.22,roofMaterial);
+  for(const x of [-w/2+.45,w/2-.45])box('full-height-concrete-side-frame',x,12.15,front,.9,8.6,1.4,raw,0,true);
+  // Wide central approach, with solid cheeks and a genuinely open space below the terrace.
+  for(let i=0;i<19;i++){const h=(i+1)*3.5/19;box('broad-entrance-stair',3,h/2,front+9.4-i*.44,7,h,.47,raw,0,true);}
+  for(const x of [-.7,6.7])m.beam('stair-side-handrail',[x,1.05,front+9.6],[x,4.55,front+1.2],.065,railMaterial);
+  slimRail(m,-w/4-1,3.55,front+.9,w/2-3);slimRail(m,w/2-4,3.55,front+.9,6);
+  slimRail(m,0,16.72,-d/2+.3,w-1);
+  return m.finish(17.8,['raised-pilotis-terrace','broad-approach-stair','inset-glazed-ground-floor','concrete-upper-frame','horizontal-louvres','narrow-side-window-fins']);
+}
+function law17(b){
+  const m=builder(b),pts=localFootprint(b),sign=ringSign(pts),edges=[];facades(pts,sign,e=>edges.push(e));
+  const red=photoMasonry('#846554'),frame=new THREE.MeshStandardMaterial({color:'#d3d3c8',roughness:.88}),black=new THREE.MeshStandardMaterial({color:'#353b40',roughness:.5,metalness:.25});
+  for(let f=0;f<=5;f++)m.polygon('law-floor-slab',pts,.35+f*3.6,.3,f===5?frame:red);
+  for(const e of edges)for(let f=0;f<5;f++){
+    const lo=.65+f*3.6,hi=.35+(f+1)*3.6,holes=[];
+    if(e.length>4)for(let j=0,n=Math.max(1,Math.round(e.length/4.1));j<n;j++)holes.push({u:(j+.5)*e.length/n,w:Math.min(e.length/n-.9,f===4?3:2.2),y:lo+1.55,h:f===4?2.7:1.85,depth:.55});
+    if(f===0&&e.nz>.8&&e.a[0]<2&&e.c[0]>2){
+      const u=(2-e.a[0])/(e.c[0]-e.a[0])*e.length;
+      for(let k=holes.length-1;k>=0;k--)if(Math.abs(holes[k].u-u)<5)holes.splice(k,1);
+      holes.push({u,w:6.2,y:(lo+hi)/2,h:hi-lo-.12,depth:1.2});
+    }
+    campusElevation(m,e,lo,hi,holes,f===4?frame:red,frame);
+  }
+  m.polygon('broad-law-roof-eave',offsetRing(pts,sign,1.4),18.35,.4,frame);
+  const x=2,z=12.3;
+  // The glass bay is suspended above the deeply recessed entrance, not grounded as a tower.
+  for(const xx of [x-4.1,x+4.1])m.box('tall-dark-entry-jamb',xx,9.5,z+1.7,.72,18.5,3.6,black,0,true);
+  for(let f=1;f<5;f++){
+    const y=.35+f*3.6;
+    m.box('projecting-glass-bay',x,y+1.8,z+3.43,7.5,3.3,.16,glass,0,true);
+    m.box('projecting-bay-floor-band',x,y,z+1.7,8.6,.36,3.6,black,0,true);
+    m.box('bay-centre-mullion',x,y+1.8,z+3.55,.08,3.3,.12,metal);
+    for(const xx of [x-3.77,x+3.77])m.box('bay-side-glass',xx,y+1.8,z+1.7,.12,3.3,3.4,glass);
+  }
+  m.box('entry-portal-header',x,3.65,z+4.5,11,.8,1,black,0,true);
+  for(const xx of [x-5.1,x+5.1])m.box('entry-portal-column',xx,1.95,z+4.5,.75,3.9,1,black,0,true);
+  m.box('recessed-entry-door',x,1.8,z+.2,6,2.8,.14,darkGlass,0,true);
+  for(let i=0;i<4;i++)m.box('entry-step',x,.1+i*.13,z+6-i*.4,10,.2,.45,frame);
+  return m.finish(19,['stepped-survey-footprint','deep-red-brick-window-reveals','light-glazed-top-storey','suspended-glazed-entry-bay','open-dark-portal','overhanging-roof']);
+}
+function pharmacy20(b){
+  const m=builder(b),{box,polygon}=m,w=b.box.width,d=b.box.depth,front=d/2,pts=localFootprint(b),sign=ringSign(pts);
+  const warm=photoMasonry('#947657'),dark=new THREE.MeshStandardMaterial({color:'#333a3c',roughness:.5}),stone=new THREE.MeshStandardMaterial({color:'#b7b3a1',roughness:.88});
+  // Low podium and inset glazed ground floor carry two brick-clad upper wings.
+  box('low-stone-podium',0,1.45,0,w,2.9,d,stone,0,true);
+  for(const y of [2.9,6.5,10.5,14.5,18.5,22.5])polygon('pharmacy-floor-plate',pts,y,.25,stone);
+  const edges=[];facades(pts,sign,e=>edges.push(e));
+  for(const e of edges){
+    const n=Math.max(1,Math.floor(e.length/2.5)),holes=Array.from({length:n},(_,j)=>({u:(j+.5)*e.length/n,w:e.length/n-.2,y:4.8,h:3.2,depth:1.1}));
+    campusElevation(m,e,3.15,6.5,holes,stone,dark);
+    for(let f=0;f<4;f++){
+      const lo=6.75+f*4,upper=[];
+      for(let j=0,k=Math.max(1,Math.round(e.length/1.7));j<k;j++)upper.push({u:(j+.5)*e.length/k,w:Math.min(.78,e.length/k-.4),y:lo+1.85,h:3.5,depth:.32});
+      if(e.nz>.8&&Math.min(e.a[0],e.c[0])<-3.5&&Math.max(e.a[0],e.c[0])>3.5){
+        const u=-e.a[0]/(e.c[0]-e.a[0])*e.length;
+        for(let k=upper.length-1;k>=0;k--)if(Math.abs(upper[k].u-u)<4)upper.splice(k,1);
+        upper.push({u,w:6.4,y:lo+1.875,h:3.7,depth:1.3,material:darkGlass});
+      }
+      campusElevation(m,e,lo,lo+3.75,upper,warm,dark);
+    }
+  }
+  // Tall central recess and separate projecting oriel stacks are the photo's strongest cues.
+  for(const x of [-3.5,3.5])box('central-recess-return',x,14.5,front+.55,.45,16,1.3,dark,0,true);
+  for(const x of [-43,-33,-23,-13,13,23,33,43])for(let f=0;f<3;f++){
+    const y=8.5+f*4;
+    box('oriel-projecting-glass-front',x,y,front+1.15,2.9,3.05,.12,glass,0,true);
+    for(const xx of [x-1.47,x+1.47])box('oriel-glazed-side',xx,y,front+.55,.1,3.05,1.15,glass);
+    for(const yy of [y-1.62,y+1.62])box('oriel-slab-cap',x,yy,front+.55,3.2,.18,1.35,stone);
+    for(const xx of [x-1.45,x,x+1.45])box('oriel-vertical-frame',xx,y,front+1.23,.05,3.15,.09,dark);
+  }
+  box('continuous-ground-canopy',0,6.6,front+.85,w+1,.35,2.8,stone,0,true);
+  box('setback-roof-service-core',0,24,0,11,3,8,dark,0,true);
+  // Open pergola: individual rafters and columns; no filled roof pavilion.
+  for(const x of [-27,-18,-9,9,18,27])for(const z of [-6,6])box('rooftop-pergola-post',x,24,z,.16,3,.16,metal);
+  for(const z of [-7,7])box('pergola-long-edge',0,25.6,z,56,.2,.24,metal);
+  for(let x=-28;x<=28;x+=2)box('open-rooftop-rafter',x,25.5,0,.14,.16,14,metal);
+  for(let x=-w/2+2;x<w/2;x+=2.4)if(Math.abs(x)>29)box('roof-plant-unit',x,23.1,-5,1.4,.9,1.3,metal);
+  slimRail(m,0,3.15,front+1.7,w-1);
+  return m.finish(25.8,['long-stone-podium','inset-glass-base','narrow-brick-piers','three-level-projecting-oriels','central-dark-recess','open-roof-pergola']);
+}
+function pharmacy21(b){
+  const s=photoWing(b,{floors:4,base:.8,brick:'#625d57',wide:3.5,topWindow:2,pitch:4.7,framePitch:9.4,eave:2.1,hood:true,bars:true,entry:{x:14,width:4.1,depth:1.9}});
+  const {box,beam}=s.m,z=b.box.depth/2,x=14;
+  box('deep-entry-canopy',x,4.05,z+2.2,11,.75,4.4,s.frame,0,true);
+  for(const xx of [x-5.15,x+5.15])box('canopy-support-return',xx,2.15,z+1.1,.6,4.1,2.2,s.frame,0,true);
+  for(let j=0;j<7;j++)box('wide-entry-stair',x,(j+1)*.11,z+5-j*.42,11,(j+1)*.22,.45,concrete,0,true);
+  for(const xx of [x-5.6,x+5.6])beam('entry-stair-side-rail',[xx,.95,z+5],[xx,2.1,z+2.1],.07,railMaterial);
+  for(let xx=x-4.5;xx<x+5;xx+=1.5)box('canopy-soffit-rib',xx,3.62,z+2.1,.15,.22,3.9,s.frame);
+  return s.finish(['grey-brick-wing','white-structural-frame','deep-window-fins','coffered-entrance-canopy','wide-steps-and-side-rails']);
+}
+function naturalScience22(b){
+  const s=photoWing(b,{floors:3,base:.5,brick:'#746957',wide:4.1,topWindow:3.3,pitch:5.1,framePitch:10.2,eave:2.3,bars:true,entry:{x:-10,width:4.7,depth:1.4}});
+  const {box}=s.m,z=b.box.depth/2,x=-3.2;
+  // Narrow, continuous glazed stair strip with visible half-landings.
+  for(const xx of [x-1.65,x+1.65])box('stair-strip-concrete-fin',xx,5.5,z+.58,.38,10.2,1.45,s.frame,0,true);
+  box('continuous-stair-glazing',x,5.6,z+1.28,2.95,10.1,.13,glass,0,true);
+  for(let y=1.1;y<10.7;y+=1.75){box('stair-half-landing',x,y,z+.38,2.9,.13,1.8,concrete);box('blue-stair-transom',x,y,z+1.4,3.3,.1,.17,railMaterial);}
+  box('recessed-entry-canopy',-10,3.55,z+1.35,8.7,.35,3,s.frame,0,true);
+  for(let j=0;j<4;j++)box('science-entry-step',-10,.13+j*.13,z+3.5-j*.4,8.5,.22,.42,concrete);
+  return s.finish(['three-storey-brick-wing','continuous-glazed-stair-strip','half-landing-transoms','deep-cantilevered-eave','barred-ground-windows','recessed-entrance']);
+}
+
+
+// Remove only near-collinear survey vertices so one long facade does not gain
+// invented piers at arbitrary OSM vertices. Corners and re-entrant bays remain.
+function cleanSurveyRing(points){
+  const out=points.map(p=>[...p]);let changed=true;
+  while(changed&&out.length>3){changed=false;for(let i=0;i<out.length;i++){
+    const a=out[(i+out.length-1)%out.length],b=out[i],c=out[(i+1)%out.length];
+    const len=edgeLength(a,c);if(len<.01)continue;
+    const dist=Math.abs((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]))/len;
+    if(dist<.16&&(b[0]-a[0])*(b[0]-c[0])+(b[1]-a[1])*(b[1]-c[1])<=0){out.splice(i,1);changed=true;break;}
+  }}return out;
+}
+function science23(b){
+  const m=builder(b),pts=cleanSurveyRing(localFootprint(b)),sign=ringSign(pts),top=14.6;
+  const brown=photoMasonry('#625b4d'),pale=new THREE.MeshStandardMaterial({color:'#d5d4c8',roughness:.9});
+  for(let f=0;f<=4;f++)m.polygon('science23-floor-band',offsetRing(pts,sign,.12),.5+f*3.5,.48,pale);
+  facades(pts,sign,e=>{
+    const long=e.length>25,n=Math.max(1,Math.round(e.length/4.1)),step=e.length/n;
+    for(let f=0;f<4;f++){
+      const lo=.98+f*3.5,hi=.5+(f+1)*3.5,holes=[];
+      if(long)for(let j=0;j<n;j++)holes.push({u:(j+.5)*step,w:f>=2?1.8:step-.85,y:lo+1.5,h:f>=2?1.55:2.3,depth:.38});
+      campusElevation(m,e,lo,hi,holes,brown,pale);
+    }
+    const nCols=Math.max(1,Math.round(e.length/8.2));
+    for(let j=0;j<=nCols;j++){const [x,z]=e.at(j/nCols);m.box('science23-full-height-pier',x,7.5,z,.52,14,.66,pale,e.angle);}
+  });
+  m.polygon('science23-deep-eave',offsetRing(pts,sign,1.5),top,.55,pale);
+  facades(offsetRing(pts,sign,1.3),sign,e=>{
+    const [x,z]=e.at(.5);m.box('science23-open-roof-rail',x,16,z,e.length,.2,.23,pale,e.angle);
+    for(let j=0,n=Math.ceil(e.length/3.7);j<=n;j++){const [x,z]=e.at(j/n);m.box('science23-roof-rail-post',x,15.57,z,.2,.7,.25,pale);}
+  });
+  // The planted pergola in the photograph is landscape, not a building wing.
+  return m.finish(16.1,['four-storey-dark-brick-frame','two-upper-punched-window-levels','wide-lower-glazing','deep-white-eave','open-concrete-roof-rail']);
+}
+function science251(b){
+  const m=builder(b),{box,polygon}=m;
+  const red=photoMasonry('#956550'),pale=new THREE.MeshStandardMaterial({color:'#d0d3cc',roughness:.83});
+  const pane=new THREE.MeshStandardMaterial({color:'#89b4b0',roughness:.28,metalness:.2});
+  const front=2.6,back=-18.4;
+  // Double-height opening below the central wing; columns are independent solids.
+  const west=[[-34.8,-18.4],[-14.8,-18.4],[-14.8,2.6],[-34.8,2.6]];
+  facades(west,ringSign(west),e=>{
+    const holes=e.nz>.8?[
+      {u:4,w:5.6,y:2.4,h:3.8,depth:.45,material:pane},
+      {u:11,w:5.6,y:2.4,h:3.8,depth:.45,material:pane},
+      {u:17,w:3.5,y:6.15,h:1.65,depth:.4,material:pane}
+    ]:[];
+    campusElevation(m,e,.1,8,holes,red,pale);
+  });
+  box('east-grounded-service-wing',27,4,-9,15.5,8,18.8,red,0,true);
+  for(const x of [-11,-3,5,13])for(const z of [-15,1.8])box('double-height-pilotis',x,4,z,.82,8,.85,pale,0,true);
+  // Four teaching levels, with the west end stepping back at the upper two.
+  for(let f=0;f<4;f++){
+    const left=f>=2?-26.5:-34.6,right=34.7,lo=8+f*3.65,hi=lo+3.65;
+    const ring=[[left,back],[right,back],[right,front],[left,front]];
+    polygon('stepped-teaching-floor',ring,lo,.28,pale);
+    facades(ring,ringSign(ring),e=>{
+      const n=Math.max(1,Math.round(e.length/7)),step=e.length/n;
+      const holes=Array.from({length:n},(_,j)=>({u:(j+.5)*step,w:step-.55,y:lo+2.2,h:2.0,depth:.25,material:pane}));
+      campusElevation(m,e,lo+.28,hi,holes,red,pale);
+    });
+    if(f===3)polygon('upper-brick-parapet-cap',ring,hi,.3,roofMaterial);
+  }
+  // Rounded lower lecture room is traced by the bulging part of the footprint.
+  const arc=[];for(let i=0;i<=12;i++){const t=Math.PI*i/12;arc.push([19.5+11*Math.cos(t),5+12.8*Math.sin(t)]);}arc.push([8.5,-1],[30.5,-1]);
+  polygon('curved-lecture-room-foundation',arc,.1,.35,concrete);
+  facades(arc,ringSign(arc),e=>{
+    const holes=e.index<12&&e.index%2===0?[{u:e.length/2,w:.72,y:2.5,h:.85,depth:.3,material:pane}]:[];
+    campusElevation(m,e,.45,4.5,holes,red,pale);
+  });
+  polygon('curved-lecture-room-window-sill',arc,4.5,.2,pale);
+  facades(arc,ringSign(arc),e=>{
+    if(e.length<1.4){const [x,z]=e.at(.5);box('curved-room-glazing',x,5.9,z,e.length,2.6,.12,pane,e.angle,true);}
+    else campusElevation(m,e,4.7,7.3,[{u:e.length/2,w:e.length-.55,y:6,h:2.5,depth:.18,material:pane}],red,metal);
+  });
+  polygon('curved-brick-fascia',arc,7.3,.9,red);polygon('curved-lecture-roof',arc,8.2,.16,roofMaterial);
+  for(const x of [-26,25]){
+    box('pale-rooftop-stair-core',x,23.6,-9,6.6,4.8,7.1,pale,0,true);
+    for(let y=21.5;y<26;y+=.9)box('core-panel-horizontal-joint',x,y,-5.4,6.6,.025,.018,metal);
+    for(const xx of [x-2.2,x,x+2.2])box('core-panel-vertical-joint',xx,23.6,-5.4,.025,4.8,.018,metal);
+  }
+  box('pilotis-paving',1,.08,-5,27,.15,22,concrete);
+  for(let i=0;i<5;i++)box('approach-step',0,.1+i*.12,front+4-i*.45,21,.22,.48,concrete);
+  return m.finish(26,['stepped-red-brick-upper-wing','double-height-open-pilotis','continuous-pale-green-window-bands','curved-lower-lecture-room','two-pale-rooftop-cores']);
+}
+function science28(b){
+  const m=builder(b),{box,polygon,beam}=m,pts=cleanSurveyRing(localFootprint(b)),sign=ringSign(pts);
+  const limestone=new THREE.MeshStandardMaterial({color:'#d3d1c5',roughness:.88});
+  const charcoal=new THREE.MeshStandardMaterial({color:'#303a3c',roughness:.53});
+  const blue=new THREE.MeshStandardMaterial({color:'#6392a9',metalness:.35,roughness:.2});
+  // The footprint is irregular. Keep its chamfers instead of filling the bounding box.
+  polygon('low-stone-entrance-deck',pts,.1,.4,limestone);
+  facades(pts,sign,e=>{
+    const n=Math.max(1,Math.floor(e.length/3));
+    const holes=Array.from({length:n},(_,j)=>({u:(j+.5)*e.length/n,w:e.length/n-.24,y:2.15,h:3.0,depth:.8,material:blue}));
+    campusElevation(m,e,.5,4.0,holes,limestone,charcoal);
+  });
+  polygon('garden-terrace-slab',pts,4,.45,limestone);
+  // Curved glass lobby, recessed far inside the upper cantilever.
+  const lobby=Array.from({length:48},(_,i)=>{const t=2*Math.PI*i/48;return [Math.cos(t)*15,Math.sin(t)*8];});
+  polygon('curved-lobby-floor',lobby,4.45,.15,limestone);
+  for(let i=0;i<lobby.length;i++){
+    const a=lobby[i],c=lobby[(i+1)%lobby.length],len=edgeLength(a,c),ang=-Math.atan2(c[1]-a[1],c[0]-a[0]);
+    box('curved-lobby-glass',(a[0]+c[0])/2,6.65,(a[1]+c[1])/2,len,4.1,.09,blue,ang,true);
+    box('curved-lobby-mullion',a[0],6.65,a[1],.055,4.2,.055,charcoal);
+  }
+  const supports=[[-19,-7,-17,-9],[-8,-11,-8,-11],[5,-11,5,-11],[16,-7,14,-9],[12,7,11,5],[-12,7,-11,5]];
+  for(const [x,z,tx,tz] of supports)beam('round-inclined-pilotis',[x,4.45,z],[tx,9.2,tz],.95,limestone);
+  polygon('floating-middle-soffit',pts,9,.5,charcoal);
+  // Two visually separate stone volumes, divided by a recessed glass/terrace belt.
+  for(const [lo,hi,upper] of [[9.5,16.1,false],[19,25,true]]){
+    const ring=upper?offsetRing(pts,sign,-1.1):pts;
+    polygon('stone-volume-floor',ring,lo,.3,limestone);
+    facades(ring,ringSign(ring),e=>{
+      const holes=[],long=e.length>19;
+      if(long){
+        if(upper){
+          const start=e.length*.31,end=e.length-1.6;
+          holes.push({u:(start+end)/2,w:end-start,y:(lo+hi)/2,h:hi-lo-1.5,depth:.5,material:blue});
+          for(let u=2;u<start-1;u+=1.6)holes.push({u,w:.72,y:(lo+hi)/2,h:hi-lo-1.2,depth:.4,material:blue});
+        }else{
+          for(let u=2;u<e.length*.38;u+=1.65)holes.push({u,w:.68,y:(lo+hi)/2,h:hi-lo-1.3,depth:.5,material:blue});
+          holes.push({u:e.length*.65,w:e.length*.28,y:(lo+hi)/2,h:hi-lo-1,depth:1.15,material:blue});
+        }
+      }else if(e.length>4){
+        for(let u=1.3;u<e.length-1;u+=1.65)holes.push({u,w:.65,y:(lo+hi)/2,h:hi-lo-1.2,depth:.5,material:blue});
+      }
+      campusElevation(m,e,lo+.3,hi,holes,limestone,charcoal);
+    });
+    polygon('stone-volume-roof',ring,hi,.22,roofMaterial);
+  }
+  const belt=offsetRing(pts,sign,-1.7);
+  facades(belt,ringSign(belt),e=>{
+    const [x,z]=e.at(.5);box('setback-glazed-belt',x,17.6,z,e.length,2.4,.12,blue,e.angle,true);
+    for(let j=0,n=Math.ceil(e.length/1.5);j<n;j++){const [x,z]=e.at(j/n);box('belt-mullion',x,17.6,z,.055,2.4,.055,charcoal);}
+  });
+  facades(offsetRing(pts,sign,-.3),sign,e=>{
+    const [x,z]=e.at(.5);box('terrace-guardrail-top',x,17.3,z,e.length,.045,.045,metal,e.angle);
+    for(let j=0,n=Math.ceil(e.length/.35);j<n;j++){const [x,z]=e.at(j/n);box('terrace-guardrail-post',x,16.85,z,.025,.9,.025,metal);}
+  });
+  // Only the photographed rooftop canopy area is raised; the remaining roof is flat.
+  box('setback-roof-plant',-8,26,-3,9,1.8,6,charcoal,0,true);
+  for(const x of [-16,-10,-4])for(const z of [-6,2])box('roof-screen-post',x,26.5,z,.12,2.3,.12,metal);
+  for(let x=-17;x<=-3;x+=1)box('open-roof-screen-rafter',x,27.65,-2,.12,.12,10,metal);
+  for(let i=0;i<9;i++)box('wide-garden-entrance-step',0,.1+i*.1,-15.2-(8-i)*.38,12,.2,.4,limestone);
+  return m.finish(27.75,['irregular-chamfered-plan','recessed-curved-glass-lobby','inclined-round-pilotis','offset-stone-upper-volumes','deep-picture-window','recessed-glazed-terrace-belt','narrow-vertical-slits']);
+}
+function pharmacy29(b){
+  const m=builder(b),{box,polygon}=m,pts=cleanSurveyRing(localFootprint(b)),sign=ringSign(pts),front=b.box.depth/2;
+  const tile=new THREE.MeshStandardMaterial({color:'#d2cdb1',roughness:.85}),bronze=new THREE.MeshStandardMaterial({color:'#645244',roughness:.6}),pane=new THREE.MeshStandardMaterial({color:'#566465',roughness:.35,metalness:.16});
+  polygon('low-basement-plinth',pts,.1,.35,concrete);
+  facades(pts,sign,e=>{
+    const n=Math.max(1,Math.round(e.length/4.5)),holes=[];
+    for(let j=0;j<n;j++){
+      const u=(j+.5)*e.length/n,pos=e.at(u/e.length),entry=e.nz>.8&&Math.abs(pos[0])<5.3;
+      if(entry)continue;
+      holes.push({u,w:Math.min(3.1,e.length/n-.7),y:1.25,h:1.05,depth:.4,material:pane});
+      holes.push({u,w:Math.min(3.15,e.length/n-.7),y:4.7,h:2.1,depth:.4,material:pane});
+    }
+    if(e.nz>.8&&e.length>20){const u=-e.a[0]/(e.c[0]-e.a[0])*e.length;holes.push({u,w:7.5,y:3,h:3.8,depth:1.2,material:darkGlass});}
+    const part=campusElevation(m,e,.45,7,holes,tile,bronze);
+    for(let y=.7;y<7;y+=.24){
+      const cuts=holes.filter(h=>Math.abs(y-h.y)<h.h/2+.12).map(h=>[Math.max(0,h.u-h.w/2-.12),Math.min(e.length,h.u+h.w/2+.12)]).sort((a,b)=>a[0]-b[0]);
+      let start=0;for(const [a,c] of [...cuts,[e.length,e.length]]){if(a>start)part('ceramic-tile-horizontal-joint',(start+a)/2,y,a-start,.009,.012,concrete,.012);start=Math.max(start,c);}
+    }
+  });
+  polygon('low-flat-roof',pts,7,.28,roofMaterial);
+  const raised=[[-10,-5],[10,-5],[10,front],[-10,front]];
+  facades(raised,ringSign(raised),e=>{
+    const holes=e.nz>.8?[{u:e.length/2,w:5.2,y:9.05,h:2.9,depth:.45,material:pane},{u:3,w:2.1,y:8.6,h:2.2,depth:.4,material:pane},{u:e.length-3,w:2.1,y:8.6,h:2.2,depth:.4,material:pane}]:[];
+    campusElevation(m,e,7.28,10.8,holes,tile,bronze);
+  });
+  polygon('raised-central-roof',raised,10.8,.2,roofMaterial);
+  // Open porch framed by two tiled returns and a lintel.
+  for(const x of [-4.4,4.4])box('tiled-porch-return',x,3.25,front+1.05,.68,4.6,2.2,tile,0,true);
+  box('tiled-entrance-lintel',0,5.55,front+1.05,9.5,.75,2.2,tile,0,true);
+  for(let i=0;i<7;i++)box('low-entrance-step',0,.1+i*.13,front+4-i*.42,9.2,.24,.44,concrete);
+  for(let x=-25;x<=25;x+=5)if(Math.abs(x)>6){m.beam('facade-rainwater-pipe',[x,.5,front+.3],[x,7.15,front+.3],.065,metal);}
+  return m.finish(11,['low-tiled-wings','raised-central-stair-hall','bronze-window-frames','recessed-porch-opening','broad-low-entrance-steps']);
+}
+function engineering30(b){
+  const m=builder(b),{box,polygon}=m,pts=cleanSurveyRing(localFootprint(b)),sign=ringSign(pts),top=15;
+  const orange=photoMasonry('#b5734b'),white=new THREE.MeshStandardMaterial({color:'#dad9cb',roughness:.9});
+  for(let f=0;f<=4;f++)polygon('engineering-floor-band',pts,.4+f*3.6,.53,white);
+  facades(pts,sign,e=>{
+    const long=e.length>30,n=Math.max(1,Math.round(e.length/7.3)),step=e.length/n;
+    for(let f=0;f<4;f++){
+      const lo=.93+f*3.6,hi=.4+(f+1)*3.6,holes=[];
+      for(let j=0;j<n;j++)holes.push({u:(j+.5)*step,w:step-.65,y:hi-1.02,h:1.65,depth:.32});
+      if(f===0&&long&&e.nx>.8){const middle=Math.floor(n/2);holes[middle]={u:(middle+.5)*step,w:step-.8,y:(lo+hi)/2,h:hi-lo-.08,depth:1.3};}
+      campusElevation(m,e,lo,hi,holes,orange,white);
+    }
+    for(let j=0;j<=n;j++){
+      const [x,z]=e.at(j/n);box('tall-projecting-white-pier',x+e.nx*.25,7.65,z+e.nz*.25,.52,14.5,.85,white,e.angle);
+      box('eave-bracket',x+e.nx*.65,14.6,z+e.nz*.65,.23,.95,1.5,white,e.angle);
+    }
+  });
+  polygon('broad-engineering-eave',offsetRing(pts,sign,1.6),top,.65,white);
+  facades(offsetRing(pts,sign,1.35),sign,e=>{
+    const [x,z]=e.at(.5);box('open-engineering-roof-rail',x,16.5,z,e.length,.2,.22,white,e.angle);
+    for(let j=0,n=Math.ceil(e.length/3);j<=n;j++){const [x,z]=e.at(j/n);box('roof-rail-post',x,16.05,z,.18,.72,.22,white);}
+  });
+  const x=b.box.width/2,z=-2;
+  box('entrance-deep-white-canopy',x+1.1,3.65,z,3.5,.62,9,white,0,true);
+  for(const zz of [z-4.2,z+4.2])box('entry-brick-side-return',x+.7,1.95,zz,2.7,3.3,.45,orange,0,true);
+  return m.finish(16.6,['orange-brick-spandrels','wide-horizontal-window-bands','projecting-white-structural-piers','deep-eave-and-brackets','open-roof-rail','recessed-canopied-entrance']);
+}
+
+function engineeringCafe302(b){
+  const m=builder(b),pts=cleanSurveyRing(localFootprint(b)),sign=ringSign(pts);
+  const cladding=new THREE.MeshStandardMaterial({color:'#a4a9aa',roughness:.7});
+  const frame=new THREE.MeshStandardMaterial({color:'#d6d8cf',roughness:.48,metalness:.3});
+  const pane=new THREE.MeshStandardMaterial({color:'#688d8e',roughness:.22,metalness:.27});
+  m.polygon('cafe-raised-stone-base',pts,.08,.65,concrete);
+  m.polygon('cafe-interior-floor',pts,.73,.15,concrete);
+  facades(pts,sign,e=>{
+    const outward=e.nz>.25,entry=e.nx<-.65&&e.nz<.2,holes=[];
+    if(outward){
+      const n=Math.max(1,Math.round(e.length/2.9)),step=e.length/n;
+      for(let j=0;j<n;j++)holes.push({u:(j+.5)*step,w:step-.12,y:2.35,h:2.8,depth:.2,material:pane});
+    }else if(entry)holes.push({u:e.length/2,w:Math.min(2.8,e.length-.7),y:2.15,h:2.54,depth:.75,material:darkGlass});
+    else if(e.length>5)holes.push({u:e.length/2,w:1.3,y:2.1,h:1.35,depth:.22,material:pane});
+    const part=campusElevation(m,e,.88,4.55,holes,cladding,frame);
+    for(const h of holes)if(outward){
+      for(const y of [1.2,1.7,3.24])part('cafe-glass-horizontal-transom',h.u,y,h.w,.055,.09,frame,-.08);
+      part('cafe-lower-opening-sash',h.u,1.46,h.w-.2,.37,.07,metal,-.07);
+      part('cafe-lower-opening-glass',h.u,1.46,h.w-.29,.27,.075,pane,-.025);
+    }
+    part('continuous-grey-parapet-seam',e.length/2,4.18,e.length,.022,.018,metal,.01);
+    if(entry){
+      part('recessed-entrance-canopy',e.length/2,3.55,3.5,.16,1.8,cladding,.52,true);
+      for(let i=0;i<4;i++)part('four-entry-steps',e.length/2,.12+i*.19,3.3,.23,.45,concrete,1.8-i*.42);
+    }
+  });
+  m.polygon('bent-low-cafe-roof',offsetRing(pts,sign,.22),4.55,.16,roofMaterial);
+  return m.finish(4.75,['bent-single-storey-plan','segmented-full-height-glass-wall','lower-opening-sashes','grey-metal-parapet','recessed-side-door-and-four-steps']);
+}
+
 export function createBuildingStructure(b){
   switch(b.number){
     case '1': return humanities1(b);
@@ -1043,6 +1503,18 @@ export function createBuildingStructure(b){
     case '13': return education13(b);
     case '14': return humanities14(b);
     case '15': return law15(b);
+    case '15-1': return lawLecture151(b);
+    case '16-1': return shinyang161(b);
+    case '17': return law17(b);
+    case '20': return pharmacy20(b);
+    case '21': return pharmacy21(b);
+    case '22': return naturalScience22(b);
+    case '23': return science23(b);
+    case '25-1': return science251(b);
+    case '28': return science28(b);
+    case '29': return pharmacy29(b);
+    case '30': return engineering30(b);
+    case '30-2': return engineeringCafe302(b);
     default: return null;
   }
 }

@@ -1,5 +1,5 @@
-import { campus as data, profiles, photos } from './data/map-data.js?v=20260929';
-import { CampusRenderer } from './renderer.js?v=20260927-wings-v2';
+import { campus as data, profiles, photos } from './data/map-data.js?v=20260930-cafe302';
+import { CampusRenderer } from './renderer.js?v=20260930-cafe302';
 const $=s=>document.querySelector(s);
 const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let viewer,selected,scope='all',photoIndex=0;
@@ -22,7 +22,7 @@ function renderInspector(){
   if($('#next-photo'))$('#next-photo').onclick=()=>{photoIndex=(photoIndex+1)%images.length;renderInspector()};
 }
 function selectBuilding(id){selected=id;photoIndex=0;viewer.select(id);listBuildings();renderInspector();const b=data.buildings.find(b=>b.id===id);viewer.focus(b,true);$('#sidebar').classList.remove('open')}
-function setScope(value){scope=value;document.querySelectorAll('[data-scope]').forEach(el=>{el.classList.toggle('active',el.dataset.scope===value);el.setAttribute('aria-pressed',el.dataset.scope===value)});$('#search').value='';listBuildings();viewer.reset(value);$('#map-location').textContent=value==='review'?'1–15동 외관 검토':'관악캠퍼스 전체';selected=null;viewer.select(null);$('#inspector').hidden=true;$('#sidebar').classList.remove('open')}
+function setScope(value){scope=value;document.querySelectorAll('[data-scope]').forEach(el=>{el.classList.toggle('active',el.dataset.scope===value);el.setAttribute('aria-pressed',el.dataset.scope===value)});$('#search').value='';listBuildings();viewer.reset(value);$('#map-location').textContent=value==='review'?'사진 기반 모델':'관악캠퍼스 전체';selected=null;viewer.select(null);$('#inspector').hidden=true;$('#sidebar').classList.remove('open')}
 async function init(){
   for(const rec of photos.buildings){const b=data.buildings.find(b=>b.review&&b.number===String(rec.number));if(b&&rec.officialName)b.name=rec.officialName;}
   viewer=new CampusRenderer($('#map'),$('#labels'),data,profiles,selectBuilding);
