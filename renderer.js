@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/OrbitControls.js';
-import { createBuildingStructure } from './building-structures.js?v=20261117-b';
+import { createBuildingStructure } from './building-structures.js?v=20261117-d';
 import { roadsideTrees } from './landscape.js';
 
 const UP = new THREE.Vector3(0,1,0);
@@ -209,7 +209,7 @@ export class CampusRenderer {
     this.isolated=id;
     this.trees.visible=!id&&this.view==='3d';
     for(const [key,m] of this.models)m.group.visible=!id||key===id;
-    document.getElementById('map-description').textContent=id?'단독 구조 비교 · 주변 건물 숨김':this.view==='2d'?'지면 윤곽 · 북쪽 기준':'평면 지형 · 건물 높이 추정';
+    
     this.needsRender=true;
   }
   reset(scope='all'){this.isolate(null);this.scope=scope;const b=this.data.buildings.filter(b=>scope==='review'?b.review:true);const minX=Math.min(...b.map(b=>b.center[0])),maxX=Math.max(...b.map(b=>b.center[0])),minZ=Math.min(...b.map(b=>b.center[1])),maxZ=Math.max(...b.map(b=>b.center[1]));const aspect=this.container.clientWidth/this.container.clientHeight;const span=Math.max((maxX-minX)/aspect,maxZ-minZ)*1.12;this.moveTo(new THREE.Vector3((minX+maxX)/2,0,(minZ+maxZ)/2),this.frustum/span);}

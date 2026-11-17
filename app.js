@@ -1,5 +1,5 @@
-import { campus as data, profiles, photos } from './data/map-data.js?v=20261117-b';
-import { CampusRenderer } from './renderer.js?v=20261117-b';
+import { campus as data, profiles, photos } from './data/map-data.js?v=20261117-d';
+import { CampusRenderer } from './renderer.js?v=20261117-d';
 
 const $ = s => document.querySelector(s);
 const $$ = s => document.querySelectorAll(s);
@@ -60,7 +60,6 @@ function filteredBuildings() {
 function listBuildings(entering = false) {
   const filtered = filteredBuildings(), list = $('#building-list'), count = `${filtered.length}개`;
   if ($('#result-count').textContent !== count) { $('#result-count').textContent = count; replay($('#result-count'), 'is-changed'); }
-  $('#list-title').textContent = scope === 'review' ? '외관 검토 대상' : '건물 목록';
   $('#clear-search').hidden = !$('#search').value;
   list.innerHTML = filtered.length ? filtered.map((b, i) => `<button class="building-row${b.id === selected ? ' active' : ''}" style="--i:${Math.min(i, 14)}" data-id="${escapeHtml(b.id)}" aria-label="${escapeHtml(b.number ? b.number + '동 ' : '')}${escapeHtml(b.name)}" ${b.id === selected ? 'aria-current="true"' : ''}><span class="num">${escapeHtml(displayNumber(b))}</span><span class="row-name">${escapeHtml(b.name)}</span>${b.review ? '<span class="dot" title="외관 추정 대상"></span>' : b.geometryStatus === 'schematic' ? '<span class="dot schematic" title="위치만 확인 · 윤곽 미확인"></span>' : ''}</button>`).join('') : '<p class="empty"><strong>검색한 건물이 없습니다.</strong><span>건물 번호나 이름을 다시 확인해 주세요.</span></p>';
   clearTimeout(enterTimer);
@@ -162,15 +161,12 @@ function setScope(value) {
   scope = value; setSegment('scope', value);
   $('#search').value = ''; selected = null; listBuildings(changed);
   viewer.reset(value);
-  $('#map-location').textContent = value === 'review' ? '사진 기반 모델' : '관악캠퍼스 전체';
   viewer.select(null); closeInspector(); closeSidebar(false);
 }
 function setView(view) {
   setSegment('view', view);
   viewer.setView(view); viewer.select(selected);
-  $('#map-help').textContent = view === '2d' ? '드래그 이동 · 스크롤 확대' : '드래그 회전 · 우클릭 이동 · 스크롤 확대';
   $('#detail-toggle').disabled = view === '2d';
-  $('#map-description').textContent = view === '2d' ? '지면 윤곽 · 북쪽 기준' : '평면 지형 · 건물 높이 추정';
   renderInspector();
 }
 
@@ -195,7 +191,6 @@ function hideLoading() {
 function showError() {
   $('#loading').hidden = true;
   $('#building-list').innerHTML = '';
-  $('#building-count').textContent = '불러오기 실패';
   const box = $('#map-error');
   box.hidden = false;
   box.innerHTML = '<div class="error-card"><span class="error-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 16.4v.2M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></span><strong>지도를 불러오지 못했습니다.</strong><p>인터넷 연결과 브라우저의 WebGL 지원 여부를 확인한 뒤 새로고침해 주세요.</p><button class="button primary" id="retry">다시 시도</button></div>';
@@ -206,8 +201,6 @@ function showError() {
 async function init() {
   for (const rec of photos.buildings) { const b = data.buildings.find(b => b.review && b.number === String(rec.number)); if (b && rec.officialName) b.name = rec.officialName; }
   viewer = new CampusRenderer($('#map'), $('#labels'), data, profiles, selectBuilding);
-  $('#building-count').textContent = `${data.buildings.length}개 모형`;
-  $('#coverage-note').textContent = `공식 건물 목록 ${data.coverage.officialEntries}개 항목을 모두 대조했습니다. 지도 윤곽 ${data.coverage.mappedFootprints}개와 윤곽이 없는 공식 위치 ${data.coverage.schematicEntries}개를 합쳐 ${data.coverage.totalModels}개 모형을 표시합니다. 주황색 임시 모형은 위치만 확인된 16 × 12m 상자이며 면적·형태는 미확인입니다. 최근 신축·철거·증축은 자료마다 시점이 다를 수 있습니다.`;
   listBuildings(true); hideLoading();
   $('#building-list').addEventListener('click', e => { const row = e.target.closest('[data-id]'); if (row) selectBuilding(row.dataset.id); });
   $('#search').addEventListener('input', () => listBuildings());
@@ -220,7 +213,6 @@ async function init() {
   $('#north').onclick = () => viewer.north();
   $('#reset-view').onclick = () => setScope('all');
   document.addEventListener('keydown', e => {
-    if ($('#sources-dialog').open) return; // the dialog handles its own Escape
     if (e.key === 'Escape') { closeSidebar(); deselect(); }
     else if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '')) {
       e.preventDefault(); if (mobile.matches) openSidebar(); $('#search').focus(); $('#search').select();
@@ -229,13 +221,6 @@ async function init() {
 }
 
 initSegments();
-$('#sources-button').onclick = () => { $('#sources-dialog').showModal(); $('#sources-dialog').querySelector('.dialog-body').scrollTop = 0; };
-$('#close-sources').onclick = () => $('#sources-dialog').close();
-$('#sources-dialog').addEventListener('click', e => {
-  if (e.target !== $('#sources-dialog')) return;
-  const r = e.target.getBoundingClientRect();
-  if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) e.target.close();
-});
 $('#open-list').onclick = openSidebar;
 $('#close-list').onclick = () => closeSidebar();
 $('#scrim').onclick = () => closeSidebar();

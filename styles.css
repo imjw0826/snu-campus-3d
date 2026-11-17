@@ -336,3 +336,34 @@ dialog[open]::backdrop{background:rgb(30 38 28/.28)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .loader{border-top-color:var(--selected)}
 }
+
+/* ---------- full-bleed layout: no outer frame, controls float over the map ---------- */
+body{padding:0}
+.app{border:0;border-radius:0;box-shadow:none}
+.sidebar{padding-bottom:12px}
+.sheet-header{display:flex;justify-content:flex-end;margin-bottom:8px}
+.list-heading{justify-content:flex-end}
+.workspace{position:relative;padding:0}
+.map-stage{border:0;border-radius:0}
+.toolbar{position:absolute;top:16px;left:16px;z-index:6;height:auto;gap:12px;padding:6px 12px 6px 6px;border:1px solid var(--border);border-radius:var(--radius-lg);background:rgb(255 255 255/.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
+.map-bottom{left:auto;right:16px;bottom:8px;padding:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.map-legend{bottom:16px}
+.scale{bottom:16px}
+.map-controls{bottom:34px}
+@media(min-width:761px){.map-stage:has(.inspector:not([hidden])) .map-controls{bottom:34px}}
+@media(max-width:1100px){
+  body{padding:0}.app{border-radius:0}.workspace{padding:0}
+  .toolbar{top:12px;left:12px;height:auto}
+}
+@media(max-width:760px){
+  .workspace{padding:0}
+  .map-stage{border-radius:0}
+  .toolbar{display:flex;top:8px;left:8px;right:8px;gap:8px;padding:6px 10px 6px 6px}
+  .segments.view{flex:1}
+  .map-bottom{right:8px;bottom:6px;padding:0}
+  .map-legend{bottom:24px}
+  .scale{bottom:24px}
+  .map-controls{bottom:28px}
+  .inspector{bottom:24px}
+  .map-stage:has(.inspector:not([hidden])) .map-controls{top:64px}
+}
