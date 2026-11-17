@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/OrbitControls.js';
-import { createBuildingStructure } from './building-structures.js?v=20260930-cafe302';
+import { createBuildingStructure } from './building-structures.js?v=20261117-b';
 import { roadsideTrees } from './landscape.js';
 
 const UP = new THREE.Vector3(0,1,0);
@@ -31,7 +31,7 @@ function meshFromVertices(vertices,color){
 export class CampusRenderer {
   constructor(container,labels,data,profiles,onSelect){
     this.container=container;this.data=data;this.profiles=profiles;this.onSelect=onSelect;this.view='3d';this.scope='all';this.detailed=true;this.selected=null;this.models=new Map();this.labelElements=[];this.picks=[];this.needsRender=true;
-    this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#ecf0ed');
+    this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#edf0ed');
     this.camera=new THREE.OrthographicCamera(-1000,1000,1000,-1000,1,14000);this.camera.position.set(-450,2600,2000);
     this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));this.renderer.setClearColor('#edf0ed');this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.85;this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;
     this.renderer.domElement.setAttribute('aria-label','서울대학교 캠퍼스 3D 지도');this.renderer.domElement.setAttribute('role','img');container.append(this.renderer.domElement);
@@ -108,8 +108,8 @@ export class CampusRenderer {
       const baseMat=material(b.review?'#72b1a7':b.geometryStatus==='schematic'?'#cab995':'#dce0df');const box=b.box;
       const base=new THREE.Mesh(new THREE.BoxGeometry(box.width,b.height,box.depth),baseMat);base.position.set(box.center[0],b.height/2,box.center[1]);base.rotation.y=-box.angle;base.castShadow=true;base.receiveShadow=true;base.userData.id=b.id;group.add(base);this.picks.push(base);
       const outline=new THREE.LineSegments(new THREE.EdgesGeometry(base.geometry),new THREE.LineBasicMaterial({color:b.review?'#59958b':'#b9c3c1',transparent:true,opacity:.45}));outline.position.copy(base.position);outline.rotation.copy(base.rotation);group.add(outline);
-      const flat=new THREE.Mesh(geometryOf(b.footprint,0,b.holes),new THREE.MeshBasicMaterial({color:b.review?'#6eafa2':b.geometryStatus==='schematic'?'#d2bd96':'#c6cecd'}));flat.position.y=.7;flat.visible=false;flat.userData.id=b.id;group.add(flat);this.picks.push(flat);
-      const flatOutline=new THREE.LineSegments(new THREE.EdgesGeometry(geometryOf(b.footprint,0,b.holes)),new THREE.LineBasicMaterial({color:b.review?'#448d7e':'#a2b0b0'}));flatOutline.position.y=.72;flatOutline.visible=false;group.add(flatOutline);
+      const flat=new THREE.Mesh(geometryOf(b.footprint,0,b.holes),new THREE.MeshBasicMaterial({color:b.review?'#9ccf8e':b.geometryStatus==='schematic'?'#d2bd96':'#c6cecd'}));flat.position.y=.7;flat.visible=false;flat.userData.id=b.id;group.add(flat);this.picks.push(flat);
+      const flatOutline=new THREE.LineSegments(new THREE.EdgesGeometry(geometryOf(b.footprint,0,b.holes)),new THREE.LineBasicMaterial({color:b.review?'#6aa85b':'#a2b0b0'}));flatOutline.position.y=.72;flatOutline.visible=false;group.add(flatOutline);
       const details=b.review?this.createDetailed(b):null;if(details)group.add(details);
       this.models.set(b.id,{group,base,outline,flat,flatOutline,details});this.scene.add(group);
     }
@@ -167,7 +167,7 @@ export class CampusRenderer {
   }
   setDetail(value){this.detailed=value;this.updateMode()}
   setView(view){if(this.view===view)return;this.view=view;this.isolate(null);this.controls.enableRotate=view==='3d';this.controls.mouseButtons.LEFT=view==='2d'?THREE.MOUSE.PAN:THREE.MOUSE.ROTATE;this.controls.touches.ONE=view==='2d'?THREE.TOUCH.PAN:THREE.TOUCH.ROTATE;const target=this.controls.target.clone();const distance=this.camera.position.distanceTo(target);this.camera.position.copy(target).add(view==='2d'?new THREE.Vector3(0,distance,.01):new THREE.Vector3(-.65,.95,1).normalize().multiplyScalar(distance));this.camera.up.set(0,1,0);this.controls.update();this.updateMode()}
-  select(id){if(!id)this.isolate(null);this.selected=id;for(const {el,b} of this.labelElements)el.classList.toggle('selected',b.id===id);for(const [key,m] of this.models){m.flat.material.color.set(key===id?'#248b7c':this.data.buildings.find(b=>b.id===key).review?'#6eafa2':this.data.buildings.find(b=>b.id===key).geometryStatus==='schematic'?'#d2bd96':'#c6cecd');m.base.material.emissive.set(key===id?'#13453e':'#000000');m.base.material.emissiveIntensity=.15;}
+  select(id){if(!id)this.isolate(null);this.selected=id;for(const {el,b} of this.labelElements)el.classList.toggle('selected',b.id===id);for(const [key,m] of this.models){m.flat.material.color.set(key===id?'#5cae4a':this.data.buildings.find(b=>b.id===key).review?'#9ccf8e':this.data.buildings.find(b=>b.id===key).geometryStatus==='schematic'?'#d2bd96':'#c6cecd');m.base.material.emissive.set(key===id?'#1f4a17':'#000000');m.base.material.emissiveIntensity=.15;}
     if(this.selectionOutline){this.scene.remove(this.selectionOutline);this.selectionOutline.geometry.dispose();this.selectionOutline.material.dispose()}
     const b=this.data.buildings.find(b=>b.id===id);if(b){const points=b.footprint.map(([x,z])=>new THREE.Vector3(x,this.view==='2d'?1:this.detailed&&b.review?.2:(this.detailed?b.detailHeight||b.height:b.height)+.8,z));this.selectionOutline=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:'#1f776d'}));this.scene.add(this.selectionOutline)}this.needsRender=true;
   }
