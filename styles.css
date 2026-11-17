@@ -159,7 +159,7 @@ button:disabled{cursor:not-allowed;opacity:.5}
 .map-legend{left:16px;bottom:44px;display:flex;align-items:center;gap:14px;padding:9px 13px;font-size:12px;color:#565d52}
 .map-legend span{display:flex;align-items:center;gap:7px}
 .map-legend i{width:11px;height:11px;border:1px solid #bcc4c2;border-radius:4px;background:#dfe3e3}
-.map-legend .legend-detail{background:#6eafa2;border-color:#5b9c8f}
+.map-legend .legend-detail{background:#9ccf8e;border-color:#86bd77}
 .map-legend .legend-schematic{background:#d2bd96;border-color:#bfa77d}
 .map-bottom{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:12px;padding:8px 16px;font-size:11px;color:#667062;background:rgb(250 251 247/.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .map-bottom a{text-decoration:none}

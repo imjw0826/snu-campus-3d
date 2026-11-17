@@ -1,5 +1,5 @@
-import { campus as data, profiles, photos } from './data/map-data.js?v=20261117-ui';
-import { CampusRenderer } from './renderer.js?v=20261117-ui';
+import { campus as data, profiles, photos } from './data/map-data.js?v=20261117-b';
+import { CampusRenderer } from './renderer.js?v=20261117-b';
 
 const $ = s => document.querySelector(s);
 const $$ = s => document.querySelectorAll(s);
